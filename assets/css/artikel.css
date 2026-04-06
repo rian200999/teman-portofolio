@@ -1,0 +1,108 @@
+/* =========================================
+   SECTION ARTIKEL COMPACT (PUTIH -> MINT)
+   ========================================= */
+.tp-artikel-compact {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #ECFDF5 100%);
+    position: relative;
+    margin-top: -1px;
+}
+
+/* Header */
+.tp-section-badge.badge-outline { background: transparent; color: var(--tp-green); border: 1px solid rgba(5, 150, 105, 0.3); margin-bottom: 20px; }
+.tp-artikel-compact .text-dark { color: var(--tp-darkest); }
+.tp-artikel-compact .text-dark span { color: #fff; background: var(--tp-darkest); padding: 2px 12px; border-radius: 8px; display: inline-block; margin-top: 10px; }
+.tp-artikel-compact .text-dark-muted { color: rgba(1, 30, 23, 0.7); font-weight: 500; }
+
+/* LIST WRAPPER */
+.artikel-list-wrapper {
+    margin-top: 60px;
+    border-top: 2px solid rgba(1, 30, 23, 0.1);
+    position: relative;
+}
+
+/* GAMBAR MELAYANG (HOVER REVEAL) */
+.hover-image-reveal {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 16px;
+    pointer-events: none; /* Biar gak ganggu klik */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transisi pas muncul doang */
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    background-size: cover;
+    background-position: center;
+}
+.hover-image-reveal.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* BARIS ARTIKEL */
+.artikel-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 20px;
+    border-bottom: 1px solid rgba(1, 30, 23, 0.1);
+    text-decoration: none;
+    transition: var(--tp-transition);
+    position: relative;
+}
+
+.artikel-row:hover {
+    background: rgba(255, 255, 255, 0.5);
+    padding-left: 30px; /* Geser dikit pas di-hover */
+}
+
+/* META DATA */
+.row-meta {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+}
+.row-date { font-size: 14px; font-weight: 700; color: var(--tp-darkest); }
+.row-tag { font-size: 12px; font-weight: 600; color: var(--tp-green); text-transform: uppercase; letter-spacing: 1px; }
+
+/* JUDUL */
+.row-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--tp-darkest);
+    flex-grow: 1;
+    margin: 0 30px;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+.artikel-row:hover .row-title { color: var(--tp-green); }
+
+/* ICON */
+.row-icon i {
+    font-size: 32px;
+    color: #CBD5E1;
+    transition: all 0.3s ease;
+}
+.artikel-row:hover .row-icon i {
+    color: var(--tp-darkest);
+    transform: rotate(45deg);
+}
+
+/* FOOTER TOMBOL */
+.artikel-footer { text-align: center; margin-top: 40px; }
+.dark-outline { border: 1px solid var(--tp-darkest) !important; color: var(--tp-darkest) !important; display: inline-flex; padding: 12px 24px; border-radius: 10px; font-weight: 700; transition: all 0.3s ease; }
+.dark-outline:hover { background: var(--tp-darkest); color: #fff !important; }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .artikel-row { flex-direction: column; align-items: flex-start; gap: 15px; padding: 25px 10px; }
+    .artikel-row:hover { padding-left: 10px; }
+    .row-meta { width: 100%; flex-direction: row; align-items: center; gap: 10px; }
+    .row-title { margin: 0; font-size: 20px; }
+    .hover-image-reveal { display: none; /* Matiin gambar melayang di HP */ }
+}

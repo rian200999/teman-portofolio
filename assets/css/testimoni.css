@@ -1,0 +1,88 @@
+/* =========================================
+   SECTION TESTIMONI (IJO MEDIUM -> IJO TUA)
+   ========================================= */
+.tp-testimoni {
+    padding: 120px 0;
+    
+    /* GRADASI SEAMLESS: Dari #059669 (Akhir Exclusive) ke #022C22 (Ijo Tua) */
+    background: linear-gradient(180deg, #059669 0%, #022C22 100%);
+    
+    position: relative;
+    margin-top: -1px;
+    overflow: hidden;
+}
+
+/* Header Text Adjustments */
+.tp-testimoni .text-white { color: #fff; }
+.tp-testimoni .text-white span { background: var(--tp-darkest); color: #fff; padding: 2px 10px; border-radius: 8px; display: inline-block; margin-top: 5px; }
+.tp-testimoni .text-white-p { color: rgba(255, 255, 255, 0.9); margin-top: 15px; }
+
+/* GRID TESTIMONI */
+.testimoni-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+/* KARTU TESTIMONI (GLASSMORPHISM) */
+.testi-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 24px;
+    color: #fff;
+    transition: var(--tp-transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testi-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--tp-light);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.testi-stars { color: #FBBF24; margin-bottom: 20px; font-size: 18px; letter-spacing: 2px; }
+
+.testi-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* USER INFO */
+.testi-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.testi-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--tp-light);
+    object-fit: cover;
+}
+
+.user-info h5 { font-size: 16px; font-weight: 800; margin-bottom: 4px; color: #fff; }
+.user-info span { font-size: 13px; color: var(--tp-light); font-weight: 600; }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .testimoni-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .testimoni-grid { grid-template-columns: 1fr; }
+    .testi-card { padding: 30px; }
+}

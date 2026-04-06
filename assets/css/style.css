@@ -1,212 +1,61 @@
-/* -----------------------------------------------------------
-   1. VARIABLES & RESET
------------------------------------------------------------ */
 :root {
-    --primary-red: #BC002D;
-    /* Merah Matahari Jepang */
-    --dark-indigo: #1A1A2E;
-    /* Navy Profesional untuk Tech */
-    --soft-white: #F9F9F9;
-    /* Background bersih */
-    --pure-white: #FFFFFF;
-    --text-gray: #4A4A4A;
-    --text-light: #888888;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* PALET WARNA HIJAU */
+    --tp-darkest: #011E17;     /* Ijo sangat tua (Background) */
+    --tp-dark: #022C22;        /* Ijo Tua (Card/Elevated) */
+    --tp-green: #059669;       /* Ijo Medium (Primary Button/Accent) */
+    --tp-light: #34D399;       /* Ijo Muda (Highlight/Glow) */
+    
+    --tp-text-main: #ECFDF5;   /* Putih kehijauan */
+    --tp-text-muted: #A7F3D0;  /* Ijo pudar untuk teks sekunder */
+    --tp-border: rgba(52, 211, 153, 0.15); /* Border ijo transparan */
+    
+    --tp-transition: all 0.3s ease;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--soft-white);
-    color: var(--dark-indigo);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--tp-darkest);
+    color: var(--tp-text-main);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Background Pattern Jepang (Subtle) */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/japanese-sayagata.png');
-    opacity: 0.03;
-    z-index: -1;
-    pointer-events: none;
-}
+a { text-decoration: none; transition: var(--tp-transition); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-a {
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-/* -----------------------------------------------------------
-   2. HEADER & NAVBAR
------------------------------------------------------------ */
+/* HEADER STYLING */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: fixed; top: 0; left: 0; width: 100%;
     padding: 20px 0;
-    background: rgba(249, 249, 249, 0.8);
-    backdrop-filter: blur(15px);
+    background: rgba(1, 30, 23, 0.85); /* Ijo transparan */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--tp-border);
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
 
-.logo {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--dark-indigo);
-    letter-spacing: -1px;
-}
+.logo { font-size: 24px; font-weight: 800; color: var(--tp-text-main); }
+.logo span { color: var(--tp-light); }
 
-.logo span {
-    color: var(--primary-red);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    font-weight: 500;
-    color: var(--dark-indigo);
-    font-size: 15px;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-red);
-}
+.navbar { display: flex; align-items: center; gap: 32px; }
+.nav-link { font-size: 15px; font-weight: 500; color: var(--tp-text-muted); }
+.nav-link:hover, .nav-link.active { color: var(--tp-light); }
 
 .btn-cta-nav {
     padding: 10px 24px;
-    background: var(--primary-red);
-    color: var(--pure-white) !important;
-    /* Fix: Tulisan Putih */
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(188, 0, 45, 0.2);
+    background: var(--tp-green);
+    color: #fff !important;
+    border-radius: 8px; font-weight: 600; font-size: 14px;
 }
+.btn-cta-nav:hover { background: var(--tp-light); color: var(--tp-darkest) !important; }
 
-.btn-cta-nav:hover {
-    transform: translateY(-2px);
-    background: #a00026;
-}
+.menu-icon { display: none; font-size: 28px; color: var(--tp-text-main); cursor: pointer; }
 
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
-/* -----------------------------------------------------------
-   5. FOOTER (JEPANG BANGET)
------------------------------------------------------------ */
-/* --- MEGA FOOTER AREA --- */
-.main-footer {
-    padding: 100px 0 30px;
-    background: #120004; /* Merah Tua Banget Hampir Hitam */
-    color: rgba(255, 255, 255, 0.6);
-    position: relative;
-    overflow: hidden;
-}
-
-.footer-bg-text {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 180px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.02);
-    white-space: nowrap;
-    pointer-events: none;
-    user-select: none;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
-    padding-bottom: 60px;
-    position: relative;
-    z-index: 2;
-}
-
-.footer-brand h3 { color: #fff; font-size: 36px; margin-bottom: 20px; font-weight: 800; }
-.footer-brand h3 span { color: #BC002D; }
-.footer-brand p { font-size: 15px; line-height: 1.8; margin-bottom: 25px; max-width: 400px; }
-
-.social-links { display: flex; gap: 15px; }
-.social-links a {
-    width: 45px; height: 45px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-    display: flex; align-items: center; justify-content: center;
-    color: #fff; font-size: 20px; transition: 0.3s;
-}
-.social-links a:hover { background: #BC002D; transform: translateY(-5px); }
-
-.footer-links h4 { color: #fff; margin-bottom: 25px; font-weight: 700; font-size: 18px; }
-.footer-links ul { list-style: none; padding: 0; }
-.footer-links ul li { margin-bottom: 15px; }
-.footer-links ul li a { color: inherit; text-decoration: none; transition: 0.3s; font-size: 15px; }
-.footer-links ul li a:hover { color: #BC002D; padding-left: 10px; }
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 14px;
-    position: relative;
-    z-index: 2;
-}
-.footer-bottom b { color: #fff; }
-
-/* Responsive Mobile */
-@media (max-width: 992px) {
-    .collab-ticket { flex-direction: column; }
-    .ticket-info { border-radius: 30px 30px 0 0; }
-    .ticket-rip { width: 100%; height: 40px; flex-direction: row; }
-    .rip-line { height: 2px; width: 90%; border-left: none; border-top: 3px dashed rgba(188, 0, 45, 0.2); }
-    .rip-hole.top { top: auto; left: -20px; }
-    .rip-hole.bottom { bottom: auto; right: -20px; }
-    .ticket-action { border-radius: 0 0 30px 30px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-    .footer-bg-text { font-size: 100px; top: 10%; }
+@media (max-width: 768px) {
+    .navbar { display: none; }
+    .menu-icon { display: block; }
 }

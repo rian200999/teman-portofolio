@@ -1,0 +1,88 @@
+/* =========================================
+   SECTION KERJASAMA (IJO TUA -> IJO GELAP)
+   ========================================= */
+.tp-kerjasama {
+    padding: 100px 0;
+    
+    /* GRADASI SEAMLESS: Dari #022C22 (Akhir Testimoni) ke #011E17 (Ijo Gelap Banget) */
+    background: linear-gradient(180deg, #022C22 0%, #011E17 100%);
+    
+    position: relative;
+    margin-top: -1px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.tp-kerjasama .text-white-p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 15px auto 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* LOGO SLIDER LOGIC */
+.logo-slider {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px 0;
+}
+
+/* Efek vignette/bayangan di sisi kiri dan kanan slider biar memudar */
+.logo-slider::before, .logo-slider::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    width: 200px; 
+    height: 100%;
+    z-index: 2; 
+    pointer-events: none;
+}
+.logo-slider::before { 
+    left: 0; 
+    background: linear-gradient(to right, #011E17, transparent); 
+}
+.logo-slider::after { 
+    right: 0; 
+    background: linear-gradient(to left, #011E17, transparent); 
+}
+
+/* Track yang akan digerakkan oleh animasi */
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    /* Durasi 30s, makin besar makin lambat jalannya */
+    animation: scrollLogos 30s linear infinite;
+}
+
+.logo-item {
+    font-size: 24px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.2); /* Transparan estetik */
+    letter-spacing: 2px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.logo-item:hover {
+    color: var(--tp-light);
+    transform: scale(1.05);
+}
+
+/* Keyframes untuk jalanin slider ke kiri */
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Geser 50% karena kontennya diduplikat 2x */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .logo-slider::before, .logo-slider::after { width: 80px; }
+    .logo-item { font-size: 18px; }
+    .logo-track { gap: 50px; }
+}

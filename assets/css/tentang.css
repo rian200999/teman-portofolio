@@ -1,0 +1,161 @@
+/* =========================================
+   SECTION TENTANG (SEAMLESS TRANSITION)
+   ========================================= */
+.tp-about-modern {
+    position: relative;
+    padding: 150px 0;
+    
+    /* FIXED GRADIENT: 
+       Mulai dari #024D38 (Warna akhir section Layanan)
+       Turun ke #10B981 (Ijo Muda Emerald)
+    */
+    background: linear-gradient(180deg, #024D38 0%, #10B981 100%);
+    
+    overflow: hidden;
+    margin-top: -1px; /* Trik biar gak ada celah pixel antar section */
+}
+
+/* Watermark Text Background */
+.about-watermark {
+    position: absolute;
+    top: 50%; left: 5%;
+    transform: translateY(-50%);
+    font-size: 250px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03); /* Tipis banget biar estetik */
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.about-flex {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; 
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* VISUAL SIDE: TECH CARD */
+.about-visual-side {
+    position: relative;
+}
+
+.tech-card {
+    background: #011E17; /* Tetap gelap biar code-nya kebaca */
+    border: 1px solid rgba(52, 211, 153, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    overflow: hidden;
+    transform: rotate(-3deg);
+    transition: var(--tp-transition);
+}
+
+.tech-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    border-color: var(--tp-light);
+}
+
+.card-header-tp {
+    background: rgba(255,255,255,0.05);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.circles { display: flex; gap: 6px; }
+.circles span { width: 10px; height: 10px; border-radius: 50%; }
+.c-red { background: #FF5F56; }
+.c-yellow { background: #FFBD2E; }
+.c-green { background: #27C93F; }
+
+.file-name { font-size: 12px; font-family: monospace; color: var(--tp-text-muted); opacity: 0.7; }
+
+.card-code-body { padding: 40px 30px; font-family: 'JetBrains Mono', monospace; font-size: 15px; line-height: 1.6; }
+.code-key { color: var(--tp-light); }
+.code-val { color: #FBBF24; }
+
+/* Floating Vercel Icon */
+.vercel-float {
+    position: absolute;
+    bottom: -30px; right: -20px;
+    width: 70px; height: 70px;
+    background: #fff; color: #000;
+    border-radius: 15px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 35px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    animation: floatAnim 4s ease-in-out infinite;
+}
+
+/* TEXT SIDE */
+.about-label {
+    font-family: monospace; 
+    color: var(--tp-darkest);
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700; 
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.about-text-side h2 {
+    font-size: 48px; line-height: 1.1; font-weight: 800; margin-bottom: 30px; color: #fff;
+}
+
+.about-text-side h2 span {
+    color: var(--tp-darkest);
+    border-bottom: 4px solid var(--tp-darkest);
+}
+
+.story-box { 
+    border-left: 4px solid var(--tp-darkest); 
+    padding-left: 30px; 
+    margin-bottom: 45px; 
+}
+.story-box p { font-size: 19px; color: #fff; margin-bottom: 20px; line-height: 1.8; font-weight: 500; }
+
+.about-features-minimal { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.f-item { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--tp-darkest); font-size: 15px; }
+.f-item i { font-size: 24px; color: #fff; background: var(--tp-darkest); padding: 5px; border-radius: 50%; }
+
+/* ANIMATION */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-20px) rotate(-5deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .about-flex { grid-template-columns: 1fr; gap: 80px; text-align: center; }
+    .about-visual-side { order: 2; margin-top: 40px; }
+    .about-text-side { order: 1; }
+    .story-box { border-left: none; padding-left: 0; }
+    .about-features-minimal { justify-items: center; grid-template-columns: 1fr; }
+}
+
+/* BADGE ADAPTASI WARNA (Bentuk ngikutin Layanan) */
+.tp-section-badge.badge-dark {
+    background: rgba(1, 30, 23, 0.4); /* Background gelap transparan */
+    color: #fff; /* Teks putih biar terang */
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+.tp-section-badge.badge-dark i {
+    color: #FBBF24; /* Ikon kuning/emas biar standout */
+}
+
+/* Penyesuaian jarak biar rapi */
+.about-text-side h2 {
+    font-size: 48px; line-height: 1.1; font-weight: 800; margin-bottom: 30px; color: #fff;
+}
+
+.about-text-side h2 span {
+    color: var(--tp-darkest);
+    border-bottom: 4px solid var(--tp-darkest);
+}
