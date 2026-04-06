@@ -1,0 +1,224 @@
+/* --- MEMBERSHIP / PRICING SECTION --- */
+.membership {
+    padding: 100px 0;
+    /* Merah Tua ke Merah Tua Banget */
+    background: linear-gradient(to bottom, #4A0010 0%, #1A0005 100%); 
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    /* Nutup celah 1px */
+    margin-top: -2px; 
+}
+/* ... sisa kode card membership lo ... */
+
+.member-header { 
+    text-align: center; 
+    margin-bottom: 60px; 
+    position: relative; 
+    z-index: 2; 
+    max-width: 600px; 
+    margin: 0 auto 60px; 
+}
+
+.member-label { 
+    color: #FF8DA1; 
+    font-weight: 700; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.member-header h2 { 
+    font-size: 48px; 
+    font-weight: 800; 
+    line-height: 1.2; 
+    margin-bottom: 15px; 
+}
+
+.highlight-pink { color: #FF8DA1; }
+
+.member-header p { 
+    font-size: 16px; 
+    color: rgba(255, 255, 255, 0.7); 
+    line-height: 1.6; 
+}
+
+/* --- GRID CARDS --- */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+}
+
+.mem-card {
+    border-radius: 30px;
+    padding: 40px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* KARTU PREMIUM (BASIC) */
+.mem-card.premium {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.mem-card.premium:hover { 
+    transform: translateY(-5px); 
+    border-color: rgba(255, 255, 255, 0.3); 
+}
+
+/* KARTU PROFESIONAL (HIGHLIGHT) */
+.mem-card.profesional {
+    background: linear-gradient(145deg, #1A0005 0%, #2b0811 100%);
+    border: 2px solid #FF8DA1;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 141, 161, 0.05);
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+.badge-pro {
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background: #BC002D;
+    color: #fff; 
+    padding: 6px 20px; 
+    border-radius: 50px; 
+    font-size: 12px; 
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(188, 0, 45, 0.4); 
+    white-space: nowrap;
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+}
+
+/* --- CARD TOP / HEADER --- */
+.mem-top { 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-bottom: 25px; 
+}
+.mem-card.profesional .mem-top { border-color: rgba(255, 141, 161, 0.2); }
+
+.mem-top h3 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.mem-card.profesional .mem-top h3 { color: #FF8DA1; }
+.mem-top p { font-size: 14px; color: rgba(255, 255, 255, 0.6); margin-bottom: 20px; line-height: 1.5; }
+
+/* PRICING ANGKA */
+.mem-price { display: flex; align-items: flex-start; color: #fff; }
+.mem-card.profesional .mem-price { color: #FF8DA1; }
+.currency { font-size: 18px; font-weight: 700; margin-top: 5px; }
+.amount { font-size: 50px; font-weight: 900; line-height: 1; margin: 0 5px; }
+.period { font-size: 12px; opacity: 0.6; align-self: center; margin-bottom: 5px; font-weight: 600; line-height: 1.4; }
+
+/* --- LIST FITUR --- */
+.mem-features { list-style: none; padding: 0; margin-bottom: 35px; }
+.mem-features li { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 15px; 
+    font-size: 15px; 
+    color: rgba(255, 255, 255, 0.9); 
+}
+.mem-features li i.bx-check { color: #27ae60; font-size: 20px; }
+.mem-features li i.pink { color: #FF8DA1; font-size: 20px; }
+
+/* Fitur Mati (Silang) */
+.mem-features li.disabled { color: rgba(255, 255, 255, 0.3); }
+.mem-features li.disabled i { color: rgba(255, 255, 255, 0.3); font-size: 20px; }
+
+/* --- STYLING KHUSUS MERCH FISIK --- */
+
+/* Paket Premium (Grey/White Transparan) */
+.highlight-feature-basic {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: #fff !important;
+}
+.highlight-feature-basic i { color: #fff; font-size: 20px; }
+
+/* Paket Profesional (Pink Transparan) */
+.highlight-feature {
+    background: rgba(255, 141, 161, 0.1);
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 141, 161, 0.2);
+    color: #fff !important;
+}
+.highlight-feature i { color: #FF8DA1; font-size: 20px; }
+
+/* --- TOMBOL --- */
+.btn-mem-outline {
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+    padding: 15px; 
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); 
+    color: #fff; 
+    font-weight: 800; 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+.btn-mem-outline:hover { background: #fff; color: #1A0005; }
+
+.btn-mem-solid {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px; 
+    width: 100%; 
+    padding: 16px; 
+    border-radius: 15px;
+    background: #BC002D;
+    color: #fff; 
+    font-weight: 800; 
+    text-decoration: none; 
+    transition: 0.3s; 
+    font-size: 16px;
+}
+.btn-mem-solid i { font-size: 20px; transition: 0.3s; }
+.btn-mem-solid:hover { 
+    background: #FF8DA1; 
+    color: #1A0005; 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 25px rgba(255, 141, 161, 0.3); 
+}
+.btn-mem-solid:hover i { transform: translateX(5px); }
+
+/* --- WAITLIST BAWAH --- */
+.mini-waitlist { 
+    text-align: center; 
+    margin-top: 50px; 
+    position: relative; 
+    z-index: 2; 
+}
+.mini-waitlist p { font-size: 14px; color: rgba(255, 255, 255, 0.6); }
+.mini-waitlist a { 
+    color: #FF8DA1; 
+    text-decoration: none; 
+    font-weight: 700; 
+    border-bottom: 1px dashed #FF8DA1; 
+    transition: 0.3s; 
+}
+.mini-waitlist a:hover { color: #fff; border-color: #fff; }
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) { 
+    .member-grid { grid-template-columns: 1fr; gap: 50px; } 
+    /* Di HP, kartu Pro jangan di-scale biar gak nabrak layar */
+    .mem-card.profesional { transform: scale(1); } 
+}

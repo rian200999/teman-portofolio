@@ -1,0 +1,440 @@
+/* --- HERO SECTION --- */
+.hero {
+    padding: 140px 0 20px !important;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px !important;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* --- LEFT SIDE: CONTENT --- */
+.beginner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff0f3;
+    color: #BC002D;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border: 1px solid rgba(188, 0, 45, 0.1);
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #1A1A2E;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: #BC002D;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-primary-new {
+    background: #BC002D;
+    color: #ffffff !important;
+    padding: 18px 35px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 10px 20px rgba(188, 0, 45, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(188, 0, 45, 0.3);
+}
+
+.btn-link {
+    font-weight: 700;
+    color: #1A1A2E;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* --- RIGHT SIDE: VISUAL FLASHCARD --- */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.japan-circle {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: #BC002D;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.main-card-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.big-flashcard {
+    background: #ffffff;
+    width: 320px;
+    height: 420px;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* Tambahkan miring awal di sini */
+    transform: rotate(-4deg); 
+    
+    /* Pastikan transisi smooth */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Jalankan animasi */
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.card-head span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.speaker-icon {
+    width: 35px;
+    height: 35px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BC002D;
+}
+
+.kanji-display {
+    font-size: 42px;
+    color: #1A1A2E;
+    text-align: center;
+    font-weight: 800;
+}
+
+.romaji {
+    text-align: center;
+    color: #BC002D;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.meaning-box {
+    background: #fdf2f4;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #1A1A2E;
+    font-size: 20px;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+.card-footer-info span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+}
+
+/* --- LEVEL BADGES --- */
+.level-badge {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    color: #999;
+    transition: all 0.4s ease;
+}
+
+.level-badge.active {
+    background: #BC002D;
+    color: white;
+    transform: scale(1.2);
+    box-shadow: 0 10px 25px rgba(188, 0, 45, 0.4);
+}
+
+/* Positions N1 - N5 */
+.n1 {
+    top: -20px;
+    right: 20px;
+}
+
+.n2 {
+    top: 80px;
+    right: -40px;
+}
+
+.n3 {
+    bottom: 120px;
+    right: -30px;
+}
+
+.n4 {
+    bottom: 0px;
+    right: 40px;
+}
+
+.n5 {
+    top: 60px;
+    left: -20px;
+}
+
+/* Animation */
+.big-flashcard {
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.card-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px dashed #eee;
+}
+
+.card-footer-info span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-head span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.speaker-icon {
+    width: 35px;
+    height: 35px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #BC002D;
+    cursor: pointer;
+}
+
+.bxs-star {
+    color: #f5c518;
+    font-size: 16px;
+}
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin: 0 auto 40px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        margin-top: 80px;
+    }
+
+    .japan-circle {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 140px 0 100px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
+}
+
+/* --- LEFT SIDE --- */
+.beginner-badge {
+    display: inline-flex; align-items: center; gap: 10px; background: #fff0f3;
+    color: #BC002D; padding: 8px 16px; border-radius: 50px; font-size: 14px;
+    font-weight: 700; margin-bottom: 25px; border: 1px solid rgba(188, 0, 45, 0.1);
+}
+
+.hero-content h1 {
+    font-size: 50px; line-height: 1.2; font-weight: 800; color: #1A1A2E; margin-bottom: 25px;
+}
+
+.hero-content h1 span { color: #BC002D; }
+
+.hero-content p {
+    font-size: 18px; color: #444; line-height: 1.8; margin-bottom: 40px; max-width: 520px;
+}
+
+.hero-actions { display: flex; align-items: center; gap: 25px; }
+
+.btn-primary-new {
+    background: #BC002D; color: #ffffff !important; padding: 18px 35px;
+    border-radius: 15px; font-weight: 700; font-size: 16px; box-shadow: 0 10px 20px rgba(188, 0, 45, 0.2);
+}
+
+.btn-link { font-weight: 700; color: #1A1A2E; display: flex; align-items: center; gap: 8px; font-size: 16px; }
+
+/* --- RIGHT SIDE --- */
+.hero-visual {
+    position: relative; display: flex; justify-content: center; align-items: center;
+}
+
+.japan-circle {
+    position: absolute; width: 420px; height: 420px; background: #BC002D; border-radius: 50%; z-index: 1;
+}
+
+.main-card-container {
+    position: relative; z-index: 2; width: 100%; display: flex; justify-content: center;
+}
+
+.big-flashcard {
+    background: #ffffff; width: 320px; height: 420px; border-radius: 30px; padding: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15); display: flex; flex-direction: column;
+    justify-content: space-between; border: 1px solid rgba(0, 0, 0, 0.05);
+    animation: cardFloat 4s ease-in-out infinite; /* Box tetap floating pelan */
+}
+
+.kanji-display { font-size: 42px; color: #1A1A2E; text-align: center; font-weight: 800; margin-bottom: 5px; }
+
+.romaji { text-align: center; color: #BC002D; font-weight: 600; font-size: 18px; margin-bottom: 15px; }
+
+.meaning-box {
+    background: #fdf2f4; padding: 15px; border-radius: 15px; text-align: center;
+    font-weight: 700; color: #1A1A2E; font-size: 20px;
+}
+
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.card-head span { font-size: 12px; font-weight: 700; color: #999; text-transform: uppercase; }
+.speaker-icon { width: 35px; height: 35px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #BC002D; cursor: pointer; }
+
+.card-footer-info { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px dashed #eee; }
+.card-footer-info span { font-size: 13px; font-weight: 600; color: #777; }
+.bxs-star { color: #f5c518; font-size: 16px; }
+
+/* --- LEVEL BADGES --- */
+.level-badge {
+    position: absolute; width: 55px; height: 55px; background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); z-index: 3; color: #999; transition: all 0.4s ease;
+}
+
+.level-badge.active { background: #BC002D; color: white; transform: scale(1.2); box-shadow: 0 10px 25px rgba(188, 0, 45, 0.4); }
+
+.n1 { top: -20px; right: 20px; }
+.n2 { top: 80px; right: -40px; }
+.n3 { bottom: 120px; right: -30px; }
+.n4 { bottom: 0px; right: 40px; }
+.n5 { top: 60px; left: -20px; }
+
+@keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
+    .hero-content p { margin: 0 auto 40px; }
+    .hero-actions { justify-content: center; }
+    .hero-visual { margin-top: 80px; }
+    .japan-circle { width: 320px; height: 320px; }
+}
+
+@keyframes cardFloat {
+    0%, 100% {
+        /* Tetap miring pas di posisi awal */
+        transform: translateY(0) rotate(-4deg);
+    }
+    50% {
+        /* Pas naik, miringnya dikit aja biar dinamis */
+        transform: translateY(-15px) rotate(-2deg);
+    }
+}
