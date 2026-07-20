@@ -1,49 +1,35 @@
 window.initHargaLogic = function() {
-    // 1. Animasi Counter untuk Harga
+    // Animasi Counter Angka Harga
     const priceCounters = document.querySelectorAll('.counter-price');
     
     if (priceCounters.length > 0) {
+        // Pakai IntersectionObserver biar animasi jalan pas section-nya dilihat aja
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const counter = entry.target;
+                    
                     const updateCount = () => {
                         const target = +counter.getAttribute('data-target');
                         const count = +counter.innerText;
+                        
+                        // Kecepatan nambah angka (makin besar pembagi, makin lambat)
                         const inc = target / 20;
 
                         if (count < target) {
                             counter.innerText = Math.ceil(count + inc);
-                            setTimeout(updateCount, 25);
+                            setTimeout(updateCount, 30);
                         } else {
-                            counter.innerText = target;
+                            counter.innerText = target; // Pastikan berhenti pas di angka target
                         }
                     };
+                    
                     updateCount();
-                    observer.unobserve(counter);
+                    observer.unobserve(counter); // Biar animasinya jalan sekali aja pas pertama kali di-scroll
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.5 }); // Trigger saat setengah (50%) kartu harganya udah masuk layar
 
         priceCounters.forEach(counter => observer.observe(counter));
     }
-
-    // 2. Efek Interaktif Kursor di Kartu Gelap
-    const passCards = document.querySelectorAll('.tech-pass-card');
-    
-    passCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            // Bikin efek gradient tipis ngikutin mouse
-            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(52, 211, 153, 0.1) 0%, #011E17 50%)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            // Balikin ke ijo gelap pekat
-            card.style.background = '#011E17';
-        });
-    });
 };

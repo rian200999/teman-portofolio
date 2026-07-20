@@ -1,115 +1,150 @@
 /* =========================================
-   SECTION KARYA DYNAMIC (IJO MUDA -> MINT)
+   SECTION KARYA CAROUSEL (LILAC MODE)
    ========================================= */
 .tp-karya-dynamic {
     padding: 120px 0;
-    /* Gradasi Seamless Tetap Dijaga */
-    background: linear-gradient(180deg, #10B981 0%, #ECFDF5 100%);
+    /* Gradasi dari Lilac pudar (akhir section Tentang) ke putih bersih */
+    background: linear-gradient(180deg, #FDFBFF 0%, #FFFFFF 100%);
     position: relative;
     margin-top: -1px;
 }
 
 /* Header Adjustments */
-.tp-karya-dynamic .text-dark { color: var(--tp-darkest); }
+.tp-karya-dynamic .text-dark { color: var(--tp-text-main); } /* Biru Pekat */
 .tp-karya-dynamic .text-dark span { 
-    color: #fff; background: var(--tp-darkest); padding: 2px 12px; border-radius: 8px; display: inline-block; margin-top: 10px;
+    color: var(--tp-light); /* Biru Elektrik */
+    background: rgba(226, 211, 244, 0.4); /* Background highlight Lilac tipis */
+    padding: 4px 14px; border-radius: 8px; display: inline-block; margin-top: 10px;
 }
-.tp-karya-dynamic .text-dark-muted { color: rgba(1, 30, 23, 0.7); font-weight: 500; }
+.tp-karya-dynamic .text-dark-muted { color: var(--tp-text-muted); font-weight: 500; }
 
-/* MATRIX LAYOUT */
-.showcase-matrix {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+/* BADGE ADAPTASI LILAC */
+.tp-section-badge.badge-lilac {
+    background: var(--tp-green); /* Lilac */
+    color: var(--tp-light); /* Biru Elektrik */
+    border: 1px solid var(--tp-border);
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   CAROUSEL LAYOUT (FIXED WIDTH)
+   ========================================= */
+.carousel-container {
+    position: relative;
     margin-top: 60px;
+    padding: 0 50px; /* Space buat tombol navigasi */
+    width: 100%;
 }
 
-/* KIRI: MONITOR VISUAL */
-.matrix-visual-side { position: relative; }
-.matrix-glow {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 80%; height: 80%; background: var(--tp-light);
-    filter: blur(100px); opacity: 0.3; z-index: 0;
+.carousel-track-wrapper {
+    overflow: hidden; /* Sembunyikan kartu yang tumpah */
+    width: 100%;
 }
 
-.matrix-monitor {
-    background: #fff;
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 20px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1;
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Ganti gap jadi margin di anak elemennya biar perhitungannya akurat */
+    gap: 0; 
+}
+
+/* KARTU KARYA (SLIDE) */
+.karya-slide {
+    /* Lebar pasti 33.333% (3 kartu per baris) di Desktop */
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    /* Pakai padding sebagai ganti gap, biar lebarnya gak kacau */
+    padding: 0 15px; 
+    box-sizing: border-box;
+}
+
+.karya-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 24px;
     overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.03);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.m-header {
-    background: #F1F5F9; padding: 12px 20px;
-    display: flex; align-items: center; justify-content: center; position: relative;
-}
-.m-dots { position: absolute; left: 20px; display: flex; gap: 6px; }
-.m-dots span { width: 10px; height: 10px; border-radius: 50%; background: #CBD5E1; }
-.m-dots span:nth-child(1) { background: #FF5F56; }
-.m-dots span:nth-child(2) { background: #FFBD2E; }
-.m-dots span:nth-child(3) { background: #27C93F; }
-.m-url { background: #fff; font-size: 11px; padding: 4px 20px; border-radius: 50px; color: #94A3B8; font-family: monospace; }
-
-.m-body {
-    position: relative;
-    height: 400px;
-    background: #E2E8F0;
+.karya-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(1, 61, 196, 0.1);
+    border-color: var(--tp-light); /* Hover jadi Biru Elektrik */
 }
 
-/* CROSSFADE SCREENS */
-.m-screen-item {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0; transform: scale(0.95); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
+/* Bagian Gambar/Visual Dummy */
+.k-image {
+    height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    color: #FFF; font-size: 50px;
 }
-.m-screen-item.active {
-    opacity: 1; transform: scale(1); pointer-events: auto; z-index: 2;
-}
-
-/* Isi Layar (Sementara pakai gradasi, nanti ganti gambar projectmu) */
-.m-content {
-    width: 100%; height: 100%; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; color: #fff;
-}
+/* Warna dummy untuk setiap tema */
 .bg-dev { background: linear-gradient(135deg, #0f172a, #1e293b); }
-.bg-creative { background: linear-gradient(135deg, #ec4899, #f43f5e); }
-.bg-pro { background: linear-gradient(135deg, #0284c7, #0369a1); }
-.m-content i { font-size: 60px; margin-bottom: 15px; opacity: 0.8; }
-.m-content h4 { font-family: monospace; font-size: 24px; letter-spacing: 1px; }
-.m-tag { font-size: 12px; background: rgba(255,255,255,0.1); padding: 4px 12px; border-radius: 50px; margin-top: 10px; }
+.bg-creative { background: linear-gradient(135deg, #FF6B6B, #FF8E53); }
+.bg-pro { background: linear-gradient(135deg, #013DC4, #3B82F6); }
+.bg-social { background: linear-gradient(135deg, #A855F7, #EC4899); }
 
-/* KANAN: INTERACTIVE LIST */
-.matrix-list-side { display: flex; flex-direction: column; gap: 15px; }
+/* Bagian Teks */
+.k-info {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Biar tombol demo selalu di bawah */
+}
+.k-info h3 { font-size: 20px; color: var(--tp-text-main); margin-bottom: 12px; font-weight: 800;}
+.k-info p { font-size: 14px; color: var(--tp-text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;}
 
-.matrix-list-item {
-    display: flex; gap: 20px; align-items: flex-start;
-    padding: 30px; border-radius: 20px; border: 1px solid transparent;
-    cursor: pointer; transition: var(--tp-transition);
-    position: relative; overflow: hidden;
+.btn-demo {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 10px 20px;
+    background: var(--tp-green); /* Background Lilac */
+    color: var(--tp-light); /* Teks Biru Elektrik */
+    border-radius: 8px; font-weight: 800; font-size: 14px;
+    text-align: center; justify-content: center;
+    transition: var(--tp-transition);
+}
+.karya-card:hover .btn-demo {
+    background: var(--tp-light); color: #FFF;
 }
 
-/* Status Default (Belum di-hover) */
-.matrix-list-item .list-num { font-size: 20px; font-weight: 800; color: #CBD5E1; transition: var(--tp-transition); }
-.matrix-list-item h3 { font-size: 22px; font-weight: 800; color: var(--tp-darkest); margin-bottom: 8px; transition: var(--tp-transition); }
-.matrix-list-item p { font-size: 14px; color: #64748B; margin-bottom: 15px; line-height: 1.6; }
-.demo-link { font-size: 13px; font-weight: 700; color: var(--tp-green); text-decoration: underline; opacity: 0; transform: translateY(10px); transition: all 0.3s ease; }
-.list-arrow { font-size: 24px; color: #CBD5E1; transition: var(--tp-transition); margin-top: 5px; }
-
-/* Status Active / Hover */
-.matrix-list-item:hover, .matrix-list-item.active {
-    background: #fff; border-color: rgba(5, 150, 105, 0.2);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+/* =========================================
+   TOMBOL NAVIGASI CAROUSEL
+   ========================================= */
+.carousel-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid var(--tp-border);
+    color: var(--tp-light); /* Biru Elektrik */
+    font-size: 24px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(1, 61, 196, 0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
 }
-.matrix-list-item:hover .list-num, .matrix-list-item.active .list-num { color: var(--tp-green); }
-.matrix-list-item:hover .list-arrow, .matrix-list-item.active .list-arrow { color: var(--tp-green); transform: translateX(5px); }
-.matrix-list-item:hover .demo-link, .matrix-list-item.active .demo-link { opacity: 1; transform: translateY(0); }
+.carousel-btn:hover { background: var(--tp-light); color: #FFF; }
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-    .showcase-matrix { grid-template-columns: 1fr; }
-    .matrix-monitor { margin-bottom: 20px; }
+    .karya-slide { 
+        flex: 0 0 50%; /* 2 Kartu di Tablet */
+        max-width: 50%; 
+    } 
+}
+@media (max-width: 768px) {
+    .karya-slide { 
+        flex: 0 0 100%; /* 1 Kartu full di HP */
+        max-width: 100%;
+        padding: 0; /* Hilangkan padding kanan kiri biar full di HP */
+    } 
+    .carousel-container { padding: 0 35px; } /* Space tombol HP */
+    .prev-btn { left: 0px; } .next-btn { right: 0px; }
 }

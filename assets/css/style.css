@@ -1,15 +1,17 @@
 :root {
-    /* PALET WARNA HIJAU */
-    --tp-darkest: #011E17;     /* Ijo sangat tua (Background) */
-    --tp-dark: #022C22;        /* Ijo Tua (Card/Elevated) */
-    --tp-green: #059669;       /* Ijo Medium (Primary Button/Accent) */
-    --tp-light: #34D399;       /* Ijo Muda (Highlight/Glow) */
+    /* PALET WARNA LILAC DOMINAN (#E2D3F4 & #013DC4) */
+    --tp-darkest: #FDFBFF;     /* Background Utama (Putih dengan hint Lilac super tipis) */
+    --tp-dark: #FFFFFF;        /* Background Card (Putih Bersih) */
     
-    --tp-text-main: #ECFDF5;   /* Putih kehijauan */
-    --tp-text-muted: #A7F3D0;  /* Ijo pudar untuk teks sekunder */
-    --tp-border: rgba(52, 211, 153, 0.15); /* Border ijo transparan */
+    /* VARIABEL DIBALIK */
+    --tp-green: #E2D3F4;       /* Lilac Pastel (Warna Dominan / Tombol / Aksen Background) */
+    --tp-light: #013DC4;       /* Biru Elektrik (Warna Aksen / Hover / Teks Penting) */
     
-    --tp-transition: all 0.3s ease;
+    --tp-text-main: #0B1333;   /* Biru Gelap Pekat (Teks utama) */
+    --tp-text-muted: #646E97;  /* Abu-abu kebiruan (Teks sekunder) */
+    --tp-border: rgba(226, 211, 244, 0.8); /* Border transparan Lilac */
+    
+    --tp-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +32,7 @@ a { text-decoration: none; transition: var(--tp-transition); }
 .header {
     position: fixed; top: 0; left: 0; width: 100%;
     padding: 20px 0;
-    background: rgba(1, 30, 23, 0.85); /* Ijo transparan */
+    background: rgba(253, 251, 255, 0.85); 
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--tp-border);
     z-index: 1000;
@@ -39,19 +41,29 @@ a { text-decoration: none; transition: var(--tp-transition); }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 
 .logo { font-size: 24px; font-weight: 800; color: var(--tp-text-main); }
-.logo span { color: var(--tp-light); }
+/* Titik pada logo pakai Biru Elektrik */
+.logo span { color: var(--tp-light); } 
 
 .navbar { display: flex; align-items: center; gap: 32px; }
-.nav-link { font-size: 15px; font-weight: 500; color: var(--tp-text-muted); }
+.nav-link { font-size: 15px; font-weight: 600; color: var(--tp-text-muted); transition: var(--tp-transition); }
 .nav-link:hover, .nav-link.active { color: var(--tp-light); }
 
+/* TOMBOL CALL TO ACTION NAV */
 .btn-cta-nav {
     padding: 10px 24px;
-    background: var(--tp-green);
-    color: #fff !important;
-    border-radius: 8px; font-weight: 600; font-size: 14px;
+    background: var(--tp-green); /* Background Lilac */
+    color: var(--tp-light) !important; /* Teks Biru Elektrik */
+    border-radius: 8px; font-weight: 800; font-size: 14px;
+    box-shadow: 0 4px 15px rgba(226, 211, 244, 0.6);
+    transition: var(--tp-transition);
 }
-.btn-cta-nav:hover { background: var(--tp-light); color: var(--tp-darkest) !important; }
+
+.btn-cta-nav:hover { 
+    background: var(--tp-light); /* Hover jadi Biru Elektrik */
+    color: #FFFFFF !important; /* Teks jadi putih */
+    box-shadow: 0 6px 20px rgba(1, 61, 196, 0.25);
+    transform: translateY(-2px); 
+}
 
 .menu-icon { display: none; font-size: 28px; color: var(--tp-text-main); cursor: pointer; }
 

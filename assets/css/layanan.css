@@ -1,23 +1,22 @@
 /* =========================================
-   SECTION LAYANAN (GRADASI IJO TUA -> MEDIUM)
+   SECTION LAYANAN (LIGHT MODE - LILAC & BLUE)
    ========================================= */
 .tp-layanan {
     position: relative;
     padding: 100px 0;
-    /* Transisi Mulus: Mulai dari Ijo Paling Gelap (Hero) ke Ijo Medium */
-    background: linear-gradient(180deg, var(--tp-darkest) 0%, #024D38 100%);
+    /* Transisi Mulus: Dari ujung hero (Lilac pudar) kembali ke putih bersih */
+    background: linear-gradient(180deg, #F5F1FB 0%, #FFFFFF 100%);
     overflow: hidden;
     z-index: 1;
 }
 
-/* Pattern kotak-kotak tipis di background */
+/* Pattern kotak-kotak tipis di background (Warna gelap transparan untuk Light Mode) */
 .layanan-bg-pattern {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(1, 61, 196, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(1, 61, 196, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
     z-index: -1;
-    opacity: 0.5;
 }
 
 /* HEADER SECTION GENERAL */
@@ -29,37 +28,42 @@
 
 .tp-section-badge {
     display: inline-flex; align-items: center; gap: 8px;
-    padding: 6px 16px; background: rgba(52, 211, 153, 0.1);
-    color: var(--tp-light); border: 1px solid var(--tp-border);
-    border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 20px;
+    padding: 6px 16px; 
+    background: var(--tp-green); /* Lilac Pastel */
+    color: var(--tp-light); /* Biru Elektrik */
+    border: 1px solid var(--tp-border);
+    border-radius: 50px; font-size: 13px; font-weight: 800; margin-bottom: 20px;
 }
 
 .section-header h2 {
     font-size: 42px; line-height: 1.2; font-weight: 800; margin-bottom: 20px; color: var(--tp-text-main);
 }
-.section-header h2 span { color: var(--tp-light); }
+.section-header h2 span { color: var(--tp-light); } /* Highlight Biru Elektrik */
 .section-header p { font-size: 16px; color: var(--tp-text-muted); }
 
 /* GRID LAYANAN (KOTAK-KOTAK) */
 .layanan-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar besar */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
 }
 
 /* KARTU LAYANAN (WITH MOUSE GLOW) */
 .layanan-card {
-    background: rgba(2, 44, 34, 0.6); /* Transparan biar gradasi di belakang tembus */
-    border: 1px solid var(--tp-border);
+    background: #FFFFFF; /* Putih bersih */
+    border: 1px solid rgba(226, 211, 244, 0.8); /* Border Lilac tipis */
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     cursor: default;
-    transition: transform 0.3s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.03); /* Shadow super halus */
 }
 
 .layanan-card:hover {
     transform: translateY(-5px);
+    border-color: var(--tp-light); /* Border berubah Biru Elektrik saat dihover */
+    box-shadow: 0 15px 40px rgba(1, 61, 196, 0.08);
 }
 
 .card-content {
@@ -71,26 +75,35 @@
 /* Icon Style */
 .layanan-icon {
     width: 60px; height: 60px;
-    background: linear-gradient(135deg, rgba(5, 150, 105, 0.2), rgba(52, 211, 153, 0.1));
-    border: 1px solid rgba(52, 211, 153, 0.2);
+    background: rgba(226, 211, 244, 0.5); /* Lilac transparan */
+    border: 1px solid var(--tp-border);
     border-radius: 16px;
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 24px;
+    transition: all 0.3s ease;
 }
-.layanan-icon i { font-size: 32px; color: var(--tp-light); }
+.layanan-icon i { font-size: 32px; color: var(--tp-light); /* Icon Biru Elektrik */ }
+
+.layanan-card:hover .layanan-icon {
+    background: var(--tp-light);
+}
+.layanan-card:hover .layanan-icon i {
+    color: #FFFFFF; /* Icon berubah putih saat card dihover */
+}
 
 /* Text Content */
-.card-content h3 { font-size: 22px; font-weight: 700; color: var(--tp-text-main); margin-bottom: 12px; }
-.card-content p { font-size: 15px; color: var(--tp-text-muted); line-height: 1.7; }
+.card-content h3 { font-size: 22px; font-weight: 800; color: var(--tp-text-main); margin-bottom: 12px; }
+.card-content p { font-size: 15px; color: var(--tp-text-muted); line-height: 1.7; font-weight: 500; }
 
 /* EFEK SENTER/GLOW DARI JS */
 .card-glow {
     position: absolute;
     width: 300px; height: 300px;
-    background: radial-gradient(circle, rgba(52, 211, 153, 0.15) 0%, rgba(0,0,0,0) 70%);
+    /* Glow warna Lilac tipis */
+    background: radial-gradient(circle, rgba(226, 211, 244, 0.5) 0%, rgba(0,0,0,0) 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* Biar gak ganggu klik */
+    pointer-events: none; 
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -99,6 +112,6 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .layanan-grid { grid-template-columns: 1fr; /* Jadi 1 kolom di HP */ }
+    .layanan-grid { grid-template-columns: 1fr; }
     .section-header h2 { font-size: 32px; }
 }

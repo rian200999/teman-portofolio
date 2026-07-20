@@ -14,12 +14,12 @@ window.initHeroLogic = function() {
             const centerX = rect.width / 2; // Titik tengah X
             const centerY = rect.height / 2; // Titik tengah Y
             
-            // Hitung rotasi berdasarkan jarak dari tengah (Maks 10 derajat)
-            const rotateX = ((y - centerY) / centerY) * -10; 
-            const rotateY = ((x - centerX) / centerX) * 10;
+            // Hitung rotasi (Diperhalus menjadi maks 6 derajat untuk kesan premium)
+            const rotateX = ((y - centerY) / centerY) * -6; 
+            const rotateY = ((x - centerX) / centerX) * 6;
             
-            // Terapkan kemiringan dan sedikit pembesaran
-            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+            // Terapkan kemiringan dan sedikit pembesaran (1.02)
+            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
         });
         
         el.addEventListener('mouseleave', () => {

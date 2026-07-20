@@ -1,126 +1,286 @@
 /* =========================================
-   SECTION HARGA (DARK TECH PASS DESIGN)
+   SECTION HARGA (PRD 3 PAKET - CLEAN NAVY)
    ========================================= */
 .tp-harga {
-    padding: 120px 0;
-    /* Gradasi dari Mint Terang ke Putih Bersih (Tetap dipertahankan) */
-    background: linear-gradient(180deg, #ECFDF5 0%, #FFFFFF 100%);
+    padding: 50px 0 120px;
+    background: #FDFBFF;
+    /* Nyambung dari background Alur */
     position: relative;
-    margin-top: -1px;
 }
 
-.tp-harga .text-dark { color: var(--tp-darkest); }
-.tp-harga .text-dark span { 
-    color: #fff; background: var(--tp-darkest);
-    padding: 2px 12px; border-radius: 8px; display: inline-block; margin-top: 10px;
+.tp-harga .text-dark {
+    color: var(--tp-text-main);
 }
-.tp-harga .text-dark-muted { color: rgba(1, 30, 23, 0.7); font-weight: 500; }
 
-/* GRID BARU */
-.harga-grid-dark {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    max-width: 900px;
+.tp-harga .text-dark span {
+    color: var(--tp-light);
+    background: rgba(226, 211, 244, 0.4);
+    padding: 4px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.tp-harga .text-dark-muted {
+    color: var(--tp-text-muted);
+    font-weight: 500;
+}
+
+/* GRID 3 KOLOM HARGA */
+.harga-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
     margin: 60px auto 0;
 }
 
-/* TECH PASS CARD (KARTU GELAP) */
-.tech-pass-card {
-    background: #011E17; /* Ijo Gelap Pekat */
-    border: 1px solid rgba(52, 211, 153, 0.2);
+/* KARTU HARGA (CLEAN NO GLOW) */
+.prd-pass-card {
+    background: #0B1333;
+    /* Biru Navy Gelap */
+    border: 1px solid rgba(226, 211, 244, 0.2);
     border-radius: 24px;
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     position: relative;
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    transition: var(--tp-transition);
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.tech-pass-card:hover {
-    transform: translateY(-10px);
+.prd-pass-card:hover {
+    transform: translateY(-8px);
     border-color: var(--tp-light);
-    box-shadow: 0 30px 60px rgba(5, 150, 105, 0.2);
+    /* Cukup hover ganti border aja, gak usah glow */
 }
 
-/* KARTU PRO (EFEK GLOW) */
+/* KARTU PRO/PREMIUM (Tengah) */
 .pro-pass {
-    border: 1px solid var(--tp-green);
-    transform: scale(1.05);
-    z-index: 2;
+    border: 2px solid var(--tp-light);
+    transform: scale(1.02);
 }
-.pro-pass:hover { transform: scale(1.05) translateY(-10px); }
 
-.pro-glow {
-    position: absolute; top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background: radial-gradient(circle, rgba(52, 211, 153, 0.1) 0%, rgba(0,0,0,0) 50%);
-    pointer-events: none; z-index: 0;
+.pro-pass:hover {
+    transform: scale(1.02) translateY(-8px);
 }
 
 .popular-tag {
-    position: absolute; top: 20px; right: -35px;
-    background: var(--tp-light); color: var(--tp-darkest);
-    padding: 6px 40px; font-size: 12px; font-weight: 800;
-    transform: rotate(45deg); z-index: 1;
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--tp-green);
+    /* Lilac */
+    color: var(--tp-light);
+    /* Biru Elektrik */
+    padding: 4px 40px;
+    font-size: 12px;
+    font-weight: 800;
+    transform: rotate(45deg);
+    z-index: 1;
 }
 
-/* HEADER & CHIP */
-.pass-header { padding: 40px 30px 20px; text-align: center; position: relative; z-index: 1; }
-.pass-chip { 
-    width: 40px; height: 40px; background: rgba(255,255,255,0.05); 
-    border-radius: 10px; display: flex; align-items: center; justify-content: center;
-    font-size: 24px; color: #94A3B8; margin: 0 auto 20px; border: 1px solid rgba(255,255,255,0.1);
+/* HEADER & SKEMA DP */
+.pass-header {
+    padding: 30px 25px 15px;
+    text-align: center;
 }
-.pro-chip { background: rgba(52, 211, 153, 0.1); color: var(--tp-light); border-color: rgba(52, 211, 153, 0.3); }
 
-.pass-header h3 { font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 8px; }
-.pass-header p { font-size: 14px; color: rgba(255,255,255,0.6); margin: 0; }
+.pass-header h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 5px;
+}
 
-/* HARGA */
-.pass-price { display: flex; justify-content: center; align-items: baseline; color: var(--tp-light); padding-bottom: 20px; position: relative; z-index: 1; }
-.pass-price .currency { font-size: 20px; font-weight: 700; margin-right: 4px; }
-.pass-price .amount { font-size: 56px; font-weight: 900; line-height: 1; letter-spacing: -2px; color: #fff; }
-.pass-price .suffix { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.5); margin-left: 5px; }
+.pass-header h3 span {
+    font-size: 14px;
+    color: var(--tp-green);
+    font-weight: 600;
+}
 
-/* PEMISAH PUTUS-PUTUS ALA TIKET */
+.pass-header p {
+    font-size: 13px;
+    color: rgba(226, 211, 244, 0.7);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.pass-price {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--tp-light);
+    padding-bottom: 10px;
+}
+
+.pass-price .currency {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 4px;
+    color: var(--tp-green);
+}
+
+.pass-price .amount {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #fff;
+}
+
+.pass-price .suffix {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--tp-green);
+    margin-left: 5px;
+}
+
+/* KOTAK INFO DP */
+.pass-skema {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0 25px 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed rgba(226, 211, 244, 0.3);
+    text-align: center;
+    font-size: 13px;
+    color: #E2D3F4;
+    font-weight: 600;
+}
+
+.pass-skema span {
+    color: #FFF;
+    background: rgba(1, 61, 196, 0.5);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* PEMISAH PUTUS-PUTUS */
 .pass-divider {
-    width: 100%; height: 1px;
-    background: repeating-linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.2) 5px, transparent 5px, transparent 10px);
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, rgba(226, 211, 244, 0.2), rgba(226, 211, 244, 0.2) 5px, transparent 5px, transparent 10px);
     position: relative;
 }
-.pass-divider::before, .pass-divider::after {
-    content: ''; position: absolute; top: -10px; width: 20px; height: 20px;
-    background: #fff; /* Sama dengan warna bg section */
+
+.pass-divider::before,
+.pass-divider::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: #FDFBFF;
+    /* Bolongan disamakan warna background Section Harga */
     border-radius: 50%;
 }
-.pass-divider::before { left: -10px; }
-.pass-divider::after { right: -10px; }
 
-/* BODY & FITUR */
-.pass-body { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; position: relative; z-index: 1; }
-.pass-features { list-style: none; padding: 0; margin-bottom: 40px; flex-grow: 1; }
-.pass-features li { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 15px; color: #E2E8F0; font-weight: 500; }
-.pass-features li i { font-size: 20px; color: var(--tp-light); }
-.pass-features li.disabled { color: #64748B; text-decoration: line-through; opacity: 0.6; }
-.pass-features li.disabled i { color: #475569; }
-
-/* TOMBOL KARTU GELAP */
-.btn-pass-outline, .btn-pass-primary {
-    width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
-    padding: 16px; border-radius: 12px; font-weight: 700; font-size: 15px; transition: all 0.3s ease;
+.pass-divider::before {
+    left: -10px;
 }
-.btn-pass-outline { border: 1px solid rgba(255,255,255,0.2); color: #fff; background: transparent; }
-.btn-pass-outline:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
 
-.btn-pass-primary { background: var(--tp-light); color: var(--tp-darkest) !important; }
-.btn-pass-primary:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(52, 211, 153, 0.2); }
+.pass-divider::after {
+    right: -10px;
+}
+
+/* BODY FITUR */
+.pass-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.pass-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.pass-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #E2E8F0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.pass-features li i {
+    font-size: 18px;
+    color: var(--tp-light);
+    margin-top: 2px;
+}
+
+.pass-features li small {
+    display: block;
+    color: rgba(226, 211, 244, 0.6);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* TOMBOL KARTU */
+.btn-pass-outline,
+.btn-pass-primary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-pass-outline {
+    border: 1px solid rgba(226, 211, 244, 0.3);
+    color: var(--tp-green);
+    background: transparent;
+}
+
+.btn-pass-outline:hover {
+    border-color: var(--tp-green);
+    background: rgba(226, 211, 244, 0.05);
+}
+
+.btn-pass-primary {
+    background: var(--tp-green);
+    color: var(--tp-light) !important;
+    font-weight: 800;
+    border: none;
+}
+
+.btn-pass-primary:hover {
+    background: var(--tp-light);
+    color: #fff !important;
+}
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-    .harga-grid-dark { flex-direction: column; align-items: center; gap: 50px; }
-    .pro-pass { transform: scale(1); }
-    .pro-pass:hover { transform: translateY(-10px); }
+    .harga-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+
+    .pro-pass {
+        transform: scale(1);
+    }
+
+    .pro-pass:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .harga-grid-3 {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 40px;
+    }
 }

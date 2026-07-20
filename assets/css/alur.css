@@ -1,0 +1,121 @@
+/* =========================================
+   SECTION ALUR PEMESANAN (KOTAK-KOTAK)
+   ========================================= */
+.tp-alur {
+    padding: 100px 0;
+    /* Transisi dari putih (karya) ke Lilac super pudar */
+    background: linear-gradient(180deg, #FFFFFF 0%, #FDFBFF 100%);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Pattern kotak-kotak tipis di background */
+.alur-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(1, 61, 196, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 61, 196, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+}
+
+.tp-alur .text-dark {
+    color: var(--tp-text-main);
+}
+
+.tp-alur .text-dark span {
+    color: var(--tp-light);
+    background: rgba(226, 211, 244, 0.4);
+    padding: 4px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.tp-alur .text-dark-muted {
+    color: var(--tp-text-muted);
+    font-weight: 500;
+}
+
+.alur-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.alur-card {
+    background: #FFFFFF;
+    /* Dibikin putih bersih biar kontras sama background lilac pudar */
+    border: 1px solid rgba(226, 211, 244, 0.6);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.alur-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--tp-light);
+}
+
+.alur-num {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tp-green);
+    /* Lilac */
+    color: var(--tp-light);
+    /* Biru Elektrik */
+    font-weight: 800;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 2px solid #FFFFFF;
+}
+
+.alur-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(1, 61, 196, 0.05);
+    color: var(--tp-light);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 20px auto 15px;
+}
+
+.alur-card h3 {
+    font-size: 18px;
+    color: var(--tp-text-main);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.alur-card p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+}
+
+/* RESPONSIVE ALUR */
+@media (max-width: 992px) {
+    .alur-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .alur-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,28 +1,28 @@
 /* =========================================
-   SECTION TENTANG (SEAMLESS TRANSITION)
+   SECTION TENTANG (LIGHT MODE LILAC)
    ========================================= */
 .tp-about-modern {
     position: relative;
     padding: 150px 0;
-    
-    /* FIXED GRADIENT: 
-       Mulai dari #024D38 (Warna akhir section Layanan)
-       Turun ke #10B981 (Ijo Muda Emerald)
+
+    /* GRADASI TERANG: 
+       Menyambung dari #FFFFFF (Layanan) turun ke Lilac super pudar
     */
-    background: linear-gradient(180deg, #024D38 0%, #10B981 100%);
-    
+    background: linear-gradient(180deg, #FFFFFF 0%, #FDFBFF 100%);
     overflow: hidden;
-    margin-top: -1px; /* Trik biar gak ada celah pixel antar section */
+    margin-top: -1px;
 }
 
-/* Watermark Text Background */
+/* Watermark Text Background (Diubah jadi abu-abu super pudar) */
 .about-watermark {
     position: absolute;
-    top: 50%; left: 5%;
+    top: 50%;
+    left: 5%;
     transform: translateY(-50%);
     font-size: 250px;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.03); /* Tipis banget biar estetik */
+    color: rgba(1, 61, 196, 0.02);
+    /* Biru elektrik transparansi 2% */
     z-index: 0;
     pointer-events: none;
     user-select: none;
@@ -30,7 +30,7 @@
 
 .about-flex {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr; 
+    grid-template-columns: 0.8fr 1.2fr;
     gap: 80px;
     align-items: center;
     position: relative;
@@ -43,10 +43,12 @@
 }
 
 .tech-card {
-    background: #011E17; /* Tetap gelap biar code-nya kebaca */
-    border: 1px solid rgba(52, 211, 153, 0.2);
+    background: var(--tp-text-main);
+    /* Background card Biru Gelap Pekat */
+    border: 1px solid rgba(226, 211, 244, 0.3);
     border-radius: 20px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    box-shadow: 0 30px 60px rgba(1, 61, 196, 0.15);
+    /* Shadow biru */
     overflow: hidden;
     transform: rotate(-3deg);
     transition: var(--tp-transition);
@@ -55,107 +57,200 @@
 .tech-card:hover {
     transform: rotate(0deg) scale(1.05);
     border-color: var(--tp-light);
+    /* Hover jadi Biru Elektrik */
+    box-shadow: 0 40px 80px rgba(1, 61, 196, 0.25);
 }
 
 .card-header-tp {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 14px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.circles { display: flex; gap: 6px; }
-.circles span { width: 10px; height: 10px; border-radius: 50%; }
-.c-red { background: #FF5F56; }
-.c-yellow { background: #FFBD2E; }
-.c-green { background: #27C93F; }
+.circles {
+    display: flex;
+    gap: 6px;
+}
 
-.file-name { font-size: 12px; font-family: monospace; color: var(--tp-text-muted); opacity: 0.7; }
+.circles span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
 
-.card-code-body { padding: 40px 30px; font-family: 'JetBrains Mono', monospace; font-size: 15px; line-height: 1.6; }
-.code-key { color: var(--tp-light); }
-.code-val { color: #FBBF24; }
+.c-red {
+    background: #FF5F56;
+}
 
-/* Floating Vercel Icon */
+.c-yellow {
+    background: #FFBD2E;
+}
+
+.c-green {
+    background: #27C93F;
+}
+
+.file-name {
+    font-size: 12px;
+    font-family: monospace;
+    color: #A0ABC0;
+    opacity: 0.7;
+}
+
+.card-code-body {
+    padding: 40px 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.code-key {
+    color: var(--tp-green);
+}
+
+/* Warna Lilac untuk kunci JSON */
+.code-val {
+    color: #F59E0B;
+}
+
+/* Warna Kuning Emas untuk value */
+
+/* Floating Paper Plane Icon */
 .vercel-float {
     position: absolute;
-    bottom: -30px; right: -20px;
-    width: 70px; height: 70px;
-    background: #fff; color: #000;
+    bottom: -30px;
+    right: -20px;
+    width: 70px;
+    height: 70px;
+    background: var(--tp-light);
+    /* Biru Elektrik */
+    color: #FFFFFF;
     border-radius: 15px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 35px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.4);
     animation: floatAnim 4s ease-in-out infinite;
 }
 
 /* TEXT SIDE */
-.about-label {
-    font-family: monospace; 
-    color: var(--tp-darkest);
-    background: rgba(255,255,255,0.2);
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-weight: 700; 
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
 .about-text-side h2 {
-    font-size: 48px; line-height: 1.1; font-weight: 800; margin-bottom: 30px; color: #fff;
+    font-size: 44px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: var(--tp-text-main);
+    /* Teks Gelap */
 }
 
 .about-text-side h2 span {
-    color: var(--tp-darkest);
-    border-bottom: 4px solid var(--tp-darkest);
+    color: var(--tp-light);
+    /* Highlight Biru Elektrik */
+    border-bottom: 4px solid var(--tp-green);
+    /* Garis bawah Lilac */
 }
 
-.story-box { 
-    border-left: 4px solid var(--tp-darkest); 
-    padding-left: 30px; 
-    margin-bottom: 45px; 
+.story-box {
+    border-left: 4px solid var(--tp-light);
+    /* Garis Biru Elektrik */
+    padding-left: 30px;
+    margin-bottom: 45px;
 }
-.story-box p { font-size: 19px; color: #fff; margin-bottom: 20px; line-height: 1.8; font-weight: 500; }
 
-.about-features-minimal { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.f-item { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--tp-darkest); font-size: 15px; }
-.f-item i { font-size: 24px; color: #fff; background: var(--tp-darkest); padding: 5px; border-radius: 50%; }
+.story-box p {
+    font-size: 17px;
+    color: var(--tp-text-muted);
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.about-features-minimal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.f-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    font-size: 16px;
+}
+
+.f-item i {
+    font-size: 24px;
+    color: var(--tp-light);
+    background: var(--tp-green);
+    /* Background Lilac */
+    padding: 6px;
+    border-radius: 50%;
+}
 
 /* ANIMATION */
 @keyframes floatAnim {
-    0%, 100% { transform: translateY(0) rotate(5deg); }
-    50% { transform: translateY(-20px) rotate(-5deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(-5deg);
+    }
+}
+
+/* BADGE ADAPTASI LILAC */
+.tp-section-badge.badge-lilac {
+    background: var(--tp-green);
+    /* Background Lilac */
+    color: var(--tp-light);
+    /* Teks Biru Elektrik */
+    border: 1px solid var(--tp-border);
+    margin-bottom: 20px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-    .about-flex { grid-template-columns: 1fr; gap: 80px; text-align: center; }
-    .about-visual-side { order: 2; margin-top: 40px; }
-    .about-text-side { order: 1; }
-    .story-box { border-left: none; padding-left: 0; }
-    .about-features-minimal { justify-items: center; grid-template-columns: 1fr; }
-}
+    .about-flex {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
 
-/* BADGE ADAPTASI WARNA (Bentuk ngikutin Layanan) */
-.tp-section-badge.badge-dark {
-    background: rgba(1, 30, 23, 0.4); /* Background gelap transparan */
-    color: #fff; /* Teks putih biar terang */
-    border-color: rgba(255, 255, 255, 0.2);
-    margin-bottom: 20px;
-}
+    .about-visual-side {
+        order: 2;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
 
-.tp-section-badge.badge-dark i {
-    color: #FBBF24; /* Ikon kuning/emas biar standout */
-}
+    .about-text-side {
+        order: 1;
+    }
 
-/* Penyesuaian jarak biar rapi */
-.about-text-side h2 {
-    font-size: 48px; line-height: 1.1; font-weight: 800; margin-bottom: 30px; color: #fff;
-}
+    .story-box {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
 
-.about-text-side h2 span {
-    color: var(--tp-darkest);
-    border-bottom: 4px solid var(--tp-darkest);
+    .about-features-minimal {
+        justify-items: center;
+        grid-template-columns: 1fr;
+    }
+
+    .about-text-side h2 {
+        font-size: 34px;
+    }
+
+    .card-code-body {
+        padding: 30px 20px;
+        font-size: 13px;
+    }
 }
