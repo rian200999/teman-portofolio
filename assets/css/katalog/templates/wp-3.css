@@ -1,0 +1,9 @@
+.wp3-container{font-family:'Georgia',serif; height:100%; min-height:400px; display:flex; flex-direction:column;}
+.wp3-tabs{display:flex; border-bottom:1px solid rgba(128,128,128,0.2); font-family:sans-serif;}
+.wp3-tab{padding:15px; font-size:10px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; cursor:pointer; opacity:0.5;}
+.wp3-tab.active{opacity:1; background:var(--t-surface); border-top:2px solid var(--t-accent);}
+.wp3-body{padding:40px 30px; flex-grow:1; background:var(--t-surface);}
+.wp3-h2{font-size:24px; margin-bottom:15px; font-style:italic; color:var(--t-accent);}
+.wp3-p{font-size:12px; line-height:1.8; opacity:0.8; margin-bottom:25px;}
+.wp3-btn{background:transparent; border:1px solid var(--t-text); font-family:sans-serif; font-size:9px; font-weight:bold; text-transform:uppercase; padding:10px 20px; cursor:pointer;}
+.wp3-btn:hover{background:var(--t-text); color:var(--t-bg);}

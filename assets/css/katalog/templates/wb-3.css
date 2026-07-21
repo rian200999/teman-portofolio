@@ -1,0 +1,6 @@
+.wb3-container{padding:20px; font-family:'Times New Roman', Times, serif;}
+.wb3-header{text-align:center; border-bottom:3px solid var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.wb3-header h1{font-size:18px; font-weight:900; letter-spacing:1px; font-family:sans-serif;}
+.wb3-h2{font-size:22px; font-style:italic; text-align:center; margin-bottom:20px; color:var(--t-accent);}
+.wb3-columns{column-count:2; column-gap:20px; font-size:10px; line-height:1.6; text-align:justify; opacity:0.9;}
+.wb3-columns p{margin-bottom:15px;}

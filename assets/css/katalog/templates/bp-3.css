@@ -1,0 +1,7 @@
+.bp3-container{padding:30px; font-family:'Helvetica Neue', sans-serif;}
+.bp3-head{font-size:9px; font-weight:bold; letter-spacing:4px; border-bottom:1px solid var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.bp3-main-img{height:180px; background:var(--t-surface); margin-bottom:20px; filter:grayscale(100%); transition:0.4s;}
+.bp3-main-img:hover{filter:grayscale(0%);}
+.bp3-info h2{font-size:24px; font-family:'Georgia',serif; margin-bottom:10px;}
+.bp3-info p{font-size:11px; line-height:1.6; opacity:0.8; margin-bottom:20px;}
+.bp3-link{font-size:10px; font-weight:bold; text-transform:uppercase; display:inline-block; border-bottom:2px solid var(--t-accent); padding-bottom:2px; cursor:pointer;}

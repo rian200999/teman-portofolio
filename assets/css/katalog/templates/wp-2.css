@@ -1,0 +1,8 @@
+.wp2-container{padding:30px; font-family:'Plus Jakarta Sans',sans-serif; display:flex; flex-direction:column; justify-content:center; height:100%; min-height:400px;}
+.wp2-title{font-size:18px; font-weight:900; margin-bottom:25px; color:var(--t-text);}
+.wp2-cards{display:flex; flex-direction:column; gap:15px; margin-bottom:25px;}
+.wp2-card{padding:20px; border-radius:8px; border:1px solid rgba(128,128,128,0.2); background:var(--t-surface);}
+.lbl{font-size:9px; font-weight:bold; padding:4px 8px; border-radius:4px; margin-bottom:10px; display:inline-block;}
+.bad{background:rgba(255,0,0,0.1); color:#D32F2F;} .good{background:rgba(var(--t-accent-rgb),0.1); color:var(--t-accent);}
+.wp2-card p{font-size:14px; font-family:'Georgia',serif; font-style:italic;}
+.wp2-result{font-size:12px; font-weight:bold; color:var(--t-accent); padding:15px; border-left:4px solid var(--t-accent); background:rgba(var(--t-accent-rgb),0.05);}

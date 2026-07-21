@@ -1,0 +1,8 @@
+#mockup-w-pro-wrapper:has(.wpr1-container){padding:0; background:var(--t-surface);}
+.wpr1-container{height:100%; min-height:400px; display:flex; justify-content:center; align-items:center; padding:20px; overflow-y:auto;}
+.wpr1-paper{background:var(--t-bg); padding:40px; box-shadow:0 10px 30px rgba(0,0,0,0.1); font-family:'Georgia',serif; max-width:90%; position:relative; background-image:radial-gradient(rgba(128,128,128,0.1) 1px, transparent 1px); background-size:10px 10px;}
+.wpr1-h1{font-size:24px; font-weight:normal; text-align:center; margin-bottom:30px; letter-spacing:2px; text-transform:uppercase; color:var(--t-accent);}
+.wpr1-dropcap{font-size:12px; line-height:1.8; margin-bottom:15px; text-align:justify;}
+.wpr1-dropcap::first-letter{font-size:48px; float:left; line-height:0.8; padding-right:8px; color:var(--t-accent); font-weight:bold;}
+.wpr1-p{font-size:12px; line-height:1.8; text-align:justify; margin-bottom:40px;}
+.wpr1-sign{font-family:'Brush Script MT', cursive; font-size:24px; color:var(--t-accent); text-align:right;}

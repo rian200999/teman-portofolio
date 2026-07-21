@@ -1,0 +1,12 @@
+.sb1-container{padding:30px; font-family:'Merriweather', serif;}
+.sb1-header{border-bottom:2px solid var(--t-accent); padding-bottom:15px; margin-bottom:20px; text-align:center;}
+.sb1-name{font-size:24px; font-weight:700; color:var(--t-accent); margin-bottom:5px;}
+.sb1-title{font-size:11px; font-style:italic; opacity:0.8;}
+.sb1-body{display:flex; gap:20px;}
+.sb1-sidebar{width:30%; border-right:1px solid rgba(128,128,128,0.2); padding-right:15px;}
+.sb1-main{width:70%;}
+.sb1-h3{font-size:12px; font-weight:700; text-transform:uppercase; color:var(--t-accent); margin-bottom:10px; font-family:'Plus Jakarta Sans', sans-serif;}
+.sb1-item{font-size:10px; margin-bottom:15px; line-height:1.5;}
+.sb1-sidebar p{font-size:10px; font-family:sans-serif;}
+.sb1-pubs{padding-left:15px; font-size:10px; line-height:1.6;}
+.sb1-pubs li{margin-bottom:15px; text-align:justify;}

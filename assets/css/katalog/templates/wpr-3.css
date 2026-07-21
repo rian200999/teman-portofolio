@@ -1,0 +1,10 @@
+#mockup-w-pro-wrapper:has(.wpr3-container){padding:0;}
+.wpr3-container{height:100%; min-height:400px; display:flex; flex-direction:column; font-family:monospace; background:var(--t-surface); color:var(--t-text);}
+.wpr3-bar{background:var(--t-text); color:var(--t-bg); padding:5px 15px; font-size:10px; display:flex; justify-content:space-between; font-weight:bold;}
+.wpr3-desktop{padding:20px; position:relative; flex-grow:1;}
+.wpr3-folder{display:inline-flex; flex-direction:column; align-items:center; margin-bottom:20px; margin-right:20px; cursor:pointer;}
+.wpr3-folder i{font-size:40px; color:var(--t-accent);}
+.wpr3-folder span{font-size:10px; font-family:sans-serif; margin-top:5px;}
+.wpr3-window{position:absolute; top:40px; left:80px; width:250px; background:var(--t-bg); border:2px solid var(--t-text); box-shadow:5px 5px 0 var(--t-text);}
+.wpr3-win-head{background:var(--t-text); color:var(--t-bg); padding:5px; text-align:center; font-size:10px; font-weight:bold;}
+.wpr3-win-body{padding:15px; font-size:11px; line-height:1.5;}

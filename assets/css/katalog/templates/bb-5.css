@@ -1,0 +1,9 @@
+.bb5-container{padding:20px; font-family:'Plus Jakarta Sans',sans-serif; display:flex; flex-direction:column; gap:10px;}
+.bb5-block{border:3px solid var(--t-text); padding:20px; background:var(--t-bg);}
+.bb5-block.head{display:flex; justify-content:space-between; align-items:center; background:var(--t-text); color:var(--t-bg);}
+.bb5-block.head h1{font-size:28px; font-weight:900; margin:0;}
+.bb5-block.head span{font-size:10px; font-weight:bold; letter-spacing:2px;}
+.bb5-block p{font-size:12px; font-weight:600; line-height:1.5;}
+.bb5-block.accent{border-color:var(--t-accent); background:rgba(var(--t-accent-rgb),0.05);}
+.bb5-block.accent h2{font-size:16px; color:var(--t-accent); margin-bottom:10px;}
+.bb5-block.accent ul{padding-left:15px; font-size:11px;} .bb5-block.accent li{margin-bottom:5px;}

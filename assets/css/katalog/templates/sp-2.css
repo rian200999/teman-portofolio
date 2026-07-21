@@ -1,0 +1,7 @@
+.sp2-container{padding:30px 20px; font-family:'Plus Jakarta Sans',sans-serif;}
+.sp2-title{font-size:16px; font-weight:900; color:var(--t-accent); margin-bottom:25px; display:flex; align-items:center; gap:8px;}
+.sp2-grant{display:flex; gap:15px; background:var(--t-surface); padding:15px; border-radius:8px; margin-bottom:15px; border:1px solid rgba(128,128,128,0.1); align-items:center;}
+.sp2-amount{font-size:16px; font-weight:900; color:var(--t-bg); background:var(--t-accent); padding:10px; border-radius:6px; flex-shrink:0;}
+.sp2-info h4{font-size:12px; font-weight:bold; margin-bottom:4px;}
+.sp2-info p{font-size:10px; opacity:0.8; margin-bottom:8px;}
+.sp2-role{font-size:8px; font-weight:bold; text-transform:uppercase; background:rgba(128,128,128,0.2); padding:3px 6px; border-radius:4px;}

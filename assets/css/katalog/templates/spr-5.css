@@ -1,0 +1,10 @@
+#mockup-s-pro-wrapper:has(.spr5-container){padding:0;}
+.spr5-container{padding:20px; height:100%; min-height:400px; background:var(--t-bg); color:var(--t-text); font-family:'Courier New', monospace; display:flex; flex-direction:column;}
+.spr5-header{font-size:10px; font-weight:bold; color:var(--t-accent); border-bottom:1px dashed var(--t-accent); padding-bottom:10px; margin-bottom:20px;}
+.spr5-grid{display:flex; gap:15px; flex-grow:1;}
+.spr5-main{width:70%; border:1px solid rgba(128,128,128,0.3); padding:20px; background:rgba(var(--t-accent-rgb), 0.05);}
+.spr5-main h1{font-size:32px; font-family:'Plus Jakarta Sans',sans-serif; font-weight:900; margin-bottom:20px; text-transform:uppercase;}
+.cmd{font-size:10px; line-height:1.6; opacity:0.8;}
+.spr5-side{width:30%; display:flex; flex-direction:column; gap:15px;}
+.spr5-box{background:var(--t-accent); color:var(--t-bg); padding:15px; text-align:center; font-size:10px; font-weight:bold; flex-grow:1; display:flex; flex-direction:column; justify-content:center;}
+.spr5-box b{font-size:24px; font-family:'Plus Jakarta Sans',sans-serif; margin-top:5px;}

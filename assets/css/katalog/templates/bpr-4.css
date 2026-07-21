@@ -1,0 +1,8 @@
+#mockup-b-pro-wrapper:has(.bpr4-container){padding:0;}
+.bpr4-container{height:100%; min-height:400px; display:flex; flex-direction:column; font-family:sans-serif;}
+.bpr4-map{flex-grow:1; background:var(--t-surface); position:relative;}
+.map-pin{position:absolute; width:15px; height:15px; background:var(--t-text); border-radius:50%; border:3px solid var(--t-bg); cursor:pointer;}
+.map-pin.active{background:var(--t-accent); box-shadow:0 0 0 5px rgba(var(--t-accent-rgb),0.3);}
+.bpr4-details{padding:30px; background:var(--t-bg); border-top:1px solid rgba(128,128,128,0.2);}
+.bpr4-details h2{font-size:18px; font-weight:900; margin-bottom:10px; color:var(--t-accent);}
+.bpr4-details p{font-size:11px; font-weight:bold; opacity:0.8;}

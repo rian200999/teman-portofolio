@@ -1,0 +1,10 @@
+.bb2-container{padding:20px; font-family:'Impact', 'Arial Black', sans-serif; height:100%; min-height:400px; display:flex; flex-direction:column; border:10px solid var(--t-accent);}
+.bb2-warn{background:repeating-linear-gradient(45deg, var(--t-accent), var(--t-accent) 10px, var(--t-bg) 10px, var(--t-bg) 20px); padding:10px; text-align:center; font-size:12px; letter-spacing:1px;}
+.bb2-warn span{background:var(--t-bg); color:var(--t-text); padding:2px 8px; margin-right:5px;}
+.bb2-body{padding:30px; font-family:'Plus Jakarta Sans',sans-serif;}
+.bb2-h1{font-size:28px; font-weight:900; text-transform:uppercase; margin-bottom:10px;}
+.bb2-p{font-size:12px; font-weight:bold; opacity:0.8; margin-bottom:30px;}
+.bb2-cards{display:flex; flex-direction:column; gap:15px;}
+.bb2-card{border:2px solid var(--t-accent); padding:15px; border-radius:4px;}
+.bb2-card h4{font-size:14px; font-weight:900; text-transform:uppercase; margin-bottom:5px; color:var(--t-accent);}
+.bb2-card p{font-size:11px;}

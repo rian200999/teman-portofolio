@@ -1,0 +1,9 @@
+.bp1-container{padding:20px; font-family:sans-serif; background:var(--t-surface); min-height:450px;}
+.bp1-nav{font-size:14px; font-weight:900; display:flex; align-items:center; gap:8px; margin-bottom:20px; border-bottom:2px solid var(--t-accent); padding-bottom:10px;}
+.bp1-stats{display:flex; gap:10px; margin-bottom:20px;}
+.bp1-stat{flex:1; background:var(--t-bg); padding:20px; border-radius:8px; text-align:center; border:1px solid rgba(128,128,128,0.1);}
+.bp1-stat.acc{background:var(--t-accent); color:var(--t-bg);}
+.bp1-stat h3{font-size:28px; font-weight:900; margin-bottom:5px;} .bp1-stat span{font-size:10px; font-weight:bold; text-transform:uppercase;}
+.bp1-card{background:var(--t-bg); padding:20px; border-radius:8px; border:1px solid rgba(128,128,128,0.1);}
+.bp1-card h4{font-size:14px; margin-bottom:10px;} .bp1-card p{font-size:11px; line-height:1.6; opacity:0.8; margin-bottom:15px;}
+.bp1-bar{height:10px; background:var(--t-surface); border-radius:5px;} .fill{height:100%; background:var(--t-accent); border-radius:5px;}

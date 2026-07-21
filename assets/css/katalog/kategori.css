@@ -124,6 +124,10 @@
     background: linear-gradient(135deg, #F59E0B, #FBBF24);
 }
 
+/* Tambahan warna kotak preview di file CSS-mu */
+.p-ana { background: linear-gradient(135deg, #059669, #10B981); color: #FFF; }
+.p-bui { background: linear-gradient(135deg, #D97706, #F59E0B); color: #FFF; }
+
 /* BAGIAN KONTEN (Teks) */
 .k-content {
     padding: 30px;
@@ -234,4 +238,48 @@
     .kategori-bento-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* WARNA TEMA (8 Kategori) */
+
+/* 1. The Engineer - Dark Navy ke Slate (Cyber/Tech) */
+.p-eng {
+    background: linear-gradient(135deg, #09090b, #1e293b);
+}
+
+/* 2. The Creator - Coral ke Peach (Artistic/Pop) */
+.p-cre {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+/* 3. The Corporate - Royal Blue ke Ocean (Professional/Trust) */
+.p-cor {
+    background: linear-gradient(135deg, #013DC4, #3B82F6);
+}
+
+/* 4. The Marketer - Purple ke Pink (Creative/Trendy) */
+.p-mar {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+}
+
+/* 5. The Wordsmith - Espresso ke Sepia (Classic/Literary) */
+.p-wri {
+    background: linear-gradient(135deg, #4A3B32, #8B5A2B);
+}
+
+/* 6. The Analyst - Emerald ke Teal (Wealth/Data) */
+.p-ana { 
+    background: linear-gradient(135deg, #064E3B, #0D9488); 
+    color: #FFF; 
+}
+
+/* 7. The Builder - Industrial Orange ke Gold (Safety/Construction) */
+.p-bui { 
+    background: linear-gradient(135deg, #C2410C, #F59E0B); 
+    color: #FFF; 
+}
+
+/* 8. The Scholar - Oxford Red ke Crimson (Academic/Ivy League) */
+.p-aca {
+    background: linear-gradient(135deg, #7F1D1D, #BE123C);
 }

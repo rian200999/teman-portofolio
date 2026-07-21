@@ -1,0 +1,10 @@
+.ap1-container{padding:20px; font-family:'Plus Jakarta Sans',sans-serif; background:var(--t-surface); min-height:450px;}
+.ap1-nav{font-size:12px; font-weight:900; margin-bottom:25px; display:flex; align-items:center; gap:8px;}
+.ap1-grid{display:grid; grid-template-columns:1fr 1fr; gap:15px;}
+.ap1-card{background:var(--t-bg); padding:20px; border-radius:12px; border:1px solid rgba(128,128,128,0.1); box-shadow:0 4px 6px rgba(0,0,0,0.02);}
+.ap1-card h3{font-size:9px; text-transform:uppercase; font-weight:bold; opacity:0.6; margin-bottom:10px;}
+.ap1-card h2{font-size:24px; font-weight:900; color:var(--t-text);}
+.ap1-card.hl{background:var(--t-accent); color:var(--t-bg);} .ap1-card.hl h2{color:var(--t-bg);}
+.ap1-card.wide{grid-column:span 2;}
+.ap1-bars{display:flex; align-items:flex-end; gap:10px; height:60px;}
+.ap1-bars .b{flex:1; background:var(--t-accent); border-radius:4px 4px 0 0;}

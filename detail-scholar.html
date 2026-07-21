@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scholar Templates - Teman Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/katalog/global.css">
+    <link rel="stylesheet" href="assets/css/katalog/detail-kategori.css">
+    <link rel="stylesheet" href="assets/css/katalog/scholar-shell.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container" style="display:flex; justify-content:space-between; padding:20px 0;">
+            <a href="katalog.html" class="logo" style="font-size:24px; font-weight:800; color:var(--tp-text-main); text-decoration:none;">
+                Teman<span style="color:var(--tp-light);">Portofolio.</span>
+            </a>
+            <nav class="navbar" style="display:flex; gap:20px; align-items:center;">
+                <a href="katalog.html" style="text-decoration:none; color:var(--tp-text-muted); font-weight:600;">
+                    <i class='bx bx-left-arrow-alt'></i> Kembali ke Katalog
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="detail-content"></main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/katalog/detail-kategori.js"></script>
+    <script src="assets/js/katalog/s-basic-controller.js"></script>
+    <script src="assets/js/katalog/s-premium-controller.js"></script>
+    <script src="assets/js/katalog/s-pro-controller.js"></script>
+
+    <script>
+        const loadSection = async (containerId, filePath) => {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const htmlText = await response.text();
+                const container = document.getElementById(containerId);
+                if (container) { container.insertAdjacentHTML('beforeend', htmlText); }
+            } catch (error) { console.warn(`Gagal memuat ${filePath}:`, error.message); }
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadSection('detail-content', 'sections/detail-scholar/hero.html');
+            await loadSection('detail-content', 'sections/detail-scholar/basic.html');
+            await loadSection('detail-content', 'sections/detail-scholar/premium.html');
+            await loadSection('detail-content', 'sections/detail-scholar/pro.html');
+
+            if (typeof window.initSBasicController === 'function') window.initSBasicController();
+            if (typeof window.initSPremiumController === 'function') window.initSPremiumController();
+            if (typeof window.initSProController === 'function') window.initSProController();
+            if (typeof window.initColorSwitcher === 'function') window.initColorSwitcher();
+
+            if (typeof AOS !== 'undefined') { AOS.init({ once: true, duration: 800 }); }
+        });
+    </script>
+</body>
+</html>

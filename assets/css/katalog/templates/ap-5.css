@@ -1,0 +1,8 @@
+.ap5-container{padding:30px; font-family:'Plus Jakarta Sans',sans-serif;}
+.ap5-title{font-size:18px; font-weight:900; border-bottom:2px solid var(--t-accent); padding-bottom:10px; margin-bottom:25px;}
+.ap5-steps{display:flex; flex-direction:column; gap:15px; margin-bottom:30px;}
+.ap5-step{display:flex; align-items:center; gap:15px; background:var(--t-surface); padding:15px; border-radius:8px;}
+.num{width:30px; height:30px; background:var(--t-accent); color:var(--t-bg); display:flex; align-items:center; justify-content:center; border-radius:50%; font-weight:900; font-size:12px;}
+.ap5-step p{font-size:12px; font-weight:bold;}
+.ap5-cta{text-align:center; font-size:10px; font-weight:bold; text-transform:uppercase; letter-spacing:1px; color:var(--t-accent); cursor:pointer;}
+.ap5-cta:hover{text-decoration:underline;}

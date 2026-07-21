@@ -1,0 +1,12 @@
+.sp1-container{padding:20px; font-family:sans-serif;}
+.sp1-top{display:flex; align-items:center; gap:15px; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(128,128,128,0.2);}
+.sp1-ava{width:50px; height:50px; background:var(--t-accent); border-radius:4px;}
+.sp1-name{font-size:18px; font-weight:800; color:var(--t-text);}
+.sp1-univ{font-size:10px; color:var(--t-accent); font-weight:bold; text-transform:uppercase;}
+.sp1-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:20px;}
+.sp1-box{background:var(--t-surface); padding:15px; border-radius:8px; text-align:center;}
+.sp1-box h4{font-size:9px; opacity:0.6; text-transform:uppercase; margin-bottom:5px;}
+.sp1-box h2{font-size:24px; font-weight:900; color:var(--t-accent);}
+.sp1-chart{background:var(--t-surface); height:120px; border-radius:8px; display:flex; align-items:flex-end; gap:10px; padding:15px; position:relative;}
+.sp1-chart .bar{flex-grow:1; background:var(--t-accent); border-radius:4px 4px 0 0; opacity:0.8;}
+.sp1-chart .lbl{position:absolute; top:10px; left:15px; font-size:9px; font-weight:bold; opacity:0.5;}

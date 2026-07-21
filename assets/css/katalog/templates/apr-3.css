@@ -1,0 +1,10 @@
+#mockup-a-pro-wrapper:has(.apr3-container){padding:0!important; overflow:hidden!important; height:400px!important; position:relative!important;}
+.apr3-container{position:absolute; top:0; left:0; right:0; bottom:0; display:flex; overflow-x:auto; overflow-y:hidden; scroll-snap-type:x mandatory; background:var(--t-bg); color:var(--t-text); font-family:'Plus Jakarta Sans',sans-serif;}
+.apr3-container::-webkit-scrollbar{height:4px;} .apr3-container::-webkit-scrollbar-thumb{background:var(--t-accent);}
+.apr3-slide{flex:0 0 100%; width:100%; height:100%; scroll-snap-align:start; display:flex; flex-direction:column; justify-content:center; padding:30px; box-sizing:border-box;}
+.apr3-slide.title{background:var(--t-surface); border-right:1px solid rgba(128,128,128,0.2);}
+.apr3-slide h1{font-size:42px; font-weight:900; color:var(--t-accent); line-height:1;}
+.apr3-slide p{font-size:12px; font-weight:bold; margin-top:20px;}
+.apr3-table{width:100%; border-collapse:collapse; font-size:12px;}
+.apr3-table th{text-align:left; border-bottom:2px solid var(--t-text); padding-bottom:10px;}
+.apr3-table td{padding:15px 0; border-bottom:1px solid rgba(128,128,128,0.2); font-family:monospace; font-size:14px;}

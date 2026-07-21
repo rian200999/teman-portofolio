@@ -1,0 +1,10 @@
+.spr2-container{padding:30px; font-family:'Georgia',serif; border:10px solid var(--t-surface); min-height:400px; box-sizing:border-box;}
+.spr2-header{display:flex; align-items:center; gap:15px; border-bottom:3px solid var(--t-text); padding-bottom:15px; margin-bottom:25px;}
+.spr2-seal{width:40px; height:40px; border:2px solid var(--t-accent); border-radius:50%; position:relative;}
+.spr2-seal::after{content:'IAP'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:10px; font-weight:bold; color:var(--t-accent);}
+.spr2-inst{font-size:16px; font-weight:bold; font-family:sans-serif; text-transform:uppercase;}
+.spr2-sub{font-size:10px; font-style:italic; opacity:0.7;}
+.spr2-name{font-size:24px; color:var(--t-accent); margin-bottom:10px;}
+.spr2-links{font-size:10px; font-family:sans-serif; margin-bottom:20px;}
+.spr2-links a{color:var(--t-text); text-decoration:none; font-weight:bold;} .spr2-links a:hover{color:var(--t-accent); text-decoration:underline;}
+.spr2-content{font-size:12px; line-height:1.8; text-align:justify; padding:15px; background:rgba(128,128,128,0.05); border-left:4px solid var(--t-accent);}

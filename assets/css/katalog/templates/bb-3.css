@@ -1,0 +1,6 @@
+.bb3-container{padding:30px 20px; font-family:sans-serif;}
+.bb3-head{margin-bottom:20px;} .bb3-head h2{font-size:24px; font-weight:900;} .bb3-head p{font-size:11px; color:var(--t-accent); font-weight:bold; text-transform:uppercase;}
+.bb3-grid{display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:100px; gap:10px;}
+.bb3-proj{background:var(--t-surface); border-radius:8px; position:relative; border:1px solid rgba(128,128,128,0.2); overflow:hidden;}
+.p1{grid-row:span 2;} .p4{grid-column:span 2;}
+.lbl{position:absolute; bottom:10px; left:10px; background:var(--t-accent); color:var(--t-bg); font-size:9px; font-weight:bold; padding:4px 8px; border-radius:4px;}

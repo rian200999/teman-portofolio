@@ -1,0 +1,9 @@
+.ap3-container{padding:30px; font-family:'Helvetica Neue', sans-serif;}
+.ap3-header{border-bottom:4px solid var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.ap3-header h1{font-size:36px; font-weight:900; color:var(--t-accent); line-height:1;}
+.ap3-header p{font-size:10px; font-weight:bold; letter-spacing:1px;}
+.ap3-body h3{font-size:12px; text-transform:uppercase; margin-bottom:10px; font-weight:bold;}
+.ap3-body p{font-size:11px; line-height:1.6; margin-bottom:15px;}
+.ap3-line{height:1px; background:rgba(128,128,128,0.3); margin:20px 0;}
+.ap3-list{padding-left:15px; font-size:11px; line-height:1.8;}
+.ap3-list li{margin-bottom:5px;}

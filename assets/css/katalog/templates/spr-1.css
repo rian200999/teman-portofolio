@@ -1,0 +1,12 @@
+#mockup-s-pro-wrapper:has(.spr1-container){padding:0;}
+.spr1-container{display:flex; flex-direction:column; height:100%; min-height:400px; font-family:'Plus Jakarta Sans',sans-serif; background:var(--t-bg);}
+.spr1-nav{display:flex; gap:15px; padding:20px; font-size:11px; background:var(--t-surface); border-bottom:1px solid rgba(128,128,128,0.1); align-items:center;}
+.spr1-nav b{font-size:14px; color:var(--t-accent); margin-right:auto; font-weight:900;}
+.spr1-hero{padding:40px 30px; text-align:center; background:linear-gradient(rgba(var(--t-accent-rgb),0.05), transparent);}
+.spr1-hero h1{font-size:28px; font-weight:900; color:var(--t-accent); margin-bottom:10px; line-height:1.2;}
+.spr1-hero p{font-size:12px; opacity:0.8; max-width:80%; margin:0 auto;}
+.spr1-team{padding:20px 30px; border-top:1px solid rgba(128,128,128,0.1);}
+.spr1-team h3{font-size:10px; text-transform:uppercase; letter-spacing:1px; opacity:0.5; margin-bottom:15px;}
+.spr1-pi{display:flex; align-items:center; gap:15px; background:var(--t-surface); padding:15px; border-radius:8px;}
+.spr1-ava{width:40px; height:40px; background:var(--t-accent); border-radius:50%;}
+.spr1-pi h4{font-size:14px; font-weight:bold;} .spr1-pi p{font-size:10px; opacity:0.7;}

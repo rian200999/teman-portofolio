@@ -1,0 +1,11 @@
+.sb2-container{padding:30px 40px; font-family:'Plus Jakarta Sans', sans-serif;}
+.sb2-top{margin-bottom:30px;}
+.sb2-top h1{font-size:26px; font-weight:900; color:var(--t-text); margin-bottom:5px; letter-spacing:-0.5px;}
+.sb2-top p{font-size:11px; color:var(--t-accent); font-weight:600;}
+.sb2-sect{margin-bottom:25px;}
+.sb2-sect h2{font-size:12px; text-transform:uppercase; letter-spacing:1px; border-bottom:1px solid rgba(128,128,128,0.2); padding-bottom:5px; margin-bottom:15px; color:var(--t-accent);}
+.sb2-tags{display:flex; gap:8px;}
+.sb2-tags span{font-size:9px; padding:4px 10px; background:var(--t-surface); border-radius:4px; font-weight:bold;}
+.sb2-card{background:var(--t-surface); padding:15px; border-radius:8px; border-left:3px solid var(--t-accent);}
+.sb2-card h4{font-size:12px; font-weight:800; margin-bottom:5px;}
+.sb2-card p{font-size:10px; line-height:1.5; opacity:0.8;}

@@ -1,0 +1,7 @@
+.sb5-container{padding:30px; font-family:'Times New Roman', Times, serif;}
+.sb5-head{text-align:center; border-bottom:1px solid var(--t-text); padding-bottom:15px; margin-bottom:20px;}
+.sb5-head h1{font-size:24px; font-variant:small-caps; margin-bottom:5px;}
+.sb5-head p{font-size:11px;}
+.sb5-cols{column-count:2; column-gap:20px; font-size:10px; line-height:1.6; text-align:justify;}
+.sb5-cols p{margin-bottom:15px;}
+.sb5-cols b{font-size:11px;}

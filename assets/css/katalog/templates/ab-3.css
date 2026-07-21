@@ -1,0 +1,8 @@
+.ab3-container{padding:40px 30px; font-family:'Georgia',serif;}
+.ab3-h1{font-size:24px; font-family:sans-serif; border-bottom:2px solid var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.ab3-list{list-style:none; padding:0; margin-bottom:30px;}
+.ab3-list li{font-size:12px; margin-bottom:10px; display:flex; align-items:center; gap:8px;}
+.ab3-list i{color:var(--t-accent); font-size:16px;}
+.ab3-box{background:var(--t-surface); padding:20px; border-left:4px solid var(--t-accent);}
+.ab3-box h3{font-size:12px; font-family:sans-serif; text-transform:uppercase; margin-bottom:8px;}
+.ab3-box p{font-size:11px; line-height:1.6; font-style:italic;}

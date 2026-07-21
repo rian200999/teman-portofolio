@@ -1,0 +1,6 @@
+.ab5-container{padding:30px; font-family:'Courier New', monospace; background:var(--t-surface); height:100%; min-height:400px; display:flex; flex-direction:column; justify-content:center;}
+.ab5-top{font-size:10px; font-weight:bold; color:var(--t-accent); border-bottom:1px dashed var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.ab5-output{font-size:11px;}
+.ab5-output p{margin-bottom:15px; opacity:0.5;}
+.ab5-kv{display:flex; margin-bottom:10px;}
+.ab5-kv span{width:60px; color:var(--t-accent); font-weight:bold;}

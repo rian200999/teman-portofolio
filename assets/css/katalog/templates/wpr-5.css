@@ -1,0 +1,6 @@
+#mockup-w-pro-wrapper:has(.wpr5-container){padding:0;}
+.wpr5-container{height:100%; min-height:400px; background:var(--t-bg); color:var(--t-text); position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:center; padding:30px;}
+.wpr5-nav{position:absolute; top:20px; left:30px; right:30px; display:flex; justify-content:space-between; font-family:sans-serif; font-size:10px; font-weight:bold; text-transform:uppercase;}
+.wpr5-bg{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:120px; font-family:'Times New Roman',serif; font-weight:bold; color:transparent; -webkit-text-stroke:1px rgba(128,128,128,0.2); z-index:1;}
+.wpr5-fg{position:relative; z-index:2; font-family:'Helvetica Neue',sans-serif; font-size:32px; font-weight:900; line-height:1; mix-blend-mode:difference;}
+.hl{color:var(--t-accent);}

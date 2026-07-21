@@ -1,0 +1,12 @@
+.wp4-container{padding:0; font-family:-apple-system, sans-serif;}
+.wp4-header{background:var(--t-surface); padding:40px 20px; text-align:center; border-bottom:1px solid rgba(128,128,128,0.1);}
+.wp4-ava{width:60px; height:60px; background:var(--t-accent); border-radius:50%; margin:0 auto 15px;}
+.wp4-header h1{font-size:22px; font-weight:900; margin-bottom:10px;}
+.wp4-header p{font-size:11px; opacity:0.8; margin-bottom:20px;}
+.wp4-form{display:flex; max-width:300px; margin:0 auto; background:var(--t-bg); border-radius:6px; overflow:hidden; border:1px solid rgba(128,128,128,0.2);}
+.wp4-form input{flex-grow:1; border:none; padding:10px; font-size:10px; background:transparent; color:var(--t-text); outline:none;}
+.wp4-form button{background:var(--t-accent); color:var(--t-bg); border:none; padding:0 15px; font-weight:bold; font-size:10px; cursor:pointer;}
+.wp4-posts{padding:20px;}
+.wp4-post{padding:15px; border:1px solid rgba(128,128,128,0.1); border-radius:8px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; cursor:pointer;}
+.wp4-post:hover{border-color:var(--t-accent);}
+.wp4-post h4{font-size:12px; font-weight:bold;} .wp4-post span{font-size:9px; opacity:0.6;}

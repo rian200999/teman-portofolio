@@ -1,0 +1,8 @@
+.sb3-container{padding:30px; font-family:sans-serif;}
+.sb3-h1{font-size:24px; font-weight:800; color:var(--t-accent); margin-bottom:20px; font-family:'Merriweather',serif; font-style:italic;}
+.sb3-grid{display:grid; grid-template-columns:1fr 1fr; gap:15px;}
+.sb3-pub{border:1px solid rgba(128,128,128,0.2); padding:15px; border-radius:6px; transition:0.3s; cursor:pointer;}
+.sb3-pub:hover{border-color:var(--t-accent); background:var(--t-surface);}
+.sb3-year{display:inline-block; font-size:9px; font-weight:bold; background:var(--t-accent); color:var(--t-bg); padding:2px 6px; border-radius:4px; margin-bottom:10px;}
+.sb3-pub h3{font-size:12px; font-weight:bold; margin-bottom:5px; line-height:1.3;}
+.sb3-pub p{font-size:10px; font-style:italic; opacity:0.7;}

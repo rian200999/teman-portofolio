@@ -1,0 +1,8 @@
+.spr4-container{padding:20px; height:100%; min-height:400px; display:flex; justify-content:center; align-items:center; background:var(--t-surface);}
+.spr4-book{display:flex; width:220px; height:300px; box-shadow:15px 15px 30px rgba(0,0,0,0.2); border-radius:2px 8px 8px 2px; transition:0.4s; cursor:pointer;}
+.spr4-book:hover{transform:perspective(500px) rotateY(-10deg) scale(1.05);}
+.spr4-spine{width:15px; height:100%; background:var(--t-text); border-radius:2px 0 0 2px;}
+.spr4-cover{flex-grow:1; background:var(--t-bg); padding:30px 20px; display:flex; flex-direction:column; border:1px solid rgba(128,128,128,0.2); border-left:none; border-radius:0 8px 8px 0; text-align:center;}
+.spr4-title{font-size:18px; font-family:'Georgia',serif; font-weight:bold; color:var(--t-accent); margin-bottom:20px; margin-top:auto;}
+.spr4-author{font-size:10px; font-family:sans-serif; opacity:0.8; margin-bottom:auto;}
+.spr4-badge{font-size:8px; font-weight:bold; text-transform:uppercase; border-top:1px solid var(--t-text); padding-top:10px;}

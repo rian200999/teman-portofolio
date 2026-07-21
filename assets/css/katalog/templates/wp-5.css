@@ -1,0 +1,8 @@
+.wp5-container{padding:20px; font-family:'Helvetica',sans-serif;}
+.wp5-logo{font-size:32px; font-weight:900; text-align:center; border-bottom:4px solid var(--t-text); padding-bottom:10px; margin-bottom:10px;}
+.wp5-ticker{background:var(--t-text); color:var(--t-bg); font-size:9px; font-weight:bold; padding:5px; margin-bottom:20px; text-transform:uppercase;}
+.wp5-grid{display:flex; flex-direction:column; gap:20px;}
+.wp5-card{border-bottom:1px solid rgba(128,128,128,0.2); padding-bottom:15px;}
+.wp5-tag{font-size:8px; font-weight:900; color:var(--t-accent); margin-bottom:5px; display:block;}
+.wp5-card h2{font-size:18px; font-family:'Georgia',serif; margin-bottom:8px; font-weight:bold;}
+.wp5-card p{font-size:11px; opacity:0.8; line-height:1.4;}

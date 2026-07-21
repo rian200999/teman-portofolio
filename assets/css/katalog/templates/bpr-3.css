@@ -1,0 +1,7 @@
+#mockup-b-pro-wrapper:has(.bpr3-container){padding:0;}
+.bpr3-container{height:100%; min-height:400px; display:flex; flex-direction:column; font-family:'Plus Jakarta Sans',sans-serif; background:var(--t-surface); color:var(--t-text);}
+.bpr3-head{display:flex; justify-content:space-between; padding:20px; font-size:12px; border-bottom:1px solid rgba(128,128,128,0.2);}
+.bpr3-head b{font-weight:900; color:var(--t-accent);} .bpr3-head span{font-weight:bold; cursor:pointer;}
+.bpr3-hero{flex-grow:1; padding:40px; display:flex; flex-direction:column; justify-content:center;}
+.bpr3-hero h1{font-size:36px; font-weight:900; line-height:1.1; margin-bottom:30px; text-transform:uppercase;}
+.bpr3-btn{background:var(--t-accent); color:var(--t-bg); border:none; padding:15px 30px; font-weight:bold; font-size:11px; align-self:flex-start; cursor:pointer;}
