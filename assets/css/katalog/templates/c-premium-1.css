@@ -1,0 +1,21 @@
+
+.cp1-container { padding: 20px; font-family: 'Plus Jakarta Sans', sans-serif; position: relative; min-height: 450px; overflow: hidden;}
+.cp1-bg-gradient { position: absolute; top:-50px; right:-50px; width: 250px; height: 250px; background: var(--t-accent); filter: blur(60px); opacity: 0.3; border-radius: 50%; z-index: 0;}
+.glass { background: rgba(var(--t-surface-rgb, 255,255,255), 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(128,128,128,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.05);}
+.cp1-nav { display: flex; justify-content: space-between; padding: 10px 20px; border-radius: 50px; font-size: 11px; font-weight: bold; position: relative; z-index: 1;}
+.cp1-hero { padding: 40px 0; text-align: center; position: relative; z-index: 1;}
+.cp1-h1 { font-size: 28px; font-weight: 900; line-height: 1.1; margin-bottom: 10px;}
+.cp1-hl { color: var(--t-accent); }
+.cp1-p { font-size: 10px; opacity: 0.8; max-width: 80%; margin: 0 auto;}
+.cp1-section { margin-bottom: 30px; position: relative; z-index: 1;}
+.cp1-h3 { font-size: 12px; font-weight: 800; margin-bottom: 15px; letter-spacing: 1px; text-transform: uppercase;}
+.cp1-case-card { border-radius: 16px; padding: 15px;}
+.cp1-case-img { height: 120px; background: rgba(128,128,128,0.1); border-radius: 8px; margin-bottom: 15px;}
+.cp1-case-info h4 { font-size: 16px; font-weight: 800; margin-bottom: 5px;}
+.cp1-case-info p { font-size: 10px; line-height: 1.5; opacity: 0.8; margin-bottom: 15px;}
+.cp1-btn { background: var(--t-accent); color: var(--t-bg); border: none; padding: 8px 16px; border-radius: 50px; font-size: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;}
+.cp1-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(var(--t-accent-rgb, 0,0,0), 0.3);}
+.cp1-contact { border-radius: 16px; padding: 20px; text-align: center;}
+.cp1-contact h3 { font-size: 18px; margin-bottom: 15px;}
+.cp1-input { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid rgba(128,128,128,0.2); background: rgba(var(--t-bg-rgb, 255,255,255), 0.5); font-family: inherit; font-size: 10px;}
+.cp1-btn.full { width: 100%; }

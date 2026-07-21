@@ -1,0 +1,9 @@
+.cb5-container{padding:20px; font-family:sans-serif;}
+.cb5-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.cb5-box{border:1px solid rgba(128,128,128,0.3); padding:15px; border-radius:4px;}
+.cb5-box.header{grid-column:span 2; background:var(--t-surface); border-color:transparent;}
+.cb5-box.header h2{font-size:24px; font-weight:bold; color:var(--t-accent);}
+.cb5-box.header p{font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-top:5px;}
+.cb5-box h3{font-size:10px; text-transform:uppercase; color:var(--t-accent); margin-bottom:10px; border-bottom:1px solid rgba(128,128,128,0.2); padding-bottom:5px;}
+.cb5-box p{font-size:10px; line-height:1.6;}
+.cb5-box.exp{grid-column:span 2;}

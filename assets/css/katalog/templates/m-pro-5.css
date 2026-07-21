@@ -1,0 +1,10 @@
+#mockup-m-pro-wrapper:has(.mpr5-container){padding:0;}
+.mpr5-container{display:flex; height:100%; min-height:400px; font-family:'Plus Jakarta Sans',sans-serif;}
+.mpr5-left{width:40%; background:var(--t-accent); color:var(--t-bg); padding:30px 20px; display:flex; flex-direction:column; justify-content:center;}
+.mpr5-left h1{font-size:48px; font-weight:900; line-height:1;}
+.mpr5-left p{font-size:10px; font-weight:bold; margin-top:10px;}
+.mpr5-right{width:60%; padding:30px 20px; overflow-y:auto;}
+.mpr5-item{margin-bottom:30px;}
+.mpr5-item h3{font-size:16px; font-weight:800; border-bottom:2px solid var(--t-surface); padding-bottom:5px; margin-bottom:10px;}
+.mpr5-item p{font-size:11px; opacity:0.8;}
+.mpr5-item button{background:var(--t-text); color:var(--t-bg); padding:10px 20px; font-size:10px; font-weight:bold; border:none; cursor:pointer;}

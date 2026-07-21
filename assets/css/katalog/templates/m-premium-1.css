@@ -1,0 +1,12 @@
+.mp1-container{padding:20px; font-family:'Plus Jakarta Sans',sans-serif;}
+.mp1-nav{font-size:12px; font-weight:800; margin-bottom:20px; color:var(--t-accent);}
+.mp1-bento{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.mp1-box{background:var(--t-surface); border-radius:12px; padding:20px; display:flex; flex-direction:column; justify-content:center;}
+.hero{grid-column:span 2; background:var(--t-accent); color:var(--t-bg);}
+.hero h1{font-size:36px; font-weight:900; line-height:1;} .hero p{font-size:10px; font-weight:bold;}
+.chart{align-items:center;} .chart p{font-size:9px; font-weight:bold; margin-bottom:10px;}
+.mp1-bars{display:flex; gap:5px; height:50px; align-items:flex-end;}
+.mp1-bars .b{width:15px; background:var(--t-accent); border-radius:4px 4px 0 0;}
+.skills{gap:8px;} .skills span{font-size:9px; font-weight:bold; background:var(--t-bg); padding:4px 8px; border-radius:4px; text-align:center;}
+.cta{grid-column:span 2; flex-direction:row; justify-content:space-between; align-items:center; font-weight:900; font-size:14px; cursor:pointer;}
+.cta:hover{background:var(--t-text); color:var(--t-bg);}

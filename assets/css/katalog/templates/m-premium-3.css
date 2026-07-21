@@ -1,0 +1,11 @@
+.mp3-container{display:flex; height:100%; min-height:400px; font-family:'Plus Jakarta Sans',sans-serif;}
+.mp3-sidebar{width:35%; background:var(--t-surface); padding:20px; border-right:1px solid rgba(128,128,128,0.1);}
+.mp3-logo{font-size:16px; font-weight:900; color:var(--t-accent); margin-bottom:40px;}
+.mp3-menu{list-style:none; padding:0; font-size:10px; font-weight:bold;}
+.mp3-menu li{margin-bottom:15px; opacity:0.5;} .mp3-menu li.active{opacity:1; color:var(--t-accent);}
+.mp3-content{width:65%; padding:30px 20px; overflow-y:auto;}
+.mp3-content h2{font-size:18px; font-weight:900; margin-bottom:20px;}
+.lbl{font-size:9px; font-weight:bold; color:var(--t-accent); margin-bottom:5px;}
+.txt{font-size:11px; line-height:1.5; opacity:0.8; margin-bottom:20px;}
+.mp3-result{display:flex; gap:20px; background:var(--t-surface); padding:15px; border-radius:8px;}
+.mp3-result h3{font-size:18px; color:var(--t-accent);} .mp3-result p{font-size:9px; font-weight:bold;}

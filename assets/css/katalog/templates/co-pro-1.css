@@ -1,0 +1,9 @@
+#mockup-cor-pro-wrapper:has(.cpr1-container){padding:0;}
+.cpr1-container{display:flex; height:100%; min-height:400px; font-family:'Helvetica Neue',sans-serif;}
+.cpr1-left{width:45%; background:var(--t-accent); color:var(--t-bg); padding:30px 20px; display:flex; flex-direction:column; justify-content:center;}
+.cpr1-logo{font-size:12px; font-weight:bold; letter-spacing:2px; margin-bottom:auto;}
+.cpr1-left h1{font-size:32px; font-weight:900; line-height:1.1; margin-bottom:auto;}
+.cpr1-right{width:55%; padding:30px 20px; background:var(--t-bg); color:var(--t-text); display:flex; flex-direction:column; justify-content:center; gap:20px;}
+.cpr1-box h3{font-size:12px; font-weight:bold; text-transform:uppercase; color:var(--t-accent); margin-bottom:10px; border-bottom:1px solid rgba(128,128,128,0.2); padding-bottom:5px;}
+.cpr1-box p{font-size:11px; line-height:1.6; opacity:0.8;}
+.cpr1-btn{background:var(--t-text); color:var(--t-bg); border:none; padding:10px 20px; font-size:10px; font-weight:bold; cursor:pointer;}

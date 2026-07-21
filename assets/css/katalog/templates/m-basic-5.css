@@ -1,0 +1,7 @@
+.mb5-container{padding:20px; height:100%; min-height:400px; display:flex; align-items:center; justify-content:center; text-align:center; font-family:'Georgia', serif;}
+.mb5-center{max-width:80%;}
+.mb5-center h2{font-size:32px; font-style:italic; margin-bottom:5px; color:var(--t-accent);}
+.mb5-tagline{font-size:10px; text-transform:uppercase; letter-spacing:2px; font-family:sans-serif; margin-bottom:25px;}
+.mb5-copy{font-size:14px; line-height:1.6; opacity:0.8; margin-bottom:30px;}
+.mb5-btn{background:var(--t-text); color:var(--t-bg); border:none; padding:12px 24px; font-size:10px; text-transform:uppercase; letter-spacing:1px; cursor:pointer;}
+.mb5-btn:hover{background:var(--t-accent);}

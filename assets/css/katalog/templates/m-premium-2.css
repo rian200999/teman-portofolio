@@ -1,0 +1,8 @@
+.mp2-container{padding:30px 20px; font-family:sans-serif; text-align:center;}
+.mp2-title{font-size:16px; font-weight:900; margin-bottom:30px; text-transform:uppercase; color:var(--t-accent);}
+.mp2-funnel{display:flex; flex-direction:column; align-items:center; gap:5px;}
+.mp2-layer{background:var(--t-surface); padding:15px; border-radius:8px; width:100%; transition:0.3s;}
+.mp2-layer:hover{transform:scale(1.05); background:var(--t-accent); color:var(--t-bg);}
+.l1{width:100%;} .l2{width:85%;} .l3{width:70%;} .l4{width:55%;}
+.mp2-layer span{font-size:10px; font-weight:900;}
+.mp2-layer p{font-size:9px; opacity:0.8;}

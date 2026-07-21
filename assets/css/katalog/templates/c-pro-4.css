@@ -1,0 +1,13 @@
+
+.cpr4-container { padding: 20px; font-family: 'Helvetica Neue', serif; background: var(--t-surface); min-height: 450px;}
+.cpr4-nav { display: flex; justify-content: space-between; font-size: 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; border-bottom: 1px solid var(--t-text); padding-bottom: 10px;}
+.cpr4-content { position: relative; }
+.cpr4-title { font-size: 42px; font-weight: normal; line-height: 1; margin-bottom: 50px; font-style: italic;}
+.cpr4-indent { margin-left: 40px; color: var(--t-accent);}
+
+.cpr4-art-box { position: relative; width: 60%; margin-bottom: 40px; transition: 0.4s; cursor: pointer;}
+.cpr4-art-box:hover { transform: scale(1.02); }
+.box-1 { margin-left: 0; }
+.box-2 { margin-left: auto; }
+.cpr4-img { height: 180px; background: var(--t-bg); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(128,128,128,0.1);}
+.cpr4-caption { font-family: sans-serif; font-size: 9px; font-weight: bold; margin-top: 10px; color: var(--t-text);}

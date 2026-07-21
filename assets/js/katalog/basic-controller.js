@@ -9,7 +9,7 @@ window.initBasicController = function() {
         },
         'basic-2': {
             title: 'Minimalist Repo',
-            desc: 'Terinspirasi dari layout GitHub. Bersih, *to-the-point*, menonjolkan riwayat kontribusi (Graph) & proyek.',
+            desc: 'Terinspirasi dari layout GitHub. Bersih, to-the-point, menonjolkan riwayat kontribusi (Graph) & proyek.',
             html: 'sections/detail-engineer/templates/basic-2.html',
             css: 'assets/css/katalog/templates/basic-2.css'
         },
@@ -21,13 +21,13 @@ window.initBasicController = function() {
         },
         'basic-4': {
             title: 'Split View',
-            desc: 'Layout elegan terbelah dua. Sisi kiri statis untuk profil, sisi kanan *scrollable* untuk detail pengalaman dan karya.',
+            desc: 'Layout elegan terbelah dua. Sisi kiri statis untuk profil, sisi kanan scrollable untuk detail pengalaman dan karya.',
             html: 'sections/detail-engineer/templates/basic-4.html',
             css: 'assets/css/katalog/templates/basic-4.css'
         },
         'basic-5': {
             title: 'Data Flow',
-            desc: 'Nuansa Cyberpunk/Sci-Fi. Menampilkan data layaknya *node* yang saling terhubung dengan garis (*flowchart style*).',
+            desc: 'Nuansa Cyberpunk/Sci-Fi. Menampilkan data layaknya node yang saling terhubung dengan garis (flowchart style).',
             html: 'sections/detail-engineer/templates/basic-5.html',
             css: 'assets/css/katalog/templates/basic-5.css'
         }

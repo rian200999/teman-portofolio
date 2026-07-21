@@ -1,0 +1,107 @@
+/* =========================================
+   ULTIMATE FIX PRO-3: HORIZONTAL ODYSSEY
+   ========================================= */
+
+/* 1. Jadikan wrapper sebagai relative parent */
+#mockup-creator-pro-wrapper:has(.cpr3-container) { 
+    padding: 0 !important; 
+    overflow: hidden !important; 
+    height: 400px !important; 
+    position: relative !important; /* WAJIB ADA */
+}
+
+/* 2. Kunci dengan Absolute agar tidak mendesak frame keluar */
+.cpr3-container { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    
+    display: flex; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    scroll-snap-type: x mandatory; 
+    background: var(--t-bg); 
+    color: var(--t-text);
+    box-sizing: border-box;
+}
+
+.cpr3-container::-webkit-scrollbar { height: 4px; }
+.cpr3-container::-webkit-scrollbar-track { background: var(--t-surface); }
+.cpr3-container::-webkit-scrollbar-thumb { background: var(--t-accent); border-radius: 10px; }
+
+.cpr3-slide { 
+    flex: 0 0 100%; 
+    width: 100%;
+    height: 100%; 
+    scroll-snap-align: start; 
+    padding: 25px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    position: relative;
+    box-sizing: border-box;
+}
+
+.cpr3-slide.hero { 
+    align-items: center; 
+    text-align: center; 
+    border-right: 1px solid rgba(128,128,128,0.2);
+}
+
+.cpr3-h1 { 
+    font-size: 32px; 
+    font-weight: 900; 
+    letter-spacing: -2px; 
+    color: var(--t-accent); 
+    margin-bottom: 6px;
+}
+
+.cpr3-scroll-indicator { 
+    position: absolute; 
+    bottom: 15px; 
+    font-size: 9px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+    animation: bounceX 2s infinite;
+}
+
+@keyframes bounceX { 
+    0%, 100% { transform: translateX(0); } 
+    50% { transform: translateX(6px); } 
+}
+
+.cpr3-slide.project { 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 20px; 
+    border-right: 1px solid rgba(128,128,128,0.2);
+}
+
+.cpr3-img { 
+    width: 120px; 
+    height: 160px; 
+    background: var(--t-surface); 
+    border-radius: 8px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    border: 1px solid rgba(128,128,128,0.1);
+    flex-shrink: 0;
+}
+
+.cpr3-info h2 { 
+    font-size: 16px; 
+    font-weight: 800; 
+    margin-bottom: 3px;
+}
+
+.cpr3-info p { 
+    font-size: 9px; 
+    opacity: 0.6; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}

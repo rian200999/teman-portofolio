@@ -3,7 +3,7 @@ window.initProController = function() {
     const templatesInfo = {
         'pro-1': {
             title: 'Enterprise Grid',
-            desc: 'Dashboard super padat ala corporate enterprise. Punya *activity heatmap* dan sidebar navigasi statis.',
+            desc: 'Dashboard super padat ala corporate enterprise. Punya activity heatmap dan sidebar navigasi statis.',
             html: 'sections/detail-engineer/templates/pro-1.html',
             css: 'assets/css/katalog/templates/pro-1.css'
         },
@@ -15,19 +15,19 @@ window.initProController = function() {
         },
         'pro-3': {
             title: 'Desktop UI',
-            desc: 'CV berwujud antarmuka desktop MacOS/Windows. Lengkap dengan *Menu Bar* atas, *Folder* di layar, dan *Dock* aplikasi di bawah.',
+            desc: 'CV berwujud antarmuka desktop MacOS/Windows. Lengkap dengan Menu Bar atas, Folder di layar, dan Dock aplikasi di bawah.',
             html: 'sections/detail-engineer/templates/pro-3.html',
             css: 'assets/css/katalog/templates/pro-3.css'
         },
         'pro-4': {
             title: 'Agile Board',
-            desc: 'Sangat cocok untuk Tech Lead/PM. Pengalaman dan portfolio diubah menjadi kartu-kartu *Kanban Board* (To Do, In Progress, Done).',
+            desc: 'Sangat cocok untuk Tech Lead/PM. Pengalaman dan portfolio diubah menjadi kartu-kartu Kanban Board (To Do, In Progress, Done).',
             html: 'sections/detail-engineer/templates/pro-4.html',
             css: 'assets/css/katalog/templates/pro-4.css'
         },
         'pro-5': {
             title: 'Ultra Noir',
-            desc: 'Tipografi raksasa nan elegan. Super minimalis, kontras tinggi, memberikan kesan CV dari *Silicon Valley Executive*.',
+            desc: 'Tipografi raksasa nan elegan. Super minimalis, kontras tinggi, memberikan kesan CV dari Silicon Valley Executive.',
             html: 'sections/detail-engineer/templates/pro-5.html',
             css: 'assets/css/katalog/templates/pro-5.css'
         }

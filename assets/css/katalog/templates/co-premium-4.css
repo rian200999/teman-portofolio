@@ -1,0 +1,13 @@
+.cp4-container{padding:20px; font-family:'Plus Jakarta Sans',sans-serif;}
+.cp4-profile{display:flex; align-items:center; gap:15px; margin-bottom:30px;}
+.cp4-avatar{width:50px; height:50px; background:var(--t-accent); border-radius:10px;}
+.cp4-profile h2{font-size:18px; font-weight:800;} .cp4-profile p{font-size:11px; color:var(--t-accent); font-weight:bold;}
+.cp4-skills{margin-bottom:30px; background:var(--t-surface); padding:15px; border-radius:8px;}
+.cp4-skill{margin-bottom:10px;}
+.cp4-skill span{font-size:10px; font-weight:bold; display:block; margin-bottom:5px;}
+.bar{height:6px; background:rgba(128,128,128,0.2); border-radius:3px;}
+.fill{height:100%; background:var(--t-accent); border-radius:3px;}
+.cp4-cards{display:flex; gap:10px;}
+.cp4-card{flex:1; padding:15px; border:1px solid rgba(128,128,128,0.2); border-radius:8px; transition:0.3s; cursor:pointer;}
+.cp4-card:hover{transform:translateY(-3px); box-shadow:0 5px 15px rgba(0,0,0,0.05); border-color:var(--t-accent);}
+.cp4-card h4{font-size:12px; font-weight:800; margin-bottom:5px;} .cp4-card p{font-size:10px; opacity:0.7;}

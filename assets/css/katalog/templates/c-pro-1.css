@@ -1,0 +1,16 @@
+
+.cpr1-container { padding: 0; font-family: 'Helvetica Neue', sans-serif; display: flex; flex-direction: column; min-height: 450px;}
+.cpr1-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 1px solid rgba(128,128,128,0.2);}
+.cpr1-nav h2 { font-size: 16px; font-weight: 900;}
+.cpr1-nav span { font-size: 10px; font-weight: bold; display: flex; align-items: center; gap: 5px; cursor: pointer;}
+.cpr1-hero { padding: 40px 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.cpr1-hero h1 { font-size: 32px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;}
+.cpr1-hl { color: var(--t-accent); }
+.cpr1-btn { background: var(--t-text); color: var(--t-bg); padding: 12px 24px; border: none; border-radius: 50px; font-size: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;}
+.cpr1-btn:hover { background: var(--t-accent); color: var(--t-bg);}
+.cpr1-marquee { background: var(--t-accent); color: var(--t-bg); padding: 8px 0; font-size: 10px; font-weight: bold; white-space: nowrap; overflow: hidden;}
+.cpr1-services { padding: 30px 20px; background: var(--t-surface);}
+.cpr1-services h3 { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5; margin-bottom: 15px;}
+.cpr1-services ul { list-style: none; padding: 0;}
+.cpr1-services li { font-size: 16px; font-weight: 800; padding: 15px 0; border-bottom: 1px solid rgba(128,128,128,0.1); display: flex; justify-content: space-between; cursor: pointer; transition: 0.3s;}
+.cpr1-services li:hover { padding-left: 10px; color: var(--t-accent);}

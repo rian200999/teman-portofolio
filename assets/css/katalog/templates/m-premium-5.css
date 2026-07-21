@@ -1,0 +1,10 @@
+.mp5-container{padding:20px; font-family:'Georgia',serif;}
+.mp5-header{text-align:center; font-size:10px; font-family:sans-serif; font-weight:bold; letter-spacing:2px; border-bottom:1px solid var(--t-text); padding-bottom:10px; margin-bottom:20px;}
+.mp5-featured{margin-bottom:30px;}
+.mp5-img{height:150px; background:var(--t-surface); margin-bottom:15px; border-radius:4px;}
+.mp5-featured h2{font-size:18px; line-height:1.2; margin-bottom:5px;}
+.mp5-featured p{font-size:10px; font-family:sans-serif; opacity:0.7;}
+.mp5-list{border-top:1px solid rgba(128,128,128,0.2); padding-top:15px;}
+.mp5-item{display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; font-family:sans-serif;}
+.mp5-item h4{font-size:12px; font-weight:bold; color:var(--t-accent);}
+.mp5-item span{font-size:9px; opacity:0.5;}

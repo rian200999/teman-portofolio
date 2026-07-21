@@ -1,0 +1,14 @@
+.cb1-container{padding:30px; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.cb1-header{border-bottom:2px solid var(--t-accent); padding-bottom:15px; margin-bottom:20px;}
+.cb1-header h1{font-size:28px; font-weight:800; color:var(--t-accent); letter-spacing:-1px;}
+.cb1-header p{font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:1px; opacity:0.8;}
+.cb1-body{display:flex; gap:20px;}
+.cb1-left{width:30%; border-right:1px solid rgba(128,128,128,0.2); padding-right:15px;}
+.cb1-right{width:70%;}
+.cb1-sect{margin-bottom:20px;}
+.cb1-sect h3{font-size:12px; text-transform:uppercase; color:var(--t-accent); margin-bottom:10px; font-weight:bold;}
+.cb1-left p, .cb1-left ul{font-size:10px; line-height:1.6; padding-left:15px;}
+.cb1-item{margin-bottom:15px;}
+.cb1-item h4{font-size:12px; font-weight:bold;}
+.cb1-item span{font-size:9px; font-style:italic; opacity:0.7; display:block; margin-bottom:5px;}
+.cb1-item p{font-size:10px; line-height:1.5;}

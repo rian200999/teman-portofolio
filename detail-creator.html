@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Creator Templates - Teman Portofolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/katalog/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/layanan.css">
+    <link rel="stylesheet" href="assets/css/katalog/detail-kategori.css">
+    <link rel="stylesheet" href="assets/css/katalog/creator-shell.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Teman<span>Portofolio.</span></a>
+
+            <nav class="navbar">
+                <!-- <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#layanan" class="nav-link">Layanan</a>
+                <a href="#harga" class="nav-link">Harga</a> -->
+                <a href="katalog.html" class="nav-link active">
+                    Kembali ke Katalog
+                </a>
+            </nav>
+
+            <div class="menu-icon" id="menu-btn">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN MODULAR DIMUAT DI SINI -->
+    <main id="detail-content"></main>
+
+    <!-- SCRIPT LOADER & LOGIC -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/katalog/detail-kategori.js"></script>
+    <script src="assets/js/katalog/creator-basic-controller.js"></script>
+    <script src="assets/js/katalog/creator-premium-controller.js"></script>
+    <script src="assets/js/katalog/creator-pro-controller.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <script>
+        const loadSection = async (containerId, filePath) => {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const htmlText = await response.text();
+                const container = document.getElementById(containerId);
+                if (container) {
+                    // FIX UTAMA: Gunakan insertAdjacentHTML agar tidak merusak elemen & event listener sebelumnya!
+                    container.insertAdjacentHTML('beforeend', htmlText);
+                }
+            } catch (error) {
+                console.warn(`Gagal memuat ${filePath}:`, error.message);
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 1. Load Semua Section Dulu Secara Berurutan
+            await loadSection('detail-content', 'sections/detail-creator/hero.html');
+            await loadSection('detail-content', 'sections/detail-creator/basic.html');
+            await loadSection('detail-content', 'sections/detail-creator/premium.html');
+            await loadSection('detail-content', 'sections/detail-creator/pro.html');
+            await loadSection('detail-content', 'sections/footer.html');
+
+            // 2. Init Semua Logic Setelah DOM Lengkap & Aman
+            if (typeof window.initCreatorBasicController === 'function') window.initCreatorBasicController();
+            if (typeof window.initCreatorPremiumController === 'function') window.initCreatorPremiumController();
+            if (typeof window.initCreatorProController === 'function') window.initCreatorProController();
+            if (typeof window.initColorSwitcher === 'function') window.initColorSwitcher();
+
+            // 3. Init Footer
+            if (typeof window.initFooterLogic === 'function') window.initFooterLogic();
+
+            // 3. Init AOS
+            if (typeof AOS !== 'undefined') { AOS.init({ once: true, duration: 800 }); }
+        });
+    </script>
+</body>
+
+</html>

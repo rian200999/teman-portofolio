@@ -1,0 +1,14 @@
+
+.cp4-container { padding: 20px; font-family: 'Plus Jakarta Sans', sans-serif; background: #050505; color: #FFF; min-height: 450px;}
+.cp4-nav { display: flex; justify-content: space-between; font-size: 11px; font-weight: 800; margin-bottom: 40px; letter-spacing: 1px;}
+.cp4-nav span { color: var(--t-accent); }
+.cp4-hero { margin-bottom: 40px;}
+.cp4-hero h1 { font-size: 38px; font-weight: 900; line-height: 1; text-transform: uppercase;}
+.cp4-hl { color: transparent; -webkit-text-stroke: 1px var(--t-accent); }
+.cp4-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
+.cp4-photo { background: #1A1A1A; border-radius: 4px; transition: 0.3s; cursor: crosshair;}
+.cp4-photo:hover { filter: brightness(1.2); box-shadow: 0 0 15px rgba(var(--t-accent-rgb, 255,255,255), 0.3);}
+.p1 { height: 150px; grid-row: span 2;}
+.p2 { height: 70px; }
+.p3 { height: 70px; }
+.p4 { height: 100px; grid-column: span 2;}

@@ -1,0 +1,6 @@
+.mp4-container{padding:20px; height:100%; min-height:400px;}
+.mp4-slide{background:var(--t-surface); height:100%; border-radius:12px; padding:30px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 10px 30px rgba(0,0,0,0.1); border:1px solid rgba(128,128,128,0.1);}
+.mp4-badge{font-size:9px; font-weight:bold; background:var(--t-accent); color:var(--t-bg); align-self:flex-start; padding:4px 8px; border-radius:4px; margin-bottom:20px;}
+.mp4-slide h1{font-size:32px; font-family:sans-serif; font-weight:900; line-height:1.1; margin-bottom:auto;}
+.mp4-bottom{font-size:11px; font-weight:bold; display:flex; justify-content:space-between; border-top:1px solid var(--t-text); padding-top:15px; color:var(--t-accent);}
+.mp4-bottom i{font-size:18px;}

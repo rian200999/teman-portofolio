@@ -1,0 +1,21 @@
+
+/* Capsule Navigation for Creator */
+.capsule-nav { display: inline-flex; background: #FFF; padding: 6px; border-radius: 50px; margin-top: 30px; gap: 5px; flex-wrap: wrap; justify-content: center; border: 1px solid rgba(255, 107, 107, 0.3); box-shadow: 0 10px 20px rgba(255, 107, 107, 0.05);}
+.capsule-btn { border: none; background: transparent; padding: 10px 20px; border-radius: 50px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 700; color: #64748B; cursor: pointer; transition: all 0.3s ease; }
+.capsule-btn:hover { color: #FF6B6B; }
+.capsule-btn.active { background: #FF6B6B; color: #FFF; box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3); }
+
+.fade-out { opacity: 0; transition: opacity 0.3s ease; }
+.fade-in { opacity: 1; transition: opacity 0.3s ease; }
+
+/* THEME ENGINE CREATOR */
+.theme-mono { --t-bg: #FFFFFF; --t-surface: #F5F5F5; --t-text: #111111; --t-accent: #000000; --t-accent-rgb: 0,0,0;}
+.theme-dark { --t-bg: #111111; --t-surface: #1A1A1A; --t-text: #FFFFFF; --t-accent: #FFFFFF; --t-accent-rgb: 255,255,255;}
+.theme-coral { --t-bg: #FFF5F5; --t-surface: #FFE3E3; --t-text: #2D3748; --t-accent: #FF6B6B; --t-accent-rgb: 255,107,107;}
+.theme-mint { --t-bg: #F0FFF4; --t-surface: #C6F6D5; --t-text: #22543D; --t-accent: #38A169; --t-accent-rgb: 56,161,105;}
+.theme-navy { --t-bg: #EBF8FF; --t-surface: #BEE3F8; --t-text: #1A365D; --t-accent: #2B6CB0; --t-accent-rgb: 43,108,176;}
+.theme-pastel { --t-bg: #FAF5FF; --t-surface: #E9D8FD; --t-text: #44337A; --t-accent: #9F7AEA; --t-accent-rgb: 159,122,234;}
+.theme-yellow { --t-bg: #FFFFF0; --t-surface: #FEFCBF; --t-text: #744210; --t-accent: #D69E2E; --t-accent-rgb: 214,158,46;}
+.theme-cyber { --t-bg: #000000; --t-surface: #111111; --t-text: #E0E0E0; --t-accent: #00FFCC; --t-accent-rgb: 0,255,204;}
+
+.browser-body { background: var(--t-bg); color: var(--t-text); transition: background 0.4s ease, color 0.4s ease; }

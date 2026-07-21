@@ -1,0 +1,13 @@
+#mockup-m-pro-wrapper:has(.mpr1-container){padding:0;}
+.mpr1-container{display:flex; height:100%; min-height:400px; font-family:'Plus Jakarta Sans',sans-serif; background:var(--t-bg); color:var(--t-text);}
+.mpr1-sidebar{width:50px; background:var(--t-surface); display:flex; flex-direction:column; align-items:center; padding-top:20px; gap:20px; border-right:1px solid rgba(128,128,128,0.1);}
+.mpr1-sidebar i{font-size:18px; color:var(--t-accent); opacity:0.5; cursor:pointer;} .mpr1-sidebar i:hover{opacity:1;}
+.mpr1-main{flex-grow:1; padding:20px;}
+.mpr1-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;}
+.mpr1-top h3{font-size:14px; font-weight:900;} .mpr1-ava{width:25px; height:25px; background:var(--t-accent); border-radius:50%;}
+.mpr1-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.mpr1-card{background:var(--t-surface); padding:15px; border-radius:8px; border:1px solid rgba(128,128,128,0.1);}
+.mpr1-card span{font-size:9px; font-weight:bold; opacity:0.6; display:block; margin-bottom:5px;}
+.mpr1-card h2{font-size:20px; font-weight:900;}
+.mpr1-card.graph{grid-column:span 2;}
+.mpr1-svg{width:100%; height:60px; margin-top:10px;}

@@ -1,0 +1,13 @@
+
+#mockup-creator-pro-wrapper:has(.cpr5-container) { padding: 0; }
+.cpr5-container { padding: 20px; font-family: 'Arial Black', Impact, sans-serif; background: var(--t-bg); color: var(--t-text); height: 100%; min-height: 450px; display: flex; flex-direction: column; overflow: hidden; position: relative;}
+.cpr5-header { font-size: 16px; font-weight: 900; margin-bottom: auto;}
+
+.cpr5-hero { position: relative; margin-bottom: auto; display: flex; align-items: center; justify-content: center; padding: 40px 0;}
+.cpr5-bg-text { font-size: 80px; color: transparent; -webkit-text-stroke: 1px rgba(128,128,128,0.3); position: absolute; z-index: 1; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;}
+.cpr5-fg-text { font-size: 36px; line-height: 0.9; text-align: center; position: relative; z-index: 2; color: var(--t-accent); mix-blend-mode: difference;}
+
+.cpr5-info { display: flex; justify-content: space-between; align-items: flex-end; font-family: 'Plus Jakarta Sans', sans-serif;}
+.cpr5-info p { font-size: 10px; max-width: 50%; line-height: 1.5; font-weight: 600;}
+.cpr5-btn { background: var(--t-text); color: var(--t-bg); border: none; font-size: 12px; font-weight: 900; padding: 15px 30px; cursor: pointer; border-radius: 0; text-transform: uppercase; transition: 0.3s;}
+.cpr5-btn:hover { background: var(--t-accent); color: var(--t-bg); transform: skewX(-10deg);}

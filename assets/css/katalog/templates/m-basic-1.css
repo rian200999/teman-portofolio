@@ -1,0 +1,11 @@
+.mb1-container{padding:30px; font-family:'Plus Jakarta Sans',sans-serif;}
+.mb1-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:40px;}
+.mb1-header h3{font-size:16px; font-weight:900;}
+.mb1-tag{font-size:9px; background:rgba(var(--t-accent-rgb),0.1); color:var(--t-accent); padding:4px 10px; border-radius:20px; font-weight:bold;}
+.mb1-hero{margin-bottom:40px;} .mb1-hero h1{font-size:36px; font-weight:900; line-height:1.1;}
+.mb1-metrics{display:grid; grid-template-columns:1fr; gap:15px; margin-bottom:40px;}
+.mb1-metric-box{background:var(--t-surface); padding:20px; border-radius:12px; border-left:4px solid var(--t-accent);}
+.mb1-metric-box h2{font-size:32px; font-weight:900; color:var(--t-text); margin-bottom:5px;}
+.mb1-metric-box p{font-size:11px; opacity:0.7; text-transform:uppercase; font-weight:bold; letter-spacing:1px;}
+.mb1-exp h4{font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--t-accent); margin-bottom:15px;}
+.mb1-list{font-size:11px; padding:12px; border-bottom:1px solid rgba(128,128,128,0.2);}

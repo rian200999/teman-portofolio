@@ -1,0 +1,10 @@
+.mb4-container{padding:40px 30px; font-family:monospace; line-height:1.6; color:var(--t-text);}
+.mb4-head{border-bottom:2px dashed var(--t-accent); padding-bottom:20px; margin-bottom:20px;}
+.mb4-head h1{font-size:18px; color:var(--t-accent);}
+.mb4-head p{font-size:10px; opacity:0.6;}
+.mb4-list{list-style:none; padding:0;}
+.mb4-list > li{margin-bottom:25px;}
+.mb4-list h2{font-size:14px; margin-bottom:10px;}
+.mb4-list ul{padding-left:20px; font-size:11px;}
+.mb4-list ul li{margin-bottom:8px;}
+.mb4-list ul li::before{content:'>'; color:var(--t-accent); margin-right:8px;}

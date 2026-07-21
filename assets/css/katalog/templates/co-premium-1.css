@@ -1,0 +1,11 @@
+.cp1-container{padding:20px; font-family:'Plus Jakarta Sans',sans-serif; background:var(--t-surface); min-height:450px;}
+.cp1-top{display:flex; justify-content:space-between; align-items:center; font-size:12px; font-weight:800; margin-bottom:20px; color:var(--t-accent);}
+.cp1-top i{margin-right:5px;}
+.cp1-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:20px;}
+.cp1-stat{background:var(--t-bg); padding:15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.02);}
+.cp1-stat span{font-size:8px; text-transform:uppercase; font-weight:bold; opacity:0.6; display:block; margin-bottom:5px;}
+.cp1-stat h3{font-size:18px; font-weight:900; color:var(--t-text);}
+.cp1-card{background:var(--t-bg); padding:20px; border-radius:8px; border-top:4px solid var(--t-accent);}
+.cp1-card h4{font-size:14px; font-weight:800; margin-bottom:10px;}
+.cp1-card p{font-size:11px; line-height:1.5; opacity:0.8; margin-bottom:15px;}
+.cp1-btn{background:rgba(var(--t-accent-rgb),0.1); color:var(--t-accent); display:inline-block; padding:8px 16px; font-size:10px; font-weight:bold; border-radius:4px; cursor:pointer;}

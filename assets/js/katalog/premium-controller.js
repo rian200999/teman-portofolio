@@ -9,7 +9,7 @@ window.initPremiumController = function() {
         },
         'premium-2': {
             title: 'Code Canvas',
-            desc: 'Layout realistis mirip aplikasi VS Code! Ada sidebar *file explorer*, *tabs* kode, dan *terminal*.',
+            desc: 'Layout realistis mirip aplikasi VS Code! Ada sidebar file explorer, tabs kode, dan terminal.',
             html: 'sections/detail-engineer/templates/premium-2.html',
             css: 'assets/css/katalog/templates/premium-2.css'
         },
@@ -21,7 +21,7 @@ window.initPremiumController = function() {
         },
         'premium-4': {
             title: 'Timeline Odyssey',
-            desc: 'Fokus ke *storytelling* karir. Ada garis *timeline* vertikal tebal dengan desain yang sinematik.',
+            desc: 'Fokus ke storytelling karir. Ada garis timeline vertikal tebal dengan desain yang sinematik.',
             html: 'sections/detail-engineer/templates/premium-4.html',
             css: 'assets/css/katalog/templates/premium-4.css'
         },
