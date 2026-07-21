@@ -85,13 +85,28 @@
     border-radius: 6px; font-weight: 600; font-size: 15px; 
     box-shadow: 0 10px 20px rgba(226, 211, 244, 0.8); transition: var(--tp-transition); 
 }
+
+.btn-primary-2 { 
+    display: flex; align-items: center; gap: 8px; 
+    padding: 12px 24px; background: var(--tp-light); /* Background Lilac */
+    color: #FFFFFF !important; /* Teks Biru */
+    border-radius: 6px; font-weight: 700; font-size: 15px; 
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.25); transition: var(--tp-transition); 
+}
+
 .btn-primary:hover { 
     background: var(--tp-light); color: #FFFFFF !important; /* Dibalik saat hover */
     box-shadow: 0 10px 30px rgba(1, 61, 196, 0.25);
     transform: translateY(-3px); 
 }
 
-.trusted-by { display: flex; align-items: center; gap: 15px; border-left: 2px solid var(--tp-border); padding-left: 20px; }
+.btn-primary-2:hover { 
+    background: var(--tp-green); color: var(--tp-light) !important; /* Dibalik saat hover */
+    box-shadow: 0 10px 20px rgba(226, 211, 244, 0.8);
+    transform: translateY(-3px); 
+}
+
+.trusted-by { display: flex; align-items: center; gap: 15px; border-left: 2px solid var(--tp-border); padding-left: 10px; }
 .avatars { display: flex; }
 .avatars img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #FFFFFF; margin-left: -12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .avatars img:first-child { margin-left: 0; }
@@ -182,7 +197,7 @@
 .dummy-btn {
     width: 100%; text-align: center; padding: 14px;
     background: var(--tp-green); color: var(--tp-light);
-    border-radius: 10px; font-weight: 800; border: none;
+    border-radius: 10px; font-weight: 700; border: none;
     transition: var(--tp-transition); cursor: pointer;
 }
 .showcase-stack:hover .dummy-btn { background: var(--tp-light); color: #FFF; }
