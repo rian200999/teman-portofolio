@@ -149,7 +149,7 @@
     padding-top: 30px; border-top: 1px dashed rgba(226, 211, 244, 0.8);
 }
 .copy-text { font-size: 14px; font-weight: 600; color: var(--tp-text-muted); }
-.tech-stack-info { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--tp-text-muted); font-weight: 600;}
+.tech-stack-info { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--tp-text-muted); font-weight: 500;}
 .divider { color: rgba(226, 211, 244, 0.6); }
 .easter-egg { font-family: "Noto Sans JP", sans-serif; font-style: italic; }
 

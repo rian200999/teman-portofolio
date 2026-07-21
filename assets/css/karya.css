@@ -1,60 +1,66 @@
 /* =========================================
-   SECTION KARYA CAROUSEL (LILAC MODE)
+   SECTION KARYA CAROUSEL
    ========================================= */
 .tp-karya-dynamic {
     padding: 120px 0;
-    /* Gradasi dari Lilac pudar (akhir section Tentang) ke putih bersih */
     background: linear-gradient(180deg, #FDFBFF 0%, #FFFFFF 100%);
     position: relative;
     margin-top: -1px;
 }
 
 /* Header Adjustments */
-.tp-karya-dynamic .text-dark { color: var(--tp-text-main); } /* Biru Pekat */
-.tp-karya-dynamic .text-dark span { 
-    color: var(--tp-light); /* Biru Elektrik */
-    background: rgba(226, 211, 244, 0.4); /* Background highlight Lilac tipis */
-    padding: 4px 14px; border-radius: 8px; display: inline-block; margin-top: 10px;
+.tp-karya-dynamic .text-dark {
+    color: var(--tp-text-main);
 }
-.tp-karya-dynamic .text-dark-muted { color: var(--tp-text-muted); font-weight: 500; }
+
+.tp-karya-dynamic .text-dark span {
+    color: var(--tp-light);
+    background: rgba(226, 211, 244, 0.4);
+    padding: 4px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.tp-karya-dynamic .text-dark-muted {
+    color: var(--tp-text-muted);
+    font-weight: 500;
+}
 
 /* BADGE ADAPTASI LILAC */
 .tp-section-badge.badge-lilac {
-    background: var(--tp-green); /* Lilac */
-    color: var(--tp-light); /* Biru Elektrik */
+    background: var(--tp-green);
+    color: var(--tp-light);
     border: 1px solid var(--tp-border);
     margin-bottom: 20px;
 }
 
-/* =========================================
-   CAROUSEL LAYOUT (FIXED WIDTH)
-   ========================================= */
+/* CAROUSEL LAYOUT */
 .carousel-container {
     position: relative;
     margin-top: 60px;
-    padding: 0 50px; /* Space buat tombol navigasi */
+    padding: 0 50px;
     width: 100%;
 }
 
 .carousel-track-wrapper {
-    overflow: hidden; /* Sembunyikan kartu yang tumpah */
+    overflow: hidden;
     width: 100%;
+    padding: 15px 0;
+    /* Biar shadow kartu gak kepotong */
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Ganti gap jadi margin di anak elemennya biar perhitungannya akurat */
-    gap: 0; 
+    gap: 0;
 }
 
 /* KARTU KARYA (SLIDE) */
 .karya-slide {
-    /* Lebar pasti 33.333% (3 kartu per baris) di Desktop */
     flex: 0 0 33.333%;
     max-width: 33.333%;
-    /* Pakai padding sebagai ganti gap, biar lebarnya gak kacau */
-    padding: 0 15px; 
+    padding: 0 15px;
     box-sizing: border-box;
 }
 
@@ -73,103 +79,277 @@
 .karya-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(1, 61, 196, 0.1);
-    border-color: var(--tp-light); /* Hover jadi Biru Elektrik */
+    border-color: var(--tp-light);
 }
 
-/* Bagian Gambar/Visual Dummy */
+/* WARNA TEMA GAMBAR KARTU (8 KATEGORI) */
 .k-image {
     height: 200px;
-    display: flex; align-items: center; justify-content: center;
-    color: #FFF; font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 60px;
 }
-/* Warna dummy untuk setiap tema */
-.bg-dev { background: linear-gradient(135deg, #0f172a, #1e293b); }
-.bg-creative { background: linear-gradient(135deg, #FF6B6B, #FF8E53); }
-.bg-pro { background: linear-gradient(135deg, #013DC4, #3B82F6); }
-.bg-social { background: linear-gradient(135deg, #A855F7, #EC4899); }
+
+.bg-dev {
+    background: linear-gradient(135deg, #09090b, #1e293b);
+}
+
+/* Engineer */
+.bg-creative {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+/* Creator */
+.bg-pro {
+    background: linear-gradient(135deg, #013DC4, #3B82F6);
+}
+
+/* Corporate */
+.bg-social {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+}
+
+/* Marketer */
+.bg-wri {
+    background: linear-gradient(135deg, #4A3B32, #8B5A2B);
+}
+
+/* Wordsmith */
+.bg-ana {
+    background: linear-gradient(135deg, #064E3B, #0D9488);
+}
+
+/* Analyst */
+.bg-bui {
+    background: linear-gradient(135deg, #C2410C, #F59E0B);
+}
+
+/* Builder */
+.bg-aca {
+    background: linear-gradient(135deg, #7F1D1D, #BE123C);
+}
+
+/* Scholar */
 
 /* Bagian Teks */
 .k-info {
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Biar tombol demo selalu di bawah */
+    flex-grow: 1;
 }
-.k-info h3 { font-size: 20px; color: var(--tp-text-main); margin-bottom: 12px; font-weight: 800;}
-.k-info p { font-size: 14px; color: var(--tp-text-muted); line-height: 1.6; margin-bottom: 25px; flex-grow: 1;}
+
+.k-info h3 {
+    font-size: 20px;
+    color: var(--tp-text-main);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.k-info p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
 
 .btn-demo {
-    display: inline-flex; align-items: center; gap: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     padding: 10px 20px;
-    background: var(--tp-green); /* Background Lilac */
-    color: var(--tp-light); /* Teks Biru Elektrik */
-    border-radius: 8px; font-weight: 800; font-size: 14px;
-    text-align: center; justify-content: center;
+    background: var(--tp-green);
+    color: var(--tp-light);
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
     transition: var(--tp-transition);
 }
+
 .karya-card:hover .btn-demo {
-    background: var(--tp-light); color: #FFF;
+    background: var(--tp-light);
+    color: #FFF;
 }
 
-/* =========================================
-   TOMBOL NAVIGASI CAROUSEL
-   ========================================= */
+/* TOMBOL NAVIGASI CAROUSEL */
 .carousel-btn {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 45px; height: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: #FFFFFF;
     border: 1px solid var(--tp-border);
-    color: var(--tp-light); /* Biru Elektrik */
+    color: var(--tp-light);
     font-size: 24px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(1, 61, 196, 0.1);
     transition: all 0.3s ease;
     z-index: 10;
 }
-.carousel-btn:hover { background: var(--tp-light); color: #FFF; }
-.prev-btn { left: 0; }
-.next-btn { right: 0; }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .karya-slide { 
-        flex: 0 0 50%; /* 2 Kartu di Tablet */
-        max-width: 50%; 
-    } 
+.carousel-btn:hover {
+    background: var(--tp-light);
+    color: #FFF;
 }
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* RESPONSIVE CAROUSEL */
+@media (max-width: 992px) {
+    .karya-slide {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
-    .karya-slide { 
-        flex: 0 0 100%; /* 1 Kartu full di HP */
+    .karya-slide {
+        flex: 0 0 100%;
         max-width: 100%;
-        padding: 0; /* Hilangkan padding kanan kiri biar full di HP */
-    } 
-    .carousel-container { padding: 0 35px; } /* Space tombol HP */
-    .prev-btn { left: 0px; } .next-btn { right: 0px; }
+        padding: 0;
+    }
+
+    .carousel-container {
+        padding: 0 35px;
+    }
+
+    .prev-btn {
+        left: 0px;
+    }
+
+    .next-btn {
+        right: 0px;
+    }
 }
 
 /* =========================================
-   TOMBOL CTA LIHAT KATALOG (DI BAWAH CAROUSEL)
+   TOMBOL CTA KATALOG (CARD STYLE)
    ========================================= */
-.karya-cta-bottom {
-    text-align: center;
-    margin-top: 50px;
+.karya-cta-card-wrap {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px; /* Biar aman di mobile */
 }
 
-.btn-lihat-katalog {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #FFFFFF; color: var(--tp-text-main);
-    padding: 16px 36px; border-radius: 12px;
-    font-size: 16px; font-weight: 800; 
-    border: 1px solid var(--tp-border);
-    transition: var(--tp-transition); 
-    box-shadow: 0 10px 20px rgba(1, 61, 196, 0.05);
+.karya-cta-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.05); /* Shadow tipis, elegan */
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.btn-lihat-katalog:hover {
-    background: var(--tp-light); color: #FFF;
-    border-color: var(--tp-light); 
-    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.2);
-    transform: translateY(-3px);
+.karya-cta-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--tp-light);
+}
+
+.cta-card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--tp-green); /* Warna lilac tipis */
+    color: var(--tp-light); /* Ikon biru elektrik */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.cta-card-text {
+    flex-grow: 1;
+}
+
+.cta-card-text h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin-bottom: 6px;
+}
+
+.cta-card-text p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-card-text strong {
+    color: var(--tp-light);
+}
+
+.cta-card-action {
+    flex-shrink: 0;
+}
+
+/* Tombol Simple Tanpa Efek Berlebihan */
+.btn-lihat-katalog-simple {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--tp-text-main); /* Biru gelap solid */
+    color: #FFFFFF;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-lihat-katalog-simple i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-lihat-katalog-simple:hover {
+    background: var(--tp-light); /* Hover jadi biru elektrik */
+    color: #FFF;
+}
+
+.btn-lihat-katalog-simple:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive buat HP */
+@media (max-width: 768px) {
+    .karya-cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 15px;
+    }
+    
+    .cta-card-text h3 {
+        font-size: 18px;
+    }
+    
+    .btn-lihat-katalog-simple {
+        width: 100%;
+        justify-content: center;
+    }
 }
