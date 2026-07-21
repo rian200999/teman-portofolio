@@ -1,0 +1,30 @@
+
+.p4-container { padding: 40px 20px; font-family: 'Plus Jakarta Sans', sans-serif; text-align: center; overflow-x: hidden;}
+.p4-hero { margin-bottom: 50px; }
+.p4-h1 { font-size: 32px; font-weight: 900; line-height: 1.1; margin-bottom: 10px; }
+.p4-p { font-size: 11px; opacity: 0.8; max-width: 80%; margin: 0 auto; }
+
+.p4-timeline-wrapper { position: relative; max-width: 100%; margin: 0 auto; padding-bottom: 30px;}
+.p4-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: rgba(128,128,128,0.1); transform: translateX(-50%); border-radius: 4px;}
+
+.p4-node { display: flex; justify-content: flex-end; padding-right: 50%; position: relative; margin-bottom: 30px; width: 100%;}
+.p4-node.right { justify-content: flex-start; padding-right: 0; padding-left: 50%; }
+
+.p4-dot { position: absolute; left: 50%; top: 15px; width: 16px; height: 16px; background: var(--t-accent); border: 4px solid var(--t-bg); border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 0 3px rgba(128,128,128,0.1); z-index: 2;}
+
+.p4-content { width: 85%; background: var(--t-surface); padding: 20px; border-radius: 12px; text-align: left; position: relative; border: 1px solid rgba(128,128,128,0.1); transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.03);}
+.p4-node:not(.right) .p4-content { margin-right: 20px; }
+.p4-node.right .p4-content { margin-left: 20px; }
+.p4-content:hover { transform: translateY(-3px); border-color: var(--t-accent);}
+
+.p4-date { font-size: 9px; font-weight: 900; color: var(--t-accent); letter-spacing: 1px; margin-bottom: 5px; }
+.p4-title { font-size: 14px; font-weight: 800; margin-bottom: 10px; color: var(--t-text);}
+.p4-desc { font-size: 10px; line-height: 1.6; opacity: 0.8; margin-bottom: 15px;}
+
+.p4-img-placeholder { height: 80px; background: rgba(128,128,128,0.1); border-radius: 8px; margin-bottom: 15px; border: 1px dashed rgba(128,128,128,0.3);}
+
+.p4-inline-form { display: flex; background: var(--t-bg); border: 1px solid rgba(128,128,128,0.2); border-radius: 50px; padding: 4px; }
+.p4-inline-form input { flex-grow: 1; background: transparent; border: none; padding: 5px 15px; font-size: 9px; color: var(--t-text); outline: none; font-family: inherit;}
+.p4-inline-form button { background: var(--t-accent); color: var(--t-bg); border: none; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s;}
+
+.p4-node-end { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: var(--t-bg); border: 2px solid rgba(128,128,128,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(128,128,128,0.5); z-index: 2;}

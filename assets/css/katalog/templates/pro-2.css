@@ -1,0 +1,30 @@
+
+#mockup-pro-wrapper:has(.pr2-container) { padding: 0; }
+.pr2-container { position: relative; height: 100%; min-height: 450px; font-family: 'JetBrains Mono', monospace; background: var(--t-bg); color: var(--t-text); overflow: hidden;}
+.pr2-bg-grid { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(rgba(128,128,128,0.2) 1px, transparent 1px); background-size: 20px 20px; z-index: 1;}
+
+.pr2-window { position: absolute; background: rgba(var(--t-bg-rgb), 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(128,128,128,0.3); border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); overflow: hidden; display: flex; flex-direction: column;}
+.pr2-win-header { background: var(--t-surface); padding: 6px 10px; display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid rgba(128,128,128,0.2);}
+.mac-dots { position: absolute; left: 10px; display: flex; gap: 5px; }
+.mac-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(128,128,128,0.3);}
+.mac-dots span:nth-child(1) { background: #FF5F56; } .mac-dots span:nth-child(2) { background: #FFBD2E; } .mac-dots span:nth-child(3) { background: #27C93F; }
+.win-title { font-size: 9px; opacity: 0.6; font-weight: bold;}
+
+.pr2-win-body { padding: 15px; font-size: 10px; line-height: 1.5; flex-grow: 1; overflow-y: auto;}
+
+/* Window Placements */
+.win-1 { top: 20px; left: 20px; width: 200px; z-index: 2; border: 1px solid var(--t-accent); box-shadow: 0 0 20px rgba(var(--t-accent-rgb, 128,128,128), 0.2);}
+.win-2 { top: 70px; left: 100px; width: 350px; height: 320px; z-index: 4; }
+.win-3 { top: 40px; right: 20px; width: 120px; z-index: 3; }
+
+.pr2-h1 { font-size: 24px; font-weight: 900; color: var(--t-accent); margin-bottom: 5px;}
+.pr2-comment { opacity: 0.5; font-style: italic; }
+.pr2-prompt { color: var(--t-accent); font-weight: bold; margin-right: 5px;}
+.pr2-output { color: rgba(128,128,128,0.8); margin-left: 15px; margin-top: 5px;}
+.pr2-proj { margin-left: 15px; line-height: 1.8; }
+.pr2-accent { color: var(--t-accent); font-weight: bold;}
+.blink { animation: blinker 1s linear infinite; font-weight: bold; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+.img-body { display: flex; align-items: center; justify-content: center; padding: 20px;}
+.pr2-avatar { width: 60px; height: 60px; background: var(--t-accent); border-radius: 8px;}

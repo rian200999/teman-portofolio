@@ -1,0 +1,27 @@
+
+.pr5-container { padding: 30px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: var(--t-bg); color: var(--t-text);}
+
+.pr5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px;}
+.pr5-logo { font-size: 20px; font-weight: 900; letter-spacing: -1px; position: relative;}
+.pr5-logo::after { content: ''; position: absolute; bottom: 4px; right: -8px; width: 6px; height: 6px; background: var(--t-accent); border-radius: 50%;}
+.pr5-contact-btn { font-size: 10px; font-weight: bold; text-transform: uppercase; border: 1px solid var(--t-text); padding: 8px 16px; border-radius: 50px; cursor: pointer; transition: 0.3s;}
+.pr5-contact-btn:hover { background: var(--t-text); color: var(--t-bg);}
+
+.pr5-hero { margin-bottom: 50px; }
+.pr5-huge { font-size: 48px; font-weight: 800; line-height: 1; letter-spacing: -2px; margin-bottom: 20px;}
+.pr5-sub { font-size: 9px; font-weight: bold; letter-spacing: 2px; color: var(--t-accent); max-width: 80%; line-height: 1.6;}
+
+.pr5-divider { height: 1px; background: rgba(128,128,128,0.2); width: 100%; margin: 30px 0;}
+
+.pr5-section { display: flex; flex-direction: column; gap: 15px;}
+.pr5-label { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5;}
+
+.pr5-work-list { display: flex; flex-direction: column; }
+.pr5-work-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid rgba(128,128,128,0.1); cursor: pointer; transition: 0.3s;}
+.pr5-work-item:hover { padding-left: 10px; color: var(--t-accent);}
+.pr5-work-item:hover .pr5-work-title i { opacity: 1; transform: translateX(5px);}
+.pr5-work-title { font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px;}
+.pr5-work-title i { opacity: 0; transition: 0.3s; color: var(--t-accent);}
+.pr5-work-tech { font-size: 10px; opacity: 0.5; font-family: monospace;}
+
+.pr5-text-large { font-size: 18px; font-weight: 600; line-height: 1.4; opacity: 0.9;}

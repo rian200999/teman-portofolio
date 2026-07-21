@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Engineer Templates - Teman Portofolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/katalog/global.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/katalog/detail-kategori.css">
     <link rel="stylesheet" href="assets/css/katalog/basic-shell.css">
 </head>
@@ -45,6 +47,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/katalog/detail-kategori.js"></script>
     <script src="assets/js/katalog/basic-controller.js"></script>
+    <script src="assets/js/katalog/premium-controller.js"></script>
+    <script src="assets/js/katalog/pro-controller.js"></script>
 
     <script>
         const loadSection = async (containerId, filePath) => {
@@ -54,31 +58,40 @@
                 const htmlText = await response.text();
                 const container = document.getElementById(containerId);
                 if (container) { container.innerHTML += htmlText; }
-            } catch (error) { 
-                console.warn(`Gagal memuat ${filePath}:`, error.message); 
+            } catch (error) {
+                console.warn(`Gagal memuat ${filePath}:`, error.message);
             }
         };
 
         document.addEventListener('DOMContentLoaded', async () => {
-            // 1. Load Hero & Basic Section
             await loadSection('detail-content', 'sections/detail-engineer/hero.html');
             await loadSection('detail-content', 'sections/detail-engineer/basic.html');
-
-            // 2. Inisialisasi controller & switcher setelah HTML Basic siap di DOM
-            if (typeof window.initBasicController === 'function') { 
-                window.initBasicController(); 
-            }
-            if (typeof window.initColorSwitcher === 'function') { 
-                window.initColorSwitcher(); 
-            }
-
-            // 3. Load Premium & Pro (Jika file belum ada, warn-nya tercatat tapi app tidak crash)
             await loadSection('detail-content', 'sections/detail-engineer/premium.html');
             await loadSection('detail-content', 'sections/detail-engineer/pro.html');
+            await loadSection('detail-content', 'sections/footer.html');
+
+            if (typeof window.initBasicController === 'function') {
+                window.initBasicController();
+            }
+            if (typeof window.initColorSwitcher === 'function') {
+                window.initColorSwitcher();
+            }
+
+            if (typeof window.initPremiumController === 'function') {
+                window.initPremiumController();
+            }
+            if (typeof window.initProController === 'function') {
+                window.initProController();
+            }
+
+            // 3. Init Footer
+            if (typeof window.initFooterLogic === 'function') {
+                window.initFooterLogic();
+            }
 
             // 4. Init AOS
-            if (typeof AOS !== 'undefined') { 
-                AOS.init({ once: true, duration: 800 }); 
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ once: true, duration: 800 });
             }
         });
     </script>
