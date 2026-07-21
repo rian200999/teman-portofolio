@@ -45,7 +45,7 @@ window.initCreatorPremiumController = function() {
         const info = templatesInfo[id];
         titleEl.innerText = info.title;
         descEl.innerHTML = info.desc;
-        ctaBtn.href = `https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20mau%20pesan%20Template%20Creator%20Premium%20(${info.title})`;
+        ctaBtn.href = `https://wa.me/6283100710499?text=Halo%20Admin,%20saya%20mau%20pesan%20Template%20Creator%20Premium%20(${info.title})`;
 
         if (activeCssLink) { activeCssLink.remove(); }
         activeCssLink = document.createElement('link');

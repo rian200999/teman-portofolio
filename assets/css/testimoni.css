@@ -1,91 +1,136 @@
 /* =========================================
-   SECTION TESTIMONI (LILAC PUDAR -> PUTIH BERSIH)
+   SECTION TESTIMONI (SWIPER)
    ========================================= */
 .tp-testimoni {
-    padding: 120px 0;
-    /* GRADASI SEAMLESS: Dari Lilac pudar (Akhir Komunitas) kembali ke putih */
+    padding: 120px 0 160px;
     background: linear-gradient(180deg, #F5F1FB 0%, #FFFFFF 100%);
     position: relative;
     margin-top: -1px;
     overflow: hidden;
 }
 
-/* Header Text Adjustments */
+.tp-testimoni .section-header {
+    margin-bottom: 60px;
+}
+
 .tp-testimoni .text-dark { color: var(--tp-text-main); }
 .tp-testimoni .text-dark span { 
-    color: var(--tp-light); /* Biru Elektrik */
-    background: rgba(226, 211, 244, 0.4); /* Highlight Lilac */
-    padding: 4px 14px; border-radius: 8px; display: inline-block; margin-top: 5px; 
+    color: var(--tp-light); 
+    background: rgba(226, 211, 244, 0.4); 
+    padding: 4px 14px; 
+    border-radius: 8px; 
+    display: inline-block; 
+    margin-top: 5px; 
 }
 .tp-testimoni .text-dark-muted { color: var(--tp-text-muted); margin-top: 15px; font-weight: 500;}
 
-/* GRID TESTIMONI */
-.testimoni-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 60px;
+/* KARTU TESTIMONI SWIPER */
+.testimoni-swiper {
+    padding: 20px 10px 60px; /* Ruang buat efek hover dan pagination */
+    overflow: visible; /* Biar bayangannya nggak kepotong */
 }
 
-/* KARTU TESTIMONI (CLEAN LIGHT MODE) */
+/* Pastikan di luar container disembunyikan biar slidernya nggak ngerusak layout body */
+@media (min-width: 1200px) {
+    .tp-testimoni .container {
+        overflow: hidden;
+    }
+}
+
 .testi-card {
     background: #FFFFFF;
-    border: 1px solid rgba(226, 211, 244, 0.8); /* Border Lilac */
+    border: 1px solid rgba(226, 211, 244, 0.8);
     padding: 40px;
     border-radius: 24px;
     color: var(--tp-text-main);
-    transition: var(--tp-transition);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 15px 35px rgba(1, 61, 196, 0.03); /* Shadow Biru Tipis */
+    height: 100%;
+    min-height: 380px; /* Biar tingginya rata */
+    box-shadow: 0 15px 35px rgba(1, 61, 196, 0.03);
+    position: relative;
+    cursor: grab; /* Biar jelas kalau bisa digeser */
 }
 
-/* 
-   Hover CSS ini sebagai fallback jika JS gagal diload,
-   tapi utamanya interaksi pakai tilt effect di JS. 
-*/
-.testi-card:hover {
-    box-shadow: 0 20px 50px rgba(1, 61, 196, 0.08);
-    border-color: var(--tp-light); /* Hover jadi Biru Elektrik */
+.testi-card:active {
+    cursor: grabbing;
 }
 
-.testi-stars { color: #F59E0B; margin-bottom: 20px; font-size: 18px; letter-spacing: 2px; }
+/* Ornamen Quote di background kartu */
+.testi-card::after {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 150px;
+    font-family: serif;
+    color: rgba(226, 211, 244, 0.3);
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+}
 
-.testi-card p {
+.testi-stars { 
+    color: #F59E0B; 
+    margin-bottom: 25px; 
+    font-size: 18px; 
+    letter-spacing: 2px; 
+    position: relative;
+    z-index: 1;
+}
+
+.testi-text {
     font-size: 15px;
-    line-height: 1.7;
-    font-style: italic;
-    margin-bottom: 30px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin-bottom: 35px;
     color: var(--tp-text-muted);
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
 }
 
-/* USER INFO */
 .testi-user {
     display: flex;
     align-items: center;
     gap: 15px;
     border-top: 1px dashed rgba(226, 211, 244, 0.8);
     padding-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .testi-user img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 2px solid var(--tp-light); /* Ring Biru Elektrik */
+    border: 2px solid var(--tp-light);
     object-fit: cover;
 }
 
-.user-info h5 { font-size: 16px; font-weight: 800; margin-bottom: 2px; color: var(--tp-text-main); }
-.user-info span { font-size: 13px; color: var(--tp-light); font-weight: 700; } /* Jabatan pakai Biru Elektrik */
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .testimoni-grid { grid-template-columns: repeat(2, 1fr); }
+.user-info h5 { 
+    font-size: 16px; 
+    font-weight: 800; 
+    margin-bottom: 2px; 
+    color: var(--tp-text-main); 
+}
+.user-info span { 
+    font-size: 13px; 
+    color: var(--tp-light); 
+    font-weight: 700; 
 }
 
-@media (max-width: 768px) {
-    .testimoni-grid { grid-template-columns: 1fr; }
-    .testi-card { padding: 30px; }
+/* Styling Pagination Dots (Bawaan Swiper) */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(1, 61, 196, 0.2);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+    background: var(--tp-light);
+    width: 30px;
+    border-radius: 10px;
 }

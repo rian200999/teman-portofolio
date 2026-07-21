@@ -47,7 +47,7 @@ window.initBasicController = function() {
         // Update Title, Desc, CTA
         titleEl.innerText = info.title;
         descEl.innerHTML = info.desc;
-        ctaBtn.href = `https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20mau%20pesan%20Template%20Engineer%20Basic%20(${info.title})`;
+        ctaBtn.href = `https://wa.me/6283100710499?text=Halo%20Admin,%20saya%20mau%20pesan%20Template%20Engineer%20Basic%20(${info.title})`;
 
         // Load CSS Dynamically (Remove old, add new)
         if (activeCssLink) { activeCssLink.remove(); }
