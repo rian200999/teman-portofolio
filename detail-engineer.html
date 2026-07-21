@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Engineer Templates - Teman Portofolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/katalog/global.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/katalog/detail-kategori.css">
+    <link rel="stylesheet" href="assets/css/katalog/basic-shell.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Teman<span>Portofolio.</span></a>
+
+            <nav class="navbar">
+                <!-- <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#layanan" class="nav-link">Layanan</a>
+                <a href="#harga" class="nav-link">Harga</a> -->
+                <a href="katalog.html" class="nav-link active">
+                    Kembali ke Katalog
+                </a>
+            </nav>
+
+            <div class="menu-icon" id="menu-btn">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN MODULAR DIMUAT DI SINI -->
+    <main id="detail-content"></main>
+
+    <!-- SCRIPT LOADER & LOGIC -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/katalog/detail-kategori.js"></script>
+    <script src="assets/js/katalog/basic-controller.js"></script>
+
+    <script>
+        const loadSection = async (containerId, filePath) => {
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const htmlText = await response.text();
+                const container = document.getElementById(containerId);
+                if (container) { container.innerHTML += htmlText; }
+            } catch (error) { 
+                console.warn(`Gagal memuat ${filePath}:`, error.message); 
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 1. Load Hero & Basic Section
+            await loadSection('detail-content', 'sections/detail-engineer/hero.html');
+            await loadSection('detail-content', 'sections/detail-engineer/basic.html');
+
+            // 2. Inisialisasi controller & switcher setelah HTML Basic siap di DOM
+            if (typeof window.initBasicController === 'function') { 
+                window.initBasicController(); 
+            }
+            if (typeof window.initColorSwitcher === 'function') { 
+                window.initColorSwitcher(); 
+            }
+
+            // 3. Load Premium & Pro (Jika file belum ada, warn-nya tercatat tapi app tidak crash)
+            await loadSection('detail-content', 'sections/detail-engineer/premium.html');
+            await loadSection('detail-content', 'sections/detail-engineer/pro.html');
+
+            // 4. Init AOS
+            if (typeof AOS !== 'undefined') { 
+                AOS.init({ once: true, duration: 800 }); 
+            }
+        });
+    </script>
+</body>
+
+</html>

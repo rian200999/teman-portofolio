@@ -1,0 +1,237 @@
+/* =========================================
+   KATEGORI BENTO GRID CSS
+   ========================================= */
+.kat-kategori {
+    padding: 120px 0;
+    background: #FFFFFF;
+}
+
+/* Grid Bento Style (Biar Gak Pasaran) */
+.kategori-bento-grid {
+    display: grid;
+    /* Kita bikin 3 kolom dasar */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* KARTU KATEGORI (Default: Makan 1 Kolom) */
+.k-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: var(--tp-transition);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.03);
+}
+
+.k-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--tp-light);
+    box-shadow: 0 20px 40px rgba(1, 61, 196, 0.1);
+}
+
+/* Modifikasi Ukuran Khusus (Makan 2 Kolom) biar layout variatif */
+.card-wide {
+    grid-column: span 2;
+    flex-direction: row;
+    /* Kalau lebar, gambarnya di kiri, teks di kanan */
+}
+
+/* PREVIEW ATAS / KIRI */
+.k-preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(226, 211, 244, 0.5);
+    height: 220px;
+    /* Tinggi default buat yang kotak */
+}
+
+/* Kalau mode Wide, preview-nya di kiri */
+.card-wide .k-preview {
+    width: 45%;
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid rgba(226, 211, 244, 0.5);
+}
+
+.b-dots {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    gap: 6px;
+}
+
+.b-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.b-dots span:nth-child(1) {
+    background: #FF5F56;
+}
+
+.b-dots span:nth-child(2) {
+    background: #FFBD2E;
+}
+
+.b-dots span:nth-child(3) {
+    background: #27C93F;
+}
+
+.k-preview i {
+    font-size: 60px;
+    color: #FFF;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+}
+
+.k-card:hover .k-preview i {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 1;
+}
+
+/* WARNA TEMA (6 Kategori) */
+.p-eng {
+    background: linear-gradient(135deg, #0B1333, #1e293b);
+}
+
+.p-cre {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+.p-cor {
+    background: linear-gradient(135deg, #013DC4, #3B82F6);
+}
+
+.p-mar {
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+}
+
+.p-wri {
+    background: linear-gradient(135deg, #10B981, #34D399);
+}
+
+.p-aca {
+    background: linear-gradient(135deg, #F59E0B, #FBBF24);
+}
+
+/* BAGIAN KONTEN (Teks) */
+.k-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Kalau mode Wide, kontennya nyesuaikan biar seimbang */
+.card-wide .k-content {
+    width: 55%;
+    justify-content: center;
+}
+
+.k-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.k-tag {
+    background: var(--tp-green);
+    color: var(--tp-light);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.k-card h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--tp-text-main);
+}
+
+.card-wide h3 {
+    font-size: 28px;
+}
+
+.k-card p {
+    color: var(--tp-text-muted);
+    margin-bottom: 25px;
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card-wide p {
+    font-size: 15px;
+}
+
+.btn-demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--tp-light);
+    font-weight: 800;
+    font-size: 14px;
+    transition: var(--tp-transition);
+}
+
+.btn-demo-link i {
+    transition: transform 0.3s;
+    font-size: 20px;
+}
+
+.btn-demo-link:hover {
+    color: var(--tp-text-main);
+}
+
+.k-card:hover .btn-demo-link i {
+    transform: translateX(5px);
+}
+
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 992px) {
+
+    /* Di Tablet, jadi grid 2 kolom biasa, buang mode Wide */
+    .kategori-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-wide {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .card-wide .k-preview {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid rgba(226, 211, 244, 0.5);
+    }
+
+    .card-wide .k-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Di HP, jadi 1 kolom bertumpuk ke bawah */
+    .kategori-bento-grid {
+        grid-template-columns: 1fr;
+    }
+}

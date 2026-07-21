@@ -1,0 +1,77 @@
+/* =========================================
+   HERO KATALOG CSS
+   ========================================= */
+.kat-hero { 
+    padding: 120px 0 120px; 
+    background: linear-gradient(135deg, #FFFFFF 0%, #FDFBFF 100%); 
+    text-align: center; 
+    position: relative; 
+    overflow: hidden; 
+    margin-top: -100px;
+}
+
+/* Badge (Adaptasi dari warna global Teman Portofolio) */
+.badge-lilac {
+    background: var(--tp-green); color: var(--tp-light);
+    border: 1px solid var(--tp-border);
+}
+
+.kat-hero h1 { 
+    font-size: 60px; font-weight: 900; color: var(--tp-text-main); 
+    margin-bottom: 24px; line-height: 1.15; letter-spacing: -1px;
+}
+.kat-hero h1 span { 
+    color: var(--tp-light); position: relative; 
+}
+.kat-hero h1 span::after { 
+    content: ''; position: absolute; left: -5px; bottom: 8px; 
+    width: calc(100% + 10px); height: 20px; background: rgba(226, 211, 244, 0.6); 
+    z-index: -1; transform: skewX(-15deg); border-radius: 4px;
+}
+
+.hero-subtitle { 
+    font-size: 18px; color: var(--tp-text-muted); max-width: 650px; 
+    margin: 0 auto 40px; font-weight: 500; line-height: 1.6;
+}
+
+/* Group Tombol */
+.hero-cta-group {
+    display: flex; justify-content: center; gap: 15px; margin-bottom: 50px;
+}
+
+.btn-hero-primary { 
+    display: inline-flex; align-items: center; gap: 8px; 
+    background: var(--tp-light); color: #fff; 
+    padding: 16px 36px; border-radius: 12px; font-size: 16px; font-weight: 800; 
+    transition: var(--tp-transition); box-shadow: 0 10px 25px rgba(1, 61, 196, 0.25); 
+}
+.btn-hero-primary:hover { 
+    background: var(--tp-green); color: var(--tp-text-main); 
+    transform: translateY(-3px); box-shadow: 0 15px 35px rgba(226, 211, 244, 0.8);
+}
+
+.btn-hero-secondary {
+    display: inline-flex; align-items: center; gap: 8px; 
+    background: #FFF; color: var(--tp-text-main); 
+    padding: 16px 32px; border-radius: 12px; font-size: 16px; font-weight: 800; 
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    transition: var(--tp-transition); box-shadow: 0 5px 15px rgba(1, 61, 196, 0.05); 
+}
+.btn-hero-secondary:hover {
+    background: #FAFAFF; border-color: var(--tp-light); color: var(--tp-light);
+    transform: translateY(-3px);
+}
+
+/* Info Tambahan Bawah */
+.hero-stats {
+    display: flex; justify-content: center; gap: 30px;
+    font-size: 14px; font-weight: 700; color: var(--tp-text-muted);
+}
+.stat-item { display: flex; align-items: center; gap: 5px; }
+.stat-item i { color: var(--tp-light); font-size: 18px; }
+
+@media (max-width: 768px) {
+    .kat-hero h1 { font-size: 42px; }
+    .hero-cta-group { flex-direction: column; padding: 0 20px;}
+    .hero-stats { flex-wrap: wrap; justify-content: center; gap: 15px;}
+}

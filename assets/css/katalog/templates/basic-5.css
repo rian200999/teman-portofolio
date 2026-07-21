@@ -1,0 +1,40 @@
+#mockup-basic-wrapper:has(.t5-container) { padding: 0; }
+.t5-container { position: relative; padding: 40px 30px; font-family: 'JetBrains Mono', monospace; min-height: 400px; z-index: 1;}
+
+/* Background Cyberpunk Grid */
+.t5-bg-dots { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(128,128,128,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(128,128,128,0.1) 1px, transparent 1px); background-size: 20px 20px; z-index: -1;}
+
+/* Node Logic */
+.t5-node { display: flex; gap: 20px; align-items: flex-start; position: relative; }
+.t5-dot { width: 14px; height: 14px; background: var(--t-bg); border: 2px solid rgba(128,128,128,0.5); border-radius: 50%; z-index: 2; margin-top: 15px;}
+.t5-dot.primary { border-color: var(--t-accent); box-shadow: 0 0 15px var(--t-accent); }
+
+/* Content Box */
+.t5-content { background: rgba(var(--t-bg-rgb), 0.9); backdrop-filter: blur(4px); border: 1px solid rgba(128,128,128,0.2); padding: 15px 20px; border-radius: 8px; flex-grow: 1; transition: border-color 0.3s;}
+.t5-content:hover { border-color: var(--t-accent); }
+.t5-content.main { border: 2px solid var(--t-accent); box-shadow: 0 5px 20px rgba(0,0,0,0.2);}
+
+/* Typography */
+.t5-h1 { font-size: 16px; color: var(--t-accent); margin-bottom: 8px; font-weight: 900;}
+.t5-p { font-size: 11px; opacity: 0.8; line-height: 1.5; margin-bottom: 15px;}
+.t5-h3 { font-size: 13px; color: var(--t-accent); margin-bottom: 15px; border-bottom: 1px dashed rgba(128,128,128,0.3); padding-bottom: 8px;}
+.t5-data { font-size: 11px; color: var(--t-text); opacity: 0.9;}
+.t5-data.block { line-height: 1.8; color: rgba(128,128,128,0.8); }
+
+.t5-btn { display: inline-block; background: var(--t-accent); color: var(--t-bg); padding: 8px 16px; font-size: 10px; font-weight: 900; cursor: pointer; border-radius: 2px;}
+
+/* Line connecting nodes */
+.t5-line { height: 30px; width: 2px; background: rgba(128,128,128,0.3); margin-left: 6px; }
+
+/* Sub Nodes & Tags */
+.t5-sub-node { background: rgba(128,128,128,0.05); padding: 10px; margin-bottom: 10px; border-left: 2px solid var(--t-accent);}
+.t5-sub-node h4 { font-size: 11px; font-weight: bold; margin-bottom: 5px; color: var(--t-text);}
+.t5-sub-node p { font-size: 10px; opacity: 0.7; line-height: 1.4; margin: 0;}
+
+.t5-data.flex-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.t5-data.flex-tags span { background: rgba(128,128,128,0.1); border: 1px solid var(--t-accent); color: var(--t-accent); padding: 4px 10px; font-size: 10px; border-radius: 2px;}
+
+.t5-proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.t5-proj-card { border: 1px dashed rgba(128,128,128,0.4); padding: 10px; }
+.t5-proj-card h5 { font-size: 11px; color: var(--t-accent); margin-bottom: 5px;}
+.t5-proj-card p { font-size: 9px; opacity: 0.6; margin: 0;}

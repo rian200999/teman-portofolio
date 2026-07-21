@@ -148,3 +148,28 @@
     .carousel-container { padding: 0 35px; } /* Space tombol HP */
     .prev-btn { left: 0px; } .next-btn { right: 0px; }
 }
+
+/* =========================================
+   TOMBOL CTA LIHAT KATALOG (DI BAWAH CAROUSEL)
+   ========================================= */
+.karya-cta-bottom {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-lihat-katalog {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #FFFFFF; color: var(--tp-text-main);
+    padding: 16px 36px; border-radius: 12px;
+    font-size: 16px; font-weight: 800; 
+    border: 1px solid var(--tp-border);
+    transition: var(--tp-transition); 
+    box-shadow: 0 10px 20px rgba(1, 61, 196, 0.05);
+}
+
+.btn-lihat-katalog:hover {
+    background: var(--tp-light); color: #FFF;
+    border-color: var(--tp-light); 
+    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.2);
+    transform: translateY(-3px);
+}
