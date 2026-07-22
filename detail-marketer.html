@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Marketer Templates - Teman Portofolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/katalog/global.css">
@@ -14,25 +16,10 @@
     <link rel="stylesheet" href="assets/css/katalog/detail-kategori.css">
     <link rel="stylesheet" href="assets/css/katalog/marketer-shell.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Teman<span>Portofolio.</span></a>
-
-            <nav class="navbar">
-                <!-- <a href="#home" class="nav-link active">Beranda</a>
-                <a href="#layanan" class="nav-link">Layanan</a>
-                <a href="#harga" class="nav-link">Harga</a> -->
-                <a href="katalog.html" class="nav-link active">
-                    Kembali ke Katalog
-                </a>
-            </nav>
-
-            <div class="menu-icon" id="menu-btn">
-                <i class='bx bx-menu-alt-right'></i>
-            </div>
-        </div>
-    </header>
+    <!-- NAVBAR INJECTION POINT -->
+    <div id="navbar-placeholder"></div>
 
     <main id="detail-content"></main>
 
@@ -55,6 +42,23 @@
         };
 
         document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('components/navbar.html');
+                if (response.ok) {
+                    const html = await response.text();
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+
+                    // Re-evaluasi script internal dari navbar.html (biar auto-active nya jalan)
+                    const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.text = script.text;
+                        document.body.appendChild(newScript);
+                    });
+                }
+            } catch (error) {
+                console.error("Gagal meload navbar:", error);
+            }
             await loadSection('detail-content', 'sections/detail-marketer/hero.html');
             await loadSection('detail-content', 'sections/detail-marketer/basic.html');
             await loadSection('detail-content', 'sections/detail-marketer/premium.html');
@@ -71,4 +75,5 @@
         });
     </script>
 </body>
+
 </html>

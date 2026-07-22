@@ -13,18 +13,8 @@
     <link rel="stylesheet" href="assets/css/katalog/scholar-shell.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container nav-container" style="display:flex; justify-content:space-between; padding:20px 0;">
-            <a href="katalog.html" class="logo" style="font-size:24px; font-weight:800; color:var(--tp-text-main); text-decoration:none;">
-                Teman<span style="color:var(--tp-light);">Portofolio.</span>
-            </a>
-            <nav class="navbar" style="display:flex; gap:20px; align-items:center;">
-                <a href="katalog.html" style="text-decoration:none; color:var(--tp-text-muted); font-weight:600;">
-                    <i class='bx bx-left-arrow-alt'></i> Kembali ke Katalog
-                </a>
-            </nav>
-        </div>
-    </header>
+    <!-- NAVBAR INJECTION POINT -->
+    <div id="navbar-placeholder"></div>
 
     <main id="detail-content"></main>
 
@@ -46,6 +36,23 @@
         };
 
         document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('components/navbar.html');
+                if (response.ok) {
+                    const html = await response.text();
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+
+                    // Re-evaluasi script internal dari navbar.html (biar auto-active nya jalan)
+                    const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.text = script.text;
+                        document.body.appendChild(newScript);
+                    });
+                }
+            } catch (error) {
+                console.error("Gagal meload navbar:", error);
+            }
             await loadSection('detail-content', 'sections/detail-scholar/hero.html');
             await loadSection('detail-content', 'sections/detail-scholar/basic.html');
             await loadSection('detail-content', 'sections/detail-scholar/premium.html');

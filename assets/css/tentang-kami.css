@@ -1,0 +1,214 @@
+/* =========================================
+   Halaman Tentang Kami - Estetik & Gen Z
+   ========================================= */
+
+body {
+    background-color: #FAFAFA;
+}
+
+.about-main {
+    padding-top: 80px;
+    /* Jarak untuk Navbar Global */
+}
+
+/* HERO SECTION */
+.about-hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(180deg, #FAFAFA 0%, #F5F1FB 100%);
+}
+
+.about-hero h1 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--tp-text-main);
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.about-hero h1 span {
+    color: transparent;
+    background: linear-gradient(90deg, var(--tp-light), #A855F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: var(--tp-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* THE STORY (STICKY LAYOUT) */
+.about-story {
+    padding: 100px 0;
+    background: #FFFFFF;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: flex-start;
+    /* Penting buat sticky */
+}
+
+.story-left {
+    position: sticky;
+    top: 150px;
+    /* Jarak pas berhenti di scroll */
+}
+
+.sticky-text {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    line-height: 1.1;
+}
+
+.story-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.story-card {
+    background: #FAFAFA;
+    border: 1px solid rgba(226, 211, 244, 0.6);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateX(10px);
+    border-color: var(--tp-light);
+}
+
+.story-card i {
+    font-size: 40px;
+    color: var(--tp-light);
+    background: var(--tp-green);
+    /* Lilac */
+    padding: 15px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.story-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--tp-text-main);
+}
+
+.story-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--tp-text-muted);
+}
+
+/* MANIFESTO (BENTO GRID) */
+.about-manifesto {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.manifesto-bento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.m-card {
+    padding: 40px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 300px;
+}
+
+.m-wide {
+    grid-column: span 2;
+}
+
+.bg-lilac {
+    background: linear-gradient(135deg, var(--tp-green), #D4C1F9);
+    color: var(--tp-text-main);
+}
+
+.bg-dark {
+    background: var(--tp-text-main);
+}
+
+.bg-blue {
+    background: var(--tp-light);
+}
+
+.m-card h3 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.m-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+}
+
+.m-wide p {
+    max-width: 60%;
+}
+
+.bg-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-size: 200px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 40px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-left {
+        position: relative;
+        /* Matikan sticky di mobile */
+        top: 0;
+        text-align: center;
+    }
+
+    .manifesto-bento {
+        grid-template-columns: 1fr;
+    }
+
+    .m-wide {
+        grid-column: span 1;
+    }
+
+    .m-wide p {
+        max-width: 100%;
+    }
+}

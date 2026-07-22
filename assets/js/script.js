@@ -9,6 +9,23 @@ const loadSection = async (containerId, filePath) => {
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('components/navbar.html');
+        if (response.ok) {
+            const html = await response.text();
+            document.getElementById('navbar-placeholder').innerHTML = html;
+            
+            // Re-evaluasi script internal dari navbar.html (biar auto-active nya jalan)
+            const scripts = document.getElementById('navbar-placeholder').querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.text = script.text;
+                document.body.appendChild(newScript);
+            });
+        }
+    } catch (error) {
+        console.error("Gagal meload navbar:", error);
+    }
     // 1. Load Sections
     await loadSection('app-content', './sections/hero.html');
     await loadSection('app-content', './sections/layanan.html');
@@ -21,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // await loadSection('app-content', './sections/exclusive.html');
     await loadSection('app-content', './sections/testimoni.html');
     // await loadSection('app-content', './sections/kerjasama.html');
-    await loadSection('app-footer', './sections/footer.html');
+    await loadSection('app-footer', './components/footer.html');
 
     // 2. Init Logics
     if (typeof window.initHeroLogic === 'function') { window.initHeroLogic(); }

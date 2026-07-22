@@ -1,0 +1,114 @@
+/* MANIFESTO BENTO GRID */
+.tk-manifesto {
+    padding: 100px 0;
+    background: #FAFAFA;
+}
+
+.tk-manifesto h2 span {
+    color: var(--tp-light);
+    border-bottom: 4px solid var(--tp-green);
+}
+
+.tk-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.tk-m-card {
+    border-radius: 28px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+    transition: transform 0.4s ease;
+}
+
+.tk-m-card:hover {
+    transform: translateY(-8px);
+}
+
+.tk-wide {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Background Variations */
+.bg-gradient {
+    background: linear-gradient(135deg, var(--tp-light), #8B5CF6);
+    color: #FFF;
+}
+.bg-dark {
+    background: var(--tp-text-main);
+    color: #FFF;
+}
+.bg-glass {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    color: var(--tp-text-main);
+}
+.bg-glass p { color: var(--tp-text-muted); }
+
+.tk-m-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+}
+.tk-wide .tk-m-content { max-width: 60%; }
+
+.tk-num {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+.bg-glass .tk-num { background: var(--tp-green); color: var(--tp-light); }
+
+.tk-m-card h3 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.tk-m-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.tk-bg-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    font-size: 220px;
+    opacity: 0.1;
+    z-index: 1;
+    transform: rotate(-15deg);
+    transition: 0.5s ease;
+}
+
+.tk-m-card:hover .tk-bg-icon {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 0.15;
+}
+
+@media (max-width: 768px) {
+    .tk-bento-grid { grid-template-columns: 1fr; }
+    .tk-wide { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+    .tk-wide .tk-m-content { max-width: 100%; }
+    .tk-m-card { padding: 30px; min-height: 280px; }
+    .tk-m-card h3 { font-size: 24px; }
+    .tk-bg-icon { font-size: 150px; }
+}
