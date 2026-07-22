@@ -284,3 +284,134 @@
         gap: 40px;
     }
 }
+
+/* =========================================
+   CUSTOM CSS CTA CARD KE PAGE HARGA
+   ========================================= */
+.harga-cta-card-wrap {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.harga-cta-card {
+    /* Background sedikit gradasi halus bernuansa Lilac */
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F1FB 100%);
+    border: 2px solid var(--tp-green); /* Border warna Lilac tegas */
+    border-radius: 24px;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.08); /* Shadow ungu lembut */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.harga-cta-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--tp-light);
+    box-shadow: 0 20px 45px rgba(1, 61, 196, 0.12);
+}
+
+/* Kotak Ikon */
+.harga-card-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--tp-light); /* Biru Elektrik */
+    color: #FFFFFF;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(1, 61, 196, 0.25);
+}
+
+.harga-card-text {
+    flex-grow: 1;
+}
+
+.harga-card-text h3 {
+    font-size: 21px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.harga-card-text p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.harga-card-text strong {
+    color: var(--tp-light);
+    font-weight: 700;
+}
+
+.harga-card-action {
+    flex-shrink: 0;
+}
+
+/* Tombol Custom ke Page Harga */
+.btn-lihat-harga-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--tp-light); /* Biru Elektrik */
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(1, 61, 196, 0.2);
+}
+
+.btn-lihat-harga-custom i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-lihat-harga-custom:hover {
+    background: var(--tp-text-main); /* Hover jadi Biru Navy Pekat */
+    color: #FFF;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(11, 19, 51, 0.25);
+}
+
+.btn-lihat-harga-custom:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive HP */
+@media (max-width: 768px) {
+    .harga-cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .harga-card-icon {
+        margin: 0 auto;
+    }
+    
+    .harga-card-text h3 {
+        font-size: 18px;
+    }
+    
+    .btn-lihat-harga-custom {
+        width: 100%;
+        justify-content: center;
+    }
+}

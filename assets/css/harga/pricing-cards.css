@@ -1,0 +1,115 @@
+/* PRICING CARDS - 3 COLUMNS */
+.hg-pricing-sec {
+    position: relative;
+    z-index: 10;
+    margin-top: -140px; 
+    padding-bottom: 80px;
+    background: transparent;
+}
+
+.hg-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 35px 25px;
+    box-shadow: 0 15px 40px rgba(1, 61, 196, 0.05);
+    position: relative;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pc-basic, .pc-pro {
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    margin-top: 20px; /* Diturunin dikit biar yg tengah nonjol */
+    margin-bottom: 20px;
+}
+
+/* Kartu Premium di tengah */
+.pc-premium {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+    border: 2px solid var(--tp-light);
+    box-shadow: 0 25px 50px rgba(1, 61, 196, 0.12);
+    z-index: 2;
+}
+
+.pc-popular-badge {
+    position: absolute;
+    top: -16px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--tp-light), #A855F7);
+    color: #FFF; font-size: 12px; font-weight: 800;
+    padding: 6px 18px; border-radius: 50px;
+    letter-spacing: 1px; text-transform: uppercase;
+    box-shadow: 0 8px 15px rgba(168, 85, 247, 0.3);
+}
+
+.pc-header h3 { font-size: 22px; font-weight: 900; color: var(--tp-text-main); margin-bottom: 8px;}
+.pc-header p { font-size: 13px; color: var(--tp-text-muted); line-height: 1.5; margin-bottom: 25px;}
+
+.pc-price {
+    margin-bottom: 15px; 
+}
+.pc-price .currency { font-size: 20px; font-weight: 700; color: var(--tp-text-main); vertical-align: top; margin-right: 2px;}
+.pc-price { font-size: 48px; font-weight: 900; color: var(--tp-text-main); line-height: 1;}
+.pc-price .zeros { font-size: 20px; font-weight: 700; color: var(--tp-text-muted);}
+
+.pc-payment-split {
+    display: flex;
+    justify-content: space-between;
+    background: #F0F4FF;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--tp-light);
+    margin-bottom: 30px;
+    border: 1px dashed rgba(1, 61, 196, 0.2);
+}
+
+.pc-features { list-style: none; padding: 0; margin: 0 0 40px 0; flex-grow: 1;}
+.pc-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 14px; color: var(--tp-text-main); margin-bottom: 16px; line-height: 1.4; font-weight: 500;
+}
+.pc-features i { font-size: 20px; color: #25D366; margin-top: 2px;}
+.pc-features i.text-lilac { color: var(--tp-light); }
+.pc-features i.text-blue { color: var(--tp-text-main); }
+
+.pc-features li.disabled { color: var(--tp-text-muted); opacity: 0.5; }
+.pc-features li.disabled i { color: #FF4D4F; }
+
+/* Buttons */
+.btn-price-outline {
+    display: block; width: 100%; text-align: center;
+    padding: 14px; border-radius: 50px; font-size: 14px; font-weight: 800;
+    background: transparent; color: var(--tp-text-main); border: 2px solid var(--tp-text-main);
+    text-decoration: none; transition: 0.3s; margin-top: auto;
+}
+.btn-price-outline:hover { background: var(--tp-text-main); color: #FFF; }
+
+.btn-price-solid {
+    display: block; width: 100%; text-align: center;
+    padding: 14px; border-radius: 50px; font-size: 14px; font-weight: 800;
+    background: var(--tp-light); color: #FFF; border: 2px solid var(--tp-light);
+    text-decoration: none; transition: 0.3s; margin-top: auto;
+    box-shadow: 0 10px 20px rgba(1, 61, 196, 0.2);
+}
+.btn-price-solid:hover { background: var(--tp-text-main); border-color: var(--tp-text-main); transform: translateY(-3px);}
+
+.btn-pro-outline { border-color: var(--tp-light); color: var(--tp-light); }
+.btn-pro-outline:hover { background: var(--tp-light); color: #FFF; }
+
+.pc-note { font-size: 11px; color: var(--tp-text-muted); text-align: center; margin-top: 15px; font-style: italic;}
+
+@media (max-width: 992px) {
+    .hg-pricing-grid { grid-template-columns: 1fr; gap: 30px; margin-top: -60px; padding: 0 15px; }
+    .pc-basic, .pc-pro { margin-top: 0; margin-bottom: 0; }
+}

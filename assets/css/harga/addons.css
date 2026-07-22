@@ -1,0 +1,54 @@
+/* ADD-ONS SECTION */
+.hg-addons {
+    padding: 0 0 100px;
+    background: #FAFAFA;
+}
+
+.hg-addons h2 span { color: var(--tp-light); }
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.addon-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+}
+.addon-card:hover {
+    border-color: var(--tp-light);
+    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.05);
+    transform: translateY(-5px);
+}
+
+.addon-icon {
+    width: 60px; height: 60px;
+    background: var(--tp-green); color: var(--tp-light);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; flex-shrink: 0;
+}
+
+.addon-info { flex-grow: 1; }
+.addon-info h4 { font-size: 16px; font-weight: 800; color: var(--tp-text-main); margin-bottom: 5px;}
+.addon-info p { font-size: 13px; color: var(--tp-text-muted); line-height: 1.5; margin: 0;}
+
+.addon-price {
+    font-size: 18px; font-weight: 900; color: var(--tp-light);
+    white-space: nowrap; flex-shrink: 0; text-align: right;
+}
+.addon-price small { display: block; font-size: 12px; color: var(--tp-text-muted); font-weight: 500;}
+
+@media (max-width: 992px) {
+    .addons-grid { grid-template-columns: 1fr; }
+    .addon-card { flex-direction: column; text-align: center; padding: 30px 20px; }
+    .addon-price { text-align: center; margin-top: 10px; }
+}

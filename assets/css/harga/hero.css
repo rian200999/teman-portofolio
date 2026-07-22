@@ -1,0 +1,82 @@
+/* HERO SECTION HARGA - SEDIKIT LEBIH TERANG */
+.hg-hero {
+    position: relative;
+    padding: 80px 0 200px;
+    background: #FAFAFA;
+    overflow: hidden;
+    margin-top: -30px;
+}
+
+.hg-dark-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 100%;
+    /* Diubah jadi gradient biru elektrik ke navy agar tidak terlalu gelap/mati */
+    background: linear-gradient(135deg, #0B1333 0%, var(--tp-light) 100%);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hg-grid-pattern {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.hg-glow-left {
+    position: absolute; top: -20%; left: -10%; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(226, 211, 244, 0.2) 0%, transparent 60%);
+    border-radius: 50%; filter: blur(60px);
+}
+
+.hg-glow-right {
+    position: absolute; bottom: -20%; right: -10%; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 60%);
+    border-radius: 50%; filter: blur(60px);
+}
+
+.badge-dark {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hg-hero h1 {
+    font-size: 56px; font-weight: 900; color: #FFF;
+    margin-bottom: 25px; line-height: 1.2; letter-spacing: -1px;
+}
+
+.hl-gradient-dark {
+    background: linear-gradient(135deg, #D4C1F9 0%, #A855F7 100%); /* Gradasi Lilac ke Ungu */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+/* Pastikan efek stabilo kotaknya benar-benar mati */
+.hl-gradient-dark::after {
+    display: none; 
+}
+
+.hg-hero p {
+    font-size: 18px; color: rgba(255, 255, 255, 0.9);
+    max-width: 650px; margin: 0 auto; line-height: 1.8; font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hg-hero { padding: 120px 0 160px; }
+    .hg-hero h1 { font-size: 40px; }
+    .hg-hero p { font-size: 15px; padding: 0 20px; }
+}
