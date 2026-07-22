@@ -1,0 +1,110 @@
+/* FAQ ACCORDION */
+.faq-accordion-sec {
+    padding: 0 0 100px;
+    background: #FAFAFA;
+    margin-top: -50px;
+}
+
+.faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(1, 61, 196, 0.02);
+}
+
+.faq-item:hover {
+    border-color: var(--tp-light);
+    box-shadow: 0 10px 25px rgba(1, 61, 196, 0.08);
+}
+
+.faq-header {
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+}
+
+.faq-header h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin: 0;
+    padding-right: 20px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.faq-icon {
+    width: 35px;
+    height: 35px;
+    background: rgba(226, 211, 244, 0.4);
+    color: var(--tp-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* CSS Grid Transition for Smooth Accordion */
+.faq-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease;
+}
+
+.faq-content {
+    overflow: hidden;
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--tp-text-muted);
+    opacity: 0;
+    transition: padding 0.4s ease, opacity 0.4s ease;
+}
+
+/* ACTIVE STATE */
+.faq-item.active {
+    border-color: var(--tp-light);
+    box-shadow: 0 10px 30px rgba(1, 61, 196, 0.08);
+}
+
+.faq-item.active .faq-header h3 {
+    color: var(--tp-light);
+}
+
+.faq-item.active .faq-icon {
+    background: var(--tp-light);
+    color: #FFF;
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-body {
+    grid-template-rows: 1fr;
+}
+
+.faq-item.active .faq-content {
+    padding: 0 30px 25px;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .faq-header { padding: 20px; }
+    .faq-header h3 { font-size: 16px; }
+    .faq-item.active .faq-content { padding: 0 20px 20px; }
+}

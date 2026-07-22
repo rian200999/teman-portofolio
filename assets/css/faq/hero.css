@@ -1,34 +1,27 @@
-/* HERO SECTION TENTANG KAMI */
-.tk-hero {
-    padding: 120px 0 100px;
-    background-image: radial-gradient(rgba(226, 211, 244, 0.3) 1px, transparent 1px);
-    background-size: 30px 30px;
+/* HERO SECTION FAQ */
+.faq-hero {
+    padding: 80px 0 120px;
+    background: linear-gradient(180deg, #FAFAFA 0%, #F5F1FB 100%);
     position: relative;
     overflow: hidden;
-    margin-top: -10px;
+    margin-top: -30px;
 }
 
-.tk-glow-orb {
+.faq-glow {
     position: absolute;
     top: -50px;
     left: 50%;
     transform: translateX(-50%);
     width: 600px;
     height: 400px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0) 70%);
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(168, 85, 247, 0) 70%);
     filter: blur(40px);
     z-index: 1;
     border-radius: 50%;
-    animation: pulseOrb 6s ease-in-out infinite alternate;
 }
 
-@keyframes pulseOrb {
-    0% { transform: translateX(-50%) scale(1); opacity: 0.8; }
-    100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
-}
-
-.tk-hero h1 {
-    font-size: 56px;
+.faq-hero h1 {
+    font-size: 52px;
     font-weight: 900;
     line-height: 1.15;
     color: var(--tp-text-main);
@@ -36,8 +29,9 @@
     letter-spacing: -1px;
 }
 
-/* GANTI BAGIAN INI DI hero.css TENTANG KAMI */
-.tk-hero h1 span {
+
+/* GANTI BAGIAN INI DI hero.css FAQ */
+.faq-hero h1 span {
     color: var(--tp-light);
     position: relative;
     background: none;
@@ -46,11 +40,11 @@
     display: inline-block;
 }
 
-.tk-hero h1 span::after {
+.faq-hero h1 span::after {
     content: '';
     position: absolute;
     left: -5px;
-    bottom: 3px;
+    bottom: 6px;
     width: calc(100% + 10px);
     height: 24px;
     background: rgba(226, 211, 244, 0.6);
@@ -59,17 +53,16 @@
     border-radius: 4px;
 }
 
-.tk-hero p {
+.faq-hero p {
     font-size: 18px;
     color: var(--tp-text-muted);
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
     line-height: 1.8;
     font-weight: 500;
 }
 
 @media (max-width: 768px) {
-    .tk-hero h1 { font-size: 38px; }
-    .tk-hero p { font-size: 15px; padding: 0 15px; }
-    .tk-glow-orb { width: 100%; height: 300px; }
+    .faq-hero h1 { font-size: 38px; }
+    .faq-hero p { font-size: 15px; padding: 0 15px; }
 }
