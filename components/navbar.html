@@ -10,7 +10,7 @@
 
         <!-- Menu Links: Sembunyi di HP -->
         <div class="nav-links desktop-only">
-            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link">Beranda</a>
             <a href="katalog.html" class="nav-link">Katalog</a>
             <a href="tentang-kami.html" class="nav-link">Tentang Kami</a>
         </div>
@@ -30,7 +30,7 @@
 <nav class="navbar-mobile mobile-only">
     <a href="index.html" class="mobile-nav-item">
         <i class='bx bx-home-alt'></i>
-        <span>Home</span>
+        <span>Beranda</span>
     </a>
     <a href="katalog.html" class="mobile-nav-item">
         <i class='bx bx-grid-alt'></i>
@@ -101,12 +101,12 @@
     }
 
     .btn-nav-wa {
-        background: var(--tp-text-main);
+        background: var(--tp-light);
         color: #FFF;
-        padding: 10px 20px;
-        border-radius: 50px;
-        font-weight: 800;
-        font-size: 13px;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 14px;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -115,13 +115,19 @@
     }
 
     .btn-nav-wa:hover {
-        background: var(--tp-light);
-        transform: translateY(-2px);
+        background: var(--tp-green);
+        color: var(--tp-light);
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(226, 211, 244, 0.8);
     }
 
     /* SISTEM DISPLAY */
     .mobile-only {
         display: none;
+    }
+
+    .bxl-whatsapp {
+        font-size: 20px !important;
     }
 
     /* ================= CSS MOBILE (MAX 768px) ================= */

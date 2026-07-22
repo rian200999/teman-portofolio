@@ -25,6 +25,13 @@ body {
     overflow-x: hidden;
 }
 
+html, body {
+    overflow-x: hidden !important; /* Kunci rapat biar gak bisa geser kanan-kiri */
+    max-width: 100vw;
+    width: 100%;
+    position: relative;
+}
+
 a { text-decoration: none; transition: var(--tp-transition); }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
