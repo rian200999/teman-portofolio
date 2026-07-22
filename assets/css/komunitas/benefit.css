@@ -1,0 +1,70 @@
+/* BENEFIT BENTO GRID */
+.km-benefit {
+    padding: 0 0 100px;
+    background: #FFFFFF;
+}
+
+.km-bento {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.kb-card {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kb-wide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 50px;
+}
+
+.bg-blue {
+    background: linear-gradient(135deg, var(--tp-text-main), var(--tp-light));
+    color: #FFF;
+}
+
+.bg-light {
+    background: #FAFAFA;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    color: var(--tp-text-main);
+}
+
+.kb-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.bg-blue h3 { font-size: 32px; font-weight: 900; margin-bottom: 15px; line-height: 1.2;}
+.bg-blue p { font-size: 15px; opacity: 0.9; line-height: 1.6;}
+
+.kb-img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.kb-icon {
+    font-size: 40px;
+    color: var(--tp-light);
+    margin-bottom: 20px;
+}
+.bg-light h3 { font-size: 24px; font-weight: 800; margin-bottom: 15px; }
+.bg-light p { font-size: 15px; color: var(--tp-text-muted); line-height: 1.6; }
+
+@media (max-width: 992px) {
+    .km-bento { grid-template-columns: 1fr; }
+    .kb-wide { flex-direction: column; padding: 40px; }
+    .kb-content { max-width: 100%; text-align: center; margin-bottom: 30px; }
+    .kb-img { width: 100%; height: 250px; border-radius: 20px; clip-path: none; }
+}

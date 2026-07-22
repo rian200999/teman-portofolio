@@ -1,0 +1,73 @@
+/* KEGIATAN ASIMETRIS */
+.kp-kegiatan {
+    padding: 120px 0;
+    background: #FAFAFA;
+}
+
+.kp-kegiatan h2 span { color: var(--tp-light); }
+
+.kp-asimetris-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.ka-card {
+    border-radius: 30px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.ka-card:hover { transform: translateY(-5px); }
+
+/* Tall Box (Kiri) */
+.ka-tall {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 450px;
+}
+
+/* Wide Boxes (Kanan Atas & Bawah) */
+.ka-wide {
+    display: flex;
+    align-items: center;
+}
+
+/* Backgrounds */
+.bg-dark { background: var(--tp-text-main); color: #FFF; }
+.bg-lilac { background: linear-gradient(135deg, var(--tp-green), #D4C1F9); color: var(--tp-text-main); }
+.bg-white { background: #FFF; border: 1px solid rgba(226, 211, 244, 0.8); color: var(--tp-text-main); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+
+.ka-icon {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; margin-bottom: 25px;
+}
+
+.bg-dark .ka-icon { background: rgba(255,255,255,0.1); color: #FFF; }
+.bg-lilac .ka-icon { background: #FFF; color: var(--tp-text-main); }
+.bg-white .ka-icon { background: var(--tp-light); color: #FFF; }
+
+.ka-content h3 { font-size: 26px; font-weight: 900; margin-bottom: 15px; }
+.ka-wide h3 { font-size: 22px; }
+
+.ka-content p { font-size: 15px; line-height: 1.7; opacity: 0.9; margin: 0; }
+
+.ka-badge {
+    position: absolute; top: 30px; right: 30px;
+    background: var(--tp-light); color: #FFF;
+    padding: 6px 14px; border-radius: 50px;
+    font-size: 12px; font-weight: 800; text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+    .kp-asimetris-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .ka-tall { grid-row: span 1; min-height: auto; }
+}
