@@ -76,7 +76,8 @@
 }
 
 @media (max-width: 768px) {
-    .hg-hero { padding: 120px 0 160px; }
+    .hg-hero { padding: 120px 0 160px; 
+    margin-top: -70px;}
     .hg-hero h1 { font-size: 40px; }
     .hg-hero p { font-size: 15px; padding: 0 20px; }
 }

@@ -4,25 +4,20 @@
         <a href="index.html" class="logo">
             Teman<span>Portofolio.</span>
         </a>
-        
-        <!-- Hamburger Icon untuk Mobile -->
-        <div class="hamburger" id="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 
-        <!-- Menu Links & CTA -->
+        <!-- Menu Links & CTA (Desktop & Sisa Menu Overlay di Mobile) -->
         <div class="nav-wrapper" id="nav-wrapper">
             <div class="nav-links">
-                <!-- <a href="index.html" class="nav-link">Home</a> -->
-                <a href="katalog.html" class="nav-link">Katalog</a>
-                <a href="harga.html" class="nav-link">Harga</a>
-                <a href="tentang-kami.html" class="nav-link">Tentang Kami</a>
+                <!-- Tambahkan class 'mobile-hide' pada menu yang sudah ada di navbar bawah -->
+                <a href="katalog.html" class="nav-link mobile-hide">Katalog</a>
+                <a href="harga.html" class="nav-link mobile-hide">Harga</a>
+                <a href="tentang-kami.html" class="nav-link mobile-hide">Tentang Kami</a>
+                
+                <!-- Menu sisanya yang masuk ke dalam hamburger mobile -->
                 <a href="komunitas.html" class="nav-link">Komunitas</a>
                 <a href="FAQ.html" class="nav-link">FAQ</a>
             </div>
-            <div class="nav-cta">
+            <div class="nav-cta mobile-hide">
                 <a href="https://wa.me/6281234567890" target="_blank" class="btn-nav-wa">
                     <i class='bx bxl-whatsapp'></i> Chat Admin
                 </a>
@@ -30,6 +25,30 @@
         </div>
     </div>
 </nav>
+
+<!-- Navbar Bawah Khusus Mobile -->
+<div class="mobile-bottom-nav">
+    <a href="katalog.html" class="bottom-link">
+        <i class='bx bx-grid-alt'></i>
+        <span>Katalog</span>
+    </a>
+    <a href="harga.html" class="bottom-link">
+        <i class='bx bx-purchase-tag'></i>
+        <span>Harga</span>
+    </a>
+    <a href="tentang-kami.html" class="bottom-link">
+        <i class='bx bx-info-circle'></i>
+        <span>Tentang</span>
+    </a>
+    <a href="https://wa.me/6281234567890" target="_blank" class="bottom-link">
+        <i class='bx bxl-whatsapp'></i>
+        <span>Chat</span>
+    </a>
+    <button class="bottom-link" id="mobile-menu-btn">
+        <i class='bx bx-menu'></i>
+        <span>Menu</span>
+    </button>
+</div>
 
 <style>
 /* CSS DESKTOP NAVBAR */
@@ -59,16 +78,20 @@
 }
 .btn-nav-wa:hover { background: var(--tp-light); transform: translateY(-2px); }
 
-/* Hamburger Icon */
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
-.hamburger span { width: 25px; height: 3px; background: var(--tp-text-main); border-radius: 5px; transition: all 0.3s ease; }
+/* Sembunyikan Navbar Bawah di Desktop */
+.mobile-bottom-nav {
+    display: none; 
+}
 
-/* CSS MOBILE NAVBAR (HAMBURGER) */
+/* CSS MOBILE NAVBAR */
 @media (max-width: 768px) {
-    body { padding-bottom: 0 !important; } /* Reset padding dari navbar bawah sebelumnya */
+    /* Beri ruang di bawah agar konten web tidak tertutup navbar bawah */
+    body { padding-bottom: 70px !important; } 
     
-    .hamburger { display: flex; }
-    
+    /* Sembunyikan menu yang sudah ada di navbar bawah supaya tidak double di overlay */
+    .mobile-hide { display: none !important; }
+
+    /* Overlay Menu Hamburger (Sisa Menu) */
     .nav-wrapper {
         position: fixed;
         top: 0; left: 0; right: 0;
@@ -83,7 +106,7 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
+        z-index: 999;
     }
     
     .nav-wrapper.active {
@@ -94,45 +117,83 @@
     
     .nav-links { flex-direction: column; gap: 25px; text-align: center; }
     .nav-link { font-size: 20px; }
-    .btn-nav-wa { font-size: 16px; padding: 15px 30px; }
     
-    /* Hamburger Animasi (X) */
-    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    /* Styling Navbar Bawah */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        background: #fff;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+        justify-content: space-around;
+        padding: 10px 0 15px 0; /* Padding bawah extra untuk area swipe di HP modern */
+        z-index: 1000;
+        border-top: 1px solid rgba(226, 211, 244, 0.5);
+    }
+
+    .bottom-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--tp-text-muted, #666);
+        font-size: 11px;
+        font-weight: 600;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bottom-link i { font-size: 22px; }
+    .bottom-link.active, .bottom-link:hover { color: var(--tp-light, #8a2be2); }
 }
 </style>
 
 <script>
 (function() {
-    // 1. Auto Active Link
+    // 1. Auto Active Link untuk Nav Atas & Nav Bawah
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const allLinks = document.querySelectorAll('.nav-link');
-    allLinks.forEach(link => {
+    const allNavLinks = document.querySelectorAll('.nav-link, .bottom-link');
+    
+    allNavLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
         }
     });
 
-    // 2. Hamburger Logic
-    const hamburger = document.getElementById('hamburger-menu');
+    // 2. Logic Hamburger Menu di Navbar Bawah
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navWrapper = document.getElementById('nav-wrapper');
+    const navLinks = document.querySelectorAll('.nav-link');
     
-    if (hamburger && navWrapper) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
+    if (mobileMenuBtn && navWrapper) {
+        const menuIcon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
             navWrapper.classList.toggle('active');
-            // Kunci scroll background saat menu terbuka
+            
+            // Kunci scroll body saat menu overlay terbuka
             document.body.style.overflow = navWrapper.classList.contains('active') ? 'hidden' : 'auto';
+            
+            // Animasi ganti icon hamburger ke X dan sebaliknya
+            if(navWrapper.classList.contains('active')){
+                menuIcon.classList.replace('bx-menu', 'bx-x');
+                mobileMenuBtn.classList.add('active');
+            } else {
+                menuIcon.classList.replace('bx-x', 'bx-menu');
+                mobileMenuBtn.classList.remove('active');
+            }
         });
 
-        // Tutup menu kalau link di-klik
-        allLinks.forEach(link => {
+        // Tutup menu kalau salah satu link di overlay di-klik
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
                 navWrapper.classList.remove('active');
                 document.body.style.overflow = 'auto';
+                menuIcon.classList.replace('bx-x', 'bx-menu');
+                mobileMenuBtn.classList.remove('active');
             });
         });
     }
