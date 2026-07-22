@@ -11,15 +11,14 @@
                 <!-- Tambahkan class 'mobile-hide' pada menu yang sudah ada di navbar bawah -->
                 <a href="katalog.html" class="nav-link mobile-hide">Katalog</a>
                 <a href="harga.html" class="nav-link mobile-hide">Harga</a>
-                <a href="tentang-kami.html" class="nav-link mobile-hide">Tentang Kami</a>
-                
-                <!-- Menu sisanya yang masuk ke dalam hamburger mobile -->
                 <a href="komunitas.html" class="nav-link">Komunitas</a>
+                <a href="tentang-kami.html" class="nav-link mobile-hide">Tentang Kami</a>
+                <!-- Menu sisanya yang masuk ke dalam hamburger mobile -->
                 <a href="FAQ.html" class="nav-link">FAQ</a>
             </div>
             <div class="nav-cta mobile-hide">
-                <a href="https://wa.me/6281234567890" target="_blank" class="btn-nav-wa">
-                    <i class='bx bxl-whatsapp'></i> Chat Admin
+                <a href="https://wa.me/6283100710499" target="_blank" class="btn-nav-wa">
+                    <i class='bx bxl-whatsapp'></i> Konsultasi Gratis
                 </a>
             </div>
         </div>
@@ -40,7 +39,7 @@
         <i class='bx bx-info-circle'></i>
         <span>Tentang</span>
     </a>
-    <a href="https://wa.me/6281234567890" target="_blank" class="bottom-link">
+    <a href="https://wa.me/6283100710499" target="_blank" class="bottom-link">
         <i class='bx bxl-whatsapp'></i>
         <span>Chat</span>
     </a>
@@ -72,11 +71,15 @@
 .nav-link:hover, .nav-link.active { color: var(--tp-light); }
 
 .btn-nav-wa {
-    background: var(--tp-text-main); color: #FFF; padding: 10px 20px; border-radius: 50px;
-    font-weight: 800; font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 5px;
+    background: var(--tp-light); color: #FFF; padding: 12px 20px; border-radius: 8px;
+    font-weight: 700; font-size: 15px; text-decoration: none; display: flex; align-items: center; gap: 5px;
     transition: 0.3s;
 }
-.btn-nav-wa:hover { background: var(--tp-light); transform: translateY(-2px); }
+.btn-nav-wa:hover { background: var(--tp-green); color: var(--tp-light); transform: translateY(-2px); }
+
+.bxl-whatsapp {
+    font-size: 18px;
+}
 
 /* Sembunyikan Navbar Bawah di Desktop */
 .mobile-bottom-nav {
