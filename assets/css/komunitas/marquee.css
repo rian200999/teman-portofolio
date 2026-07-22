@@ -1,10 +1,10 @@
 /* RUNNING TEXT (MARQUEE) */
 .kp-marquee-wrap {
-    background: var(--tp-text-main); /* Dark navy */
+    background: var(--tp-light);
     padding: 25px 0;
     overflow: hidden;
     position: relative;
-    transform: rotate(-2deg) scale(1.05); /* Miring estetik */
+    transform: rotate(-2deg) scale(1.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     z-index: 10;
 }
@@ -23,7 +23,7 @@
 .marquee-content span {
     font-size: 24px;
     font-weight: 900;
-    color: #FFFFFF;
+    color: var(--tp-green);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0 30px;

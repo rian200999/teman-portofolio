@@ -41,7 +41,7 @@
 
 .t-badge {
     display: inline-block;
-    background: rgba(1, 61, 196, 0.1);
+    background: var(--tp-green);
     color: var(--tp-light);
     font-size: 12px; font-weight: 900; letter-spacing: 2px;
     padding: 6px 12px; border-radius: 6px;
@@ -53,15 +53,15 @@
 
 .btn-ticket-join {
     display: inline-flex; align-items: center; gap: 8px;
-    background: #25D366; /* WhatsApp Green */
+    background: #25D366;
     color: #FFF;
-    padding: 14px 28px; border-radius: 12px;
+    padding: 14px 28px; border-radius: 8px;
     font-size: 15px; font-weight: 800; text-decoration: none;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 .btn-ticket-join:hover { 
     background: #128C7E; 
-    transform: translateY(-3px); 
+    transform: translateY(-2px); 
 }
 
 .ticket-divider {
