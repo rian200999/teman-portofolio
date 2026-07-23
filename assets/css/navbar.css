@@ -93,23 +93,25 @@
     position: relative;
 }
 
+/* 1. UPDATE CLASS INI */
 .dropdown-menu {
     position: absolute;
     top: 150%;
-    left: -50%;
+    /* Tarik persis ke tengah parent */
+    left: 50%; 
     background: #FFFFFF;
     border: 1px solid rgba(226, 211, 244, 0.8);
     border-radius: 24px;
     padding: 20px;
-    width: 600px;
-    /* Lebar dibikin besar biar muat 2 kolom */
+    width: 850px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     box-shadow: 0 20px 50px rgba(11, 19, 51, 0.08);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(15px);
+    /* Geser ke kiri 50% dari ukuran kotaknya, dan turunin 15px untuk efek animasi */
+    transform: translate(-50%, 15px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     pointer-events: none;
 }
@@ -118,7 +120,8 @@
 .nav-item-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    /* Naikkan ke Y: 0, tapi X (kiri-kanan) harus tetap -50% biar gak menceng */
+    transform: translate(-50%, 0);
     pointer-events: auto;
 }
 
@@ -224,11 +227,14 @@
     display: none;
 }
 
+/* =========================================
+   RESPONSIVE UNTUK TABLET (Layar Sedang)
+   ========================================= */
 @media (max-width: 992px) {
     .dropdown-menu {
-        width: 450px;
-        grid-template-columns: 1fr;
-        left: 0;
+        width: 600px; /* Dikecilin sedikit */
+        grid-template-columns: repeat(2, 1fr); /* Balik ke 2 kolom biar muat */
+        left: -50%;
     }
 }
 
@@ -314,8 +320,31 @@
     }
 
     .bottom-link.active,
+    .bottom-link.active i,
+    .bottom-link.active span,
     .bottom-link:hover {
-        color: var(--tp-light);
-        transform: translateY(-2px);
+        color: var(--tp-light) !important;
+        transform: translateY(-2px) !important;
     }
+}
+
+/* Sembunyikan di Desktop */
+.mobile-only {
+    display: none !important;
+}
+
+/* Munculkan di Mobile Hamburger Menu */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: flex !important;
+    }
+}
+
+/* =========================================
+   FIX: Warna Biru pada Tombol Menu Mobile
+   ========================================= */
+#mobile-menu-btn.active,
+#mobile-menu-btn.active i,
+#mobile-menu-btn.active span {
+    color: var(--tp-light) !important;
 }

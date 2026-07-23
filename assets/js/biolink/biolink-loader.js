@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navContainer = document.getElementById('navbar-placeholder');
     const footerContainer = document.getElementById('app-footer');
 
-    await loadComponent('sections/navbar.html', navContainer);
-    await loadComponent('sections/footer.html', footerContainer);
+    await loadComponent('components/navbar.html', navContainer);
+    await loadComponent('components/footer.html', footerContainer);
 
     for (const section of sections) {
         await loadComponent(section, contentContainer);
