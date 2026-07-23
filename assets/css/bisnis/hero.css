@@ -1,0 +1,124 @@
+.b2b-hero {
+    background: linear-gradient(135deg, #F4EDFF 0%, #FFFFFF 100%);
+    padding: 160px 20px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.b2b-hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.b2b-hero-badge {
+    display: inline-block;
+    background: white;
+    color: var(--tp-light);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+    margin-bottom: 30px;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+.b2b-hero h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.text-highlight {
+    color: var(--tp-light);
+    background: linear-gradient(120deg, #8a2be2, #4a00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.b2b-hero p {
+    font-size: 17px;
+    color: var(--tp-text-muted);
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.b2b-hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.b2b-feat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--tp-text-main);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    transition: 0.3s;
+}
+
+.b2b-feat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+}
+
+.b2b-feat i {
+    color: #10B981;
+    font-size: 22px;
+}
+
+@keyframes floatUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #8a2be2;
+    top: -100px;
+    left: -100px;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: #FF4757;
+    bottom: -150px;
+    right: -150px;
+    opacity: 0.15;
+}
+
+@media (max-width: 768px) {
+    .b2b-hero h1 {
+        font-size: 34px;
+    }
+}

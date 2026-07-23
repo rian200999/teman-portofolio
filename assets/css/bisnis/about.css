@@ -1,0 +1,92 @@
+
+
+.b2b-about {
+    padding: 100px 20px;
+    background: #FFFFFF;
+}
+
+.b2b-about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.b2b-about-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 50px 30px;
+    text-align: center;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    transition: 0.4s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.b2b-about-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--tp-light);
+    transform: scaleX(0);
+    transition: 0.4s ease;
+    transform-origin: left;
+}
+
+.b2b-about-card:hover {
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.12);
+}
+
+.b2b-about-card:hover::before {
+    transform: scaleX(1);
+}
+
+.b2b-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(138, 43, 226, 0.05) 100%);
+    color: var(--tp-light);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    transition: 0.4s;
+}
+
+.b2b-about-card:hover .b2b-icon-wrapper {
+    background: var(--tp-light);
+    color: white;
+    transform: rotate(10deg);
+}
+
+.b2b-about-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--tp-text-main);
+}
+
+.b2b-about-card p {
+    font-size: 15px;
+    color: var(--tp-text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .b2b-about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .b2b-about-grid {
+        grid-template-columns: 1fr;
+    }
+}

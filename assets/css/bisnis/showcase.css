@@ -1,0 +1,118 @@
+.b2b-showcase {
+    padding: 100px 20px;
+    background: var(--tp-darkest);
+}
+
+.b2b-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.showcase-card {
+    background: var(--tp-dark);
+    border: 1px solid var(--tp-border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: var(--tp-transition);
+    box-shadow: 0 10px 30px rgba(11, 19, 51, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(1, 61, 196, 0.08);
+    border-color: var(--tp-light);
+}
+
+.showcase-img {
+    height: 220px;
+    background: linear-gradient(135deg, var(--tp-darkest) 0%, var(--tp-green) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tp-light);
+    font-size: 80px;
+    position: relative;
+}
+
+.custom-img {
+    background: linear-gradient(135deg, var(--tp-green) 0%, var(--tp-light) 100%);
+    color: var(--tp-dark);
+}
+
+.showcase-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--tp-dark);
+    color: var(--tp-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-badge {
+    color: var(--tp-text-main);
+}
+
+.showcase-info {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-info h3 {
+    color: var(--tp-text-main);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.showcase-info p {
+    color: var(--tp-text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-custom-req {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: var(--tp-text-main);
+    color: var(--tp-dark);
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--tp-transition);
+}
+
+.btn-custom-req:hover {
+    background: var(--tp-light);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+    .b2b-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .b2b-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-img {
+        height: 180px;
+    }
+}

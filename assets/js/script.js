@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadSection('app-content', './sections/komunitas.html');
     // await loadSection('app-content', './sections/exclusive.html');
     await loadSection('app-content', './sections/testimoni.html');
+    await loadSection('app-content', './sections/promo-b2b.html');
     // await loadSection('app-content', './sections/kerjasama.html');
     await loadSection('app-footer', './components/footer.html');
 
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof window.initKomunitasLogic === 'function') { window.initKomunitasLogic(); } // <--- EKSEKUSI JS KOMUNITAS
     // if (typeof window.initExclusiveLogic === 'function') { window.initExclusiveLogic(); } // <--- EKSEKUSI JS EXCLUSIVE
     if (typeof window.initTestimoniLogic === 'function') { window.initTestimoniLogic(); } // <--- EKSEKUSI JS TESTIMONI
+    if (typeof window.initPromoB2BLogic === 'function') { window.initPromoB2BLogic(); } // <--- EKSEKUSI JS PROMO B2B
     // if (typeof window.initKerjasamaLogic === 'function') { window.initKerjasamaLogic(); } // <--- EKSEKUSI JS KERJASAMA
     if (typeof window.initFooterLogic === 'function') { window.initFooterLogic(); } // <--- EKSEKUSI JS FOOTER
     

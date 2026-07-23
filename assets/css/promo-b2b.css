@@ -1,0 +1,108 @@
+/* --- PROMO B2B DI HOMEPAGE --- */
+.section-promo-bisnis {
+    padding: 80px 20px;
+    background: #F7F9FC;
+    /* Abu-abu kebiruan super soft */
+}
+
+.promo-bisnis-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(138, 43, 226, 0.1);
+}
+
+.promo-badge {
+    display: inline-block;
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--tp-light, #8a2be2);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.promo-bisnis-text {
+    flex: 1;
+}
+
+.promo-bisnis-text h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--tp-text-main, #0b1333);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.promo-bisnis-text h2 span {
+    color: var(--tp-light, #8a2be2);
+}
+
+.promo-bisnis-text p {
+    font-size: 15px;
+    color: var(--tp-text-muted, #666);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-promo-bisnis {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--tp-text-main, #0b1333);
+    color: #FFF;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-promo-bisnis:hover {
+    background: var(--tp-light, #8a2be2);
+    transform: translateY(-3px);
+}
+
+.promo-bisnis-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mockup-placeholder {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #8a2be2, #4a00e0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
+}
+
+@media (max-width: 768px) {
+    .promo-bisnis-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .mockup-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 80px;
+    }
+
+    .promo-bisnis-text h2 {
+        font-size: 26px;
+    }
+}

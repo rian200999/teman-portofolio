@@ -14,6 +14,12 @@
     --tp-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+.b2b-hero h1 span, 
+.cta-b2b-text h2 span {
+    color: var(--tp-light); /* Biar warnanya jadi Biru Elektrik */
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 

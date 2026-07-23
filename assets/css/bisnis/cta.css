@@ -1,0 +1,118 @@
+.b2b-cta-katalog {
+    padding: 80px 20px 120px;
+    background: var(--tp-darkest);
+}
+
+.cta-katalog-b2b-box {
+    background: var(--tp-text-main);
+    border-radius: 35px;
+    padding: 70px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(11, 19, 51, 0.2);
+}
+
+.cta-b2b-text {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-b2b-text h2 {
+    color: var(--tp-dark);
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.cta-b2b-text p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cta-b2b-action {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-cta-b2b-katalog {
+    background: var(--tp-dark);
+    color: var(--tp-light);
+    padding: 18px 36px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--tp-transition);
+}
+
+.btn-cta-b2b-katalog i {
+    font-size: 24px;
+    transition: var(--tp-transition);
+}
+
+.btn-cta-b2b-katalog:hover {
+    background: var(--tp-light);
+    color: var(--tp-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.4);
+}
+
+.btn-cta-b2b-katalog:hover i {
+    transform: translateX(5px);
+}
+
+/* Lingkaran Dekorasi pakai Lilac */
+.cta-b2b-deco {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--tp-green);
+    filter: blur(70px);
+    opacity: 0.3;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.deco-top {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -100px;
+}
+
+.deco-bot {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -100px;
+}
+
+@media (max-width: 992px) {
+    .cta-katalog-b2b-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+        gap: 40px;
+    }
+
+    .cta-b2b-text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-b2b-text h2 {
+        font-size: 28px;
+    }
+}
