@@ -3,6 +3,7 @@
     padding: 160px 20px 100px;
     background: linear-gradient(180deg, #FDFBFF 0%, #FFFFFF 100%);
     overflow: hidden;
+    margin-top: -40px;
 }
 
 .inv-hero-bg {
