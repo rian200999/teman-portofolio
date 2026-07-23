@@ -1,0 +1,29 @@
+.inv-showcase-v2 { padding: 100px 20px; background: var(--tp-darkest); }
+.inv-2x2-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
+
+.e-card-v2 { background: white; border-radius: 24px; border: 1px solid var(--tp-border); display: flex; align-items: center; padding: 25px; gap: 25px; transition: var(--tp-transition); box-shadow: 0 10px 30px rgba(0,0,0,0.03); position: relative; overflow: hidden; }
+.e-card-v2:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(1,61,196,0.1); border-color: var(--tp-light); }
+
+.e-visual { width: 120px; height: 100%; min-height: 140px; border-radius: 16px; flex-shrink: 0; }
+.bg-wedding { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+.bg-kids { background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%); }
+.bg-formal { background: linear-gradient(135deg, #013DC4 0%, #3B82F6 100%); }
+
+.e-body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
+.e-icon { width: 40px; height: 40px; background: var(--tp-darkest); color: var(--tp-light); border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 24px; margin-bottom: 15px; }
+.e-body h3 { font-size: 20px; font-weight: 900; color: var(--tp-text-main); margin-bottom: 8px; }
+.e-body p { font-size: 14px; color: var(--tp-text-muted); line-height: 1.6; margin: 0; }
+
+/* Custom Event Card (Glowing Animation) */
+.custom-event-card { border: none; padding: 30px; justify-content: center; text-align: center; background: linear-gradient(-45deg, var(--tp-light), #8a2be2, #4a00e0); background-size: 300%; animation: gradientBG 6s ease infinite; color: white; }
+@keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+.custom-body { align-items: center; z-index: 2; position: relative; }
+.custom-icon { background: rgba(255,255,255,0.2); color: white; width: 60px; height: 60px; font-size: 32px; border-radius: 50%; }
+.custom-event-card h3 { color: white; font-size: 24px; }
+.custom-event-card p { color: rgba(255,255,255,0.8); margin-bottom: 25px; }
+
+.btn-custom-event { background: white; color: var(--tp-text-main); padding: 12px 25px; border-radius: 50px; font-weight: 800; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.btn-custom-event:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+
+@media (max-width: 768px) { .inv-2x2-grid { grid-template-columns: 1fr; } .e-card-v2 { flex-direction: column; text-align: center; } .e-visual { width: 100%; height: 120px; min-height: auto; } .e-body { align-items: center; } }

@@ -1,0 +1,182 @@
+.inv-about-v2 {
+    padding: 100px 20px;
+    background: white;
+    overflow: hidden;
+}
+
+.inv-bento-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.inv-bento-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+.inv-bento-card {
+    background: var(--tp-darkest);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid var(--tp-border);
+    position: relative;
+    overflow: hidden;
+    transition: var(--tp-transition);
+}
+
+.inv-bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(11, 19, 51, 0.06);
+    border-color: var(--tp-light);
+}
+
+.bento-sheets {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, white 0%, #f4f6ff 100%);
+    border: 2px solid var(--tp-green);
+}
+
+.bento-text h3 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    margin-bottom: 12px;
+}
+
+.bento-text p {
+    font-size: 15px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* UI Spreadsheet Palsu */
+.mini-ui-sheets {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+    padding: 15px;
+    margin-top: 30px;
+    border: 1px solid #eee;
+}
+
+.sheet-header {
+    background: #10B981;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.sheet-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--tp-text-main);
+}
+
+.sheet-row:last-child {
+    border: none;
+}
+
+.badge-hadir {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+.badge-absen {
+    background: rgba(244, 63, 94, 0.1);
+    color: #F43F5E;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+/* UI Chat Palsu */
+.bento-guest {
+    flex: 1;
+    background: #FFF9F0;
+    border-color: #FFE4B5;
+}
+
+.mini-chat-bubble {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--tp-text-main);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.1);
+    margin-top: 20px;
+    display: inline-block;
+    animation: floatChat 3s ease-in-out infinite;
+}
+
+@keyframes floatChat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* UI Angpao */
+.bento-angpao {
+    flex: 1;
+    background: var(--tp-text-main);
+}
+
+.bento-angpao .bento-text h3 {
+    color: white;
+}
+
+.bento-angpao .bento-text p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.watermark-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.05);
+    transform: rotate(-15deg);
+}
+
+@media (max-width: 992px) {
+    .inv-bento-grid {
+        flex-direction: column;
+    }
+
+    .bento-sheets {
+        flex: none;
+    }
+
+    .inv-bento-right {
+        flex: none;
+    }
+}

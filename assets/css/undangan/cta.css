@@ -1,0 +1,123 @@
+/* CSS ini sangat mirip dengan CTA Biolink, namun file dipisah agar aman dari bentrok jika dimodifikasi masing-masing */
+.inv-multi-cta {
+    padding: 100px 20px 150px;
+    background: var(--tp-darkest);
+}
+
+.multi-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.m-cta-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 24px;
+    border: 1px solid var(--tp-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    transition: var(--tp-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.m-cta-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(1, 61, 196, 0.1);
+    border-color: var(--tp-light);
+    background: #fcfaff;
+}
+
+.m-cta-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--tp-green);
+    color: var(--tp-light);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.m-cta-card:hover .m-cta-icon {
+    background: var(--tp-light);
+    color: white;
+}
+
+.m-cta-text h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin-bottom: 8px;
+}
+
+.m-cta-text p {
+    font-size: 13px;
+    color: var(--tp-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    font-size: 24px;
+    color: var(--tp-light);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: 0.3s;
+}
+
+.m-cta-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.highlight {
+    border: 2px solid var(--tp-light);
+    box-shadow: 0 10px 25px rgba(1, 61, 196, 0.05);
+}
+
+@media (max-width: 992px) {
+    .multi-cta-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .m-cta-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .arrow-icon {
+        opacity: 1;
+        transform: none;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .m-cta-card:hover .arrow-icon {
+        transform: translateY(-50%) translateX(5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .m-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .arrow-icon {
+        top: 35px;
+        right: 25px;
+        transform: none !important;
+    }
+}

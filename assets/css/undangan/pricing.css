@@ -1,0 +1,39 @@
+.inv-pricing-v2 { padding: 100px 20px; background: #FDFBFF; }
+.ticket-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; max-width: 800px; margin: 0 auto; align-items: start; }
+
+/* Bentuk Tiket Vertical */
+.ticket-card { background: white; border-radius: 24px; border: 1px solid var(--tp-border); filter: drop-shadow(0 15px 30px rgba(11,19,51,0.05)); display: flex; flex-direction: column; transition: var(--tp-transition); }
+.ticket-card:hover { transform: translateY(-10px); filter: drop-shadow(0 25px 40px rgba(1,61,196,0.15)); }
+
+.ticket-top { padding: 40px 30px 20px; text-align: center; border-radius: 24px 24px 0 0; background: white; }
+.ticket-top h3 { font-size: 20px; font-weight: 800; color: var(--tp-text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+.t-price { font-size: 50px; font-weight: 900; color: var(--tp-text-main); margin-bottom: 15px; line-height: 1; }
+.t-price span { font-size: 20px; vertical-align: super; }
+.t-badge { display: inline-block; background: var(--tp-green); color: var(--tp-text-main); font-size: 12px; font-weight: 800; padding: 6px 16px; border-radius: 50px; }
+
+/* Efek Sobekan Tiket (Punch Hole) */
+.ticket-divider { position: relative; border-bottom: 3px dashed var(--tp-border); margin: 0 10px; }
+.ticket-divider::before, .ticket-divider::after { content: ''; position: absolute; top: -15px; width: 30px; height: 30px; background: #FDFBFF; border-radius: 50%; }
+.ticket-divider::before { left: -25px; border-right: 1px solid var(--tp-border); }
+.ticket-divider::after { right: -25px; border-left: 1px solid var(--tp-border); }
+
+.ticket-bottom { padding: 20px 30px 40px; background: white; border-radius: 0 0 24px 24px; flex-grow: 1; display: flex; flex-direction: column; }
+.t-features { list-style: none; padding: 0; margin: 0 0 30px 0; flex-grow: 1; }
+.t-features li { font-size: 14px; font-weight: 600; color: var(--tp-text-main); margin-bottom: 15px; text-align: center; border-bottom: 1px solid #f9f9f9; padding-bottom: 10px; }
+.t-disabled { color: #ccc !important; text-decoration: line-through; }
+
+.btn-ticket-outline { display: block; text-align: center; padding: 15px; border: 2px solid var(--tp-text-main); border-radius: 12px; font-weight: 800; color: var(--tp-text-main); text-decoration: none; transition: var(--tp-transition); }
+.btn-ticket-outline:hover { background: var(--tp-text-main); color: white; }
+.btn-ticket-solid { display: block; text-align: center; padding: 15px; background: var(--tp-light); color: white; border-radius: 12px; font-weight: 800; text-decoration: none; transition: var(--tp-transition); box-shadow: 0 10px 20px rgba(1,61,196,0.3); }
+.btn-ticket-solid:hover { background: var(--tp-text-main); }
+
+/* Varian Premium Tiket */
+.ticket-pro { border-color: var(--tp-light); }
+.t-top-pro { background: var(--tp-light); position: relative; overflow: hidden; }
+.t-top-pro h3 { color: rgba(255,255,255,0.8); }
+.t-top-pro .t-price { color: white; }
+.bg-white { background: white !important; color: var(--tp-light) !important; }
+.divider-pro::before, .divider-pro::after { border-color: var(--tp-light); }
+.t-ribbon-pro { position: absolute; top: 15px; right: -30px; background: #F59E0B; color: white; padding: 5px 30px; font-size: 11px; font-weight: 800; transform: rotate(45deg); }
+
+@media (max-width: 768px) { .ticket-grid { grid-template-columns: 1fr; gap: 40px; } }

@@ -1,0 +1,302 @@
+.inv-hero {
+    position: relative;
+    padding: 160px 20px 100px;
+    background: linear-gradient(180deg, #FDFBFF 0%, #FFFFFF 100%);
+    overflow: hidden;
+}
+
+.inv-hero-bg {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(226, 211, 244, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    z-index: 0;
+}
+
+.inv-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.inv-hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.inv-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--tp-green);
+    color: var(--tp-light);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.inv-hero-content h1 {
+    font-size: 46px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.inv-hero-content h1 span {
+    color: var(--tp-light);
+    border-bottom: 3px dashed var(--tp-green);
+}
+
+.inv-hero-content p {
+    font-size: 17px;
+    color: var(--tp-text-muted);
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.inv-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-inv-primary {
+    background: var(--tp-text-main);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: var(--tp-transition);
+    box-shadow: 0 10px 25px rgba(11, 19, 51, 0.2);
+}
+
+.btn-inv-primary:hover {
+    background: var(--tp-light);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(1, 61, 196, 0.3);
+}
+
+.btn-inv-primary i {
+    font-size: 20px;
+}
+
+.inv-trust {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--tp-text-muted);
+}
+
+.avatars {
+    display: flex;
+}
+
+.avatars img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+}
+
+.avatars img:first-child {
+    margin-left: 0;
+}
+
+/* Visual Kartu Melayang & Pop-ups */
+.inv-hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.inv-card-mockup {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 20px;
+    border: 10px solid #f9f9f9;
+    box-shadow: 0 30px 60px rgba(138, 43, 226, 0.15);
+    animation: floatCard 5s ease-in-out infinite;
+}
+
+.inv-card-inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--tp-green);
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, white 0%, #faf8ff 100%);
+}
+
+.inv-ring {
+    width: 60px;
+    height: 60px;
+    background: var(--tp-green);
+    border-radius: 50%;
+    color: var(--tp-light);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.inv-card-inner h3 {
+    font-size: 16px;
+    color: var(--tp-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.inv-card-inner h4 {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--tp-text-main);
+    font-family: serif;
+    margin-bottom: 15px;
+}
+
+.inv-card-inner p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    margin-bottom: auto;
+}
+
+.inv-btn-fake {
+    background: var(--tp-light);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.live-popup {
+    position: absolute;
+    background: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--tp-text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--tp-light);
+    z-index: 3;
+}
+
+.live-popup i {
+    color: var(--tp-light);
+    font-size: 18px;
+}
+
+.rsvp-1 {
+    top: 15%;
+    left: -60px;
+    animation: floatRSVP 4s infinite 0.5s;
+}
+
+.rsvp-2 {
+    bottom: 32%;
+    right: -80px;
+    border-left-color: #10B981;
+    animation: floatRSVP 5s infinite 1.2s;
+}
+
+.rsvp-2 i {
+    color: #10B981;
+}
+
+.rsvp-3 {
+    bottom: 22%;
+    left: -40px;
+    border-left-color: #F59E0B;
+    animation: floatRSVP 6s infinite 0.8s;
+}
+
+.rsvp-3 i {
+    color: #F59E0B;
+}
+
+@keyframes floatCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes floatRSVP {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+
+@media (max-width: 992px) {
+    .inv-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inv-hero-content {
+        margin-bottom: 40px;
+    }
+
+    .inv-hero-actions {
+        justify-content: center;
+    }
+
+    .live-popup {
+        display: none;
+        /* Sembunyikan di HP biar ga nutupin kartu */
+    }
+}
+
+@media (max-width: 768px) {
+    .inv-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .inv-card-mockup {
+        width: 280px;
+        height: 400px;
+    }
+}
