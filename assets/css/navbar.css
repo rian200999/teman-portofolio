@@ -1,0 +1,321 @@
+/* =========================================
+   DESKTOP NAVBAR GLOBAL
+   ========================================= */
+.navbar-global {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(226, 211, 244, 0.4);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-global .logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--tp-text-main, #0b1333);
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.navbar-global .logo span {
+    color: var(--tp-light, #8a2be2);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--tp-text-muted, #666);
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--tp-light, #8a2be2);
+}
+
+.btn-nav-wa {
+    background: var(--tp-light, #8a2be2);
+    color: #FFF;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+
+.btn-nav-wa:hover {
+    background: var(--tp-text-main, #0b1333);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(11, 19, 51, 0.2);
+}
+
+.bxl-whatsapp {
+    font-size: 18px;
+}
+
+/* =========================================
+   MEGA MENU DROPDOWN (ESTETIK & KEREN)
+   ========================================= */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 150%;
+    left: -50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(226, 211, 244, 0.8);
+    border-radius: 24px;
+    padding: 20px;
+    width: 600px;
+    /* Lebar dibikin besar biar muat 2 kolom */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    box-shadow: 0 20px 50px rgba(11, 19, 51, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+/* Munculin dropdown saat di-hover */
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Jembatan transparan agar hover tidak putus saat kursor turun */
+.nav-item-dropdown::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -30px;
+    left: 0;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.dropdown-item:hover:not(.disabled-item) {
+    background: linear-gradient(135deg, #FDFBFF 0%, #F5F1FB 100%);
+    border-color: rgba(226, 211, 244, 0.8);
+    transform: translateX(5px);
+}
+
+.dd-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--tp-light, #8a2be2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.dropdown-item:hover:not(.disabled-item) .dd-icon {
+    background: var(--tp-light);
+    color: white;
+}
+
+.dd-text h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dd-text p {
+    font-size: 12px;
+    color: var(--tp-text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Item Coming Soon */
+.disabled-item {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #FAFAFA;
+    border: 1px dashed #EAEAEA;
+}
+
+.disabled-item .dd-icon {
+    background: #E0E0E0;
+    color: #888;
+}
+
+/* Badges */
+.badge-new {
+    background: #FF4757;
+    color: white;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+.badge-cs {
+    background: #F59E0B;
+    color: white;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 800;
+}
+
+/* =========================================
+   MOBILE NAVBAR & HAMBURGER OVERLAY
+   ========================================= */
+.mobile-bottom-nav {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .dropdown-menu {
+        width: 450px;
+        grid-template-columns: 1fr;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 70px !important;
+    }
+
+    /* Sembunyikan item desktop */
+    .mobile-hide {
+        display: none !important;
+    }
+
+    /* Overlay Mobile */
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 30px;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+    }
+
+    .nav-wrapper.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    /* Bottom Nav Bar */
+    .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+        justify-content: space-around;
+        padding: 12px 0 15px 0;
+        z-index: 1000;
+        border-top: 1px solid rgba(226, 211, 244, 0.4);
+    }
+
+    .bottom-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--tp-text-muted);
+        font-size: 11px;
+        font-weight: 700;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .bottom-link i {
+        font-size: 24px;
+    }
+
+    .bottom-link.active,
+    .bottom-link:hover {
+        color: var(--tp-light);
+        transform: translateY(-2px);
+    }
+}
