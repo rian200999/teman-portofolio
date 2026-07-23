@@ -1,0 +1,161 @@
+.bio-multi-cta {
+    padding: 100px 20px 150px;
+    background: white;
+}
+
+.multi-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.m-cta-card {
+    background: var(--tp-darkest);
+    padding: 35px 30px;
+    border-radius: 24px;
+    border: 1px solid var(--tp-border);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    transition: var(--tp-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.m-cta-card:hover:not(.disabled) {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(1, 61, 196, 0.1);
+    border-color: var(--tp-light);
+    background: white;
+}
+
+/* Icon Kiri Atas */
+.m-cta-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--tp-green);
+    color: var(--tp-light);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.m-cta-card:hover:not(.disabled) .m-cta-icon {
+    background: var(--tp-light);
+    color: white;
+}
+
+.m-cta-text h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.m-cta-text p {
+    font-size: 14px;
+    color: var(--tp-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 24px;
+    color: var(--tp-light);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: 0.3s;
+}
+
+.m-cta-card:hover:not(.disabled) .arrow-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Highlight Card */
+.highlight {
+    border: 2px solid var(--tp-light);
+    background: linear-gradient(135deg, white, #f4f6ff);
+}
+
+/* Disabled Card (Coming Soon) */
+.disabled {
+    background: #f9f9f9;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+.disabled .m-cta-icon {
+    background: #e0e0e0;
+    color: #888;
+}
+
+.disabled .m-cta-text h3,
+.disabled .m-cta-text p {
+    color: #888;
+}
+
+.disabled .arrow-icon {
+    opacity: 1;
+    color: #888;
+    transform: none;
+    right: 25px;
+}
+
+.cs-tag {
+    background: #F59E0B;
+    color: white;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+    .multi-cta-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .m-cta-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .arrow-icon {
+        opacity: 1;
+        transform: none;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .m-cta-card:hover:not(.disabled) .arrow-icon {
+        transform: translateY(-50%) translateX(5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .m-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .arrow-icon {
+        top: 35px;
+        right: 25px;
+        transform: none !important;
+    }
+}
