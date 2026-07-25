@@ -16,7 +16,7 @@
 
 /* Atur ukuran gambar logo di navbar */
 .logo-img {
-    height: 40px; /* Sesuaikan angka ini biar pas dengan tinggi navbar kamu */
+    height: 55px; /* Sesuaikan angka ini biar pas dengan tinggi navbar kamu */
     width: auto;
     object-fit: contain;
     display: block;
