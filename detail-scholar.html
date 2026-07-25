@@ -3,7 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Scholar Templates - Teman Portofolio</title>
+
+    <!-- ========================================== -->
+    <!-- 1. PRIMARY SEO META TAGS & FAVICON -->
+    <!-- ========================================== -->
+    <title>The Scholar - Template Web Portofolio Akademik | Teman Portofolio</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+
+    <meta name="title" content="The Scholar - Template Web Portofolio Akademik | TemanPortofolio">
+    <meta name="description" content="Tampilkan publikasi jurnal, penelitian, dan pencapaian akademik Anda secara profesional dengan template The Scholar. Cocok untuk dosen, peneliti, dan mahasiswa.">
+    <meta name="keywords" content="template the scholar, web portofolio akademik, template cv dosen, portofolio peneliti, web publikasi jurnal, portofolio mahasiswa, teman portofolio, web edukasi">
+    <meta name="author" content="TemanPortofolio">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+
+    <!-- Canonical Tag (Ubah 'scholar.html' jika nama file kamu berbeda) -->
+    <link rel="canonical" href="https://temanportofolio.com/scholar.html">
+
+    <!-- ========================================== -->
+    <!-- 2. OPEN GRAPH / FACEBOOK / WHATSAPP TAGS -->
+    <!-- ========================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://temanportofolio.com/scholar.html">
+    <meta property="og:title" content="The Scholar - Template Web Portofolio Akademik | TemanPortofolio">
+    <meta property="og:description" content="Tampilkan publikasi jurnal, penelitian, dan pencapaian akademik Anda secara profesional dengan template The Scholar.">
+    <meta property="og:image" content="https://temanportofolio.com/assets/img/thumbnail.png">
+
+    <!-- ========================================== -->
+    <!-- 3. TWITTER CARDS -->
+    <!-- ========================================== -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://temanportofolio.com/scholar.html">
+    <meta property="twitter:title" content="The Scholar - Template Web Portofolio Akademik | TemanPortofolio">
+    <meta property="twitter:description" content="Tampilkan publikasi jurnal, penelitian, dan pencapaian akademik Anda secara profesional dengan template The Scholar.">
+    <meta property="twitter:image" content="https://temanportofolio.com/assets/img/og-thumbnail.jpg">
+
+    <!-- ========================================== -->
+    <!-- 4. GOOGLE ANALYTICS (Modular) -->
+    <!-- ========================================== -->
+    <script src="assets/js/analytics.js"></script>
+    <!-- ========================================== -->
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -63,11 +106,18 @@
             await loadSection('detail-content', 'sections/detail-scholar/basic.html');
             await loadSection('detail-content', 'sections/detail-scholar/premium.html');
             await loadSection('detail-content', 'sections/detail-scholar/pro.html');
+            
+            // Tambahan: Memanggil file footer yang sebelumnya terlewat
+            await loadSection('detail-content', 'components/footer.html');
 
             if (typeof window.initSBasicController === 'function') window.initSBasicController();
             if (typeof window.initSPremiumController === 'function') window.initSPremiumController();
             if (typeof window.initSProController === 'function') window.initSProController();
             if (typeof window.initColorSwitcher === 'function') window.initColorSwitcher();
+            
+            // Init Footer logic agar berjalan semestinya
+            if (typeof window.initFooter === 'function') window.initFooter();
+            if (typeof window.initFooterLogic === 'function') window.initFooterLogic();
 
             if (typeof AOS !== 'undefined') { AOS.init({ once: true, duration: 800 }); }
         });
