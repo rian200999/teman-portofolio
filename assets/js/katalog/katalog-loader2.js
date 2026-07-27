@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load Sections Khusus Katalog
     await loadSection('katalog-content', 'sections/katalog/hero.html');
     await loadSection('katalog-content', 'sections/katalog/kategori.html');
-    await loadSection('katalog-content', 'sections/katalog/showcase.html');
+    // await loadSection('katalog-content', 'sections/katalog/showcase.html');
     // await loadSection('katalog-content', 'sections/katalog/cta.html');
     
     // Load Footer (Asumsi pakai footer.html dari halaman utama)
