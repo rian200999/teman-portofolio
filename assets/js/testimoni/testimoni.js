@@ -16,7 +16,7 @@ const dataTestimoni = [
         nama: "Rian Hidayat",
         posisi: "Software Engineer",
         paket: "Custom", // Basic, Premium, Pro, Custom
-        gambar: "https://temanportofolio.com/assets/img/testimonial/rian-hidayat.png",
+        gambar: "https://temanportofolio.com/assets/img/testimonials/rian-hidayat.png",
         link: "#",
         testimoni: "Semenjak pakai Teman Portofolio, lamaranku yang tadinya sering di-ghosting sekarang mulai dapet panggilan HRD. Tampilan dataku jadi super rapi!"
     },
