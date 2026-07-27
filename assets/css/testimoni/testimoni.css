@@ -1,0 +1,352 @@
+/* =========================================
+   PALET WARNA & VARIABEL
+========================================= */
+:root {
+    --tp-darkest: #FDFBFF;
+    /* Background Utama */
+    --tp-dark: #FFFFFF;
+    /* Background Card */
+    --tp-green: #E2D3F4;
+    /* Lilac (Dominan) */
+    --tp-light: #013DC4;
+    /* Biru Elektrik (Aksen) */
+    --tp-text-main: #0B1333;
+    /* Teks Gelap Utama */
+    --tp-text-muted: #646E97;
+    /* Teks Sekunder Abu/Biru */
+    --tp-border: #EAE2F3;
+    /* Border Lilac Tipis & Halus */
+    --tp-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   1. CONTAINER GRID (3 KOLOM)
+========================================= */
+.ts-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. DESAIN CARD ELEGAN
+========================================= */
+.ts-card {
+    background: var(--tp-dark);
+    border: 1px solid var(--tp-border);
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    /* Soft shadow biar keliatan melayang elegan */
+    box-shadow: 0 10px 25px rgba(226, 211, 244, 0.3);
+    transition: var(--tp-transition);
+    position: relative;
+}
+
+.ts-card:hover {
+    box-shadow: 0 20px 40px rgba(1, 61, 196, 0.12);
+    transform: translateY(-8px);
+    border-color: var(--tp-light);
+}
+
+/* =========================================
+   3. GAMBAR PREVIEW PORTOFOLIO
+========================================= */
+.ts-image-wrapper {
+    width: 100%;
+    height: 190px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: var(--tp-darkest);
+    border: 1px solid var(--tp-border);
+}
+
+.ts-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Fokus ke bagian header web orangnya */
+    transition: transform 0.6s ease;
+}
+
+.ts-card:hover .ts-image-wrapper img {
+    transform: scale(1.08);
+    /* Efek zoom tipis pas card di-hover */
+}
+
+/* =========================================
+   4. HEADER CARD (NAMA, POSISI, RATING)
+========================================= */
+.ts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.ts-profile h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.ts-profile p {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--tp-text-muted);
+    margin: 0 0 8px 0;
+}
+
+.ts-stars i {
+    color: #F59E0B;
+    /* Warna kuning emas */
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+/* =========================================
+   5. BADGE PAKET
+========================================= */
+.ts-badge {
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Warna-warni badge sesuai paket */
+.badge-basic {
+    background: #F3F4F6;
+    color: #4B5563;
+}
+
+.badge-premium {
+    background: var(--tp-green);
+    color: var(--tp-light);
+}
+
+.badge-pro {
+    background: var(--tp-light);
+    color: var(--tp-dark);
+}
+
+.badge-custom {
+    background: var(--tp-text-main);
+    color: var(--tp-green);
+}
+
+/* =========================================
+   6. KUTIPAN TESTIMONI (TEKS)
+========================================= */
+.ts-quote {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--tp-text-main);
+    margin-bottom: 24px;
+    flex-grow: 1;
+    /* Dorong tombol ke paling bawah sejajar */
+}
+
+/* =========================================
+   7. TOMBOL "LIHAT WEB" DI DALAM CARD
+========================================= */
+.ts-btn-visit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: var(--tp-green);
+    color: var(--tp-text-main);
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--tp-transition);
+    width: 100%;
+    /* Tombol melebar penuhi card */
+}
+
+.ts-btn-visit:hover {
+    background: var(--tp-light);
+    color: var(--tp-dark);
+}
+
+/* =========================================
+   8. TOMBOL LOAD MORE (MUAT LEBIH BANYAK)
+========================================= */
+.ts-btn-wrapper {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.ts-btn-load {
+    background: transparent;
+    border: 2px solid var(--tp-border);
+    color: var(--tp-text-main);
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--tp-transition);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ts-btn-load:hover {
+    border-color: var(--tp-light);
+    color: var(--tp-dark);
+    background: var(--tp-light);
+    box-shadow: 0 10px 20px rgba(1, 61, 196, 0.2);
+}
+
+/* =========================================
+   9. RESPONSIVE UNTUK TABLET & HP
+========================================= */
+@media (max-width: 1024px) {
+    .ts-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Tablet jadi 2 kolom */
+    }
+}
+
+@media (max-width: 768px) {
+    .ts-grid-container {
+        grid-template-columns: 1fr;
+        /* HP jadi 1 kolom */
+    }
+
+    .ts-image-wrapper {
+        height: 220px;
+        /* Di HP gambar dilonggarin dikit */
+    }
+}
+
+
+
+
+/* =========================================
+   10. SECTION EKOSISTEM LAYANAN
+========================================= */
+.ts-layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ts-layanan-card {
+    background: var(--tp-darkest);
+    border: 1px solid var(--tp-border);
+    border-radius: 20px;
+    padding: 24px;
+    text-decoration: none;
+    transition: var(--tp-transition);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.ts-layanan-card:hover:not(.card-disabled) {
+    border-color: var(--tp-light);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(1, 61, 196, 0.08);
+}
+
+.ts-layanan-card .icon-box {
+    width: 48px;
+    height: 48px;
+    background: var(--tp-green);
+    color: var(--tp-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    transition: var(--tp-transition);
+}
+
+.ts-layanan-card:hover:not(.card-disabled) .icon-box {
+    background: var(--tp-light);
+    color: var(--tp-dark);
+}
+
+.ts-layanan-card h3 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--tp-text-main);
+    margin: 0 0 8px 0;
+}
+
+.ts-layanan-card p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--tp-text-muted);
+    margin: 0;
+}
+
+/* Style Khusus Coming Soon (E-Menu) */
+.card-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #F9FAFB;
+}
+.badge-coming-soon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #E5E7EB;
+    color: #4B5563;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+/* Style Khusus Komunitas (Biar Standout) */
+.card-komunitas {
+    background: linear-gradient(135deg, var(--tp-dark) 0%, var(--tp-green) 100%);
+    border-color: var(--tp-green);
+}
+.card-komunitas .arrow-hover {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    font-size: 24px;
+    color: var(--tp-light);
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: var(--tp-transition);
+}
+.card-komunitas:hover .arrow-hover {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Grid Layanan */
+@media (max-width: 768px) {
+    .ts-layanan-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .ts-layanan-grid { grid-template-columns: 1fr; }
+}
