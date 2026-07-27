@@ -168,7 +168,7 @@
     gap: 8px;
     padding: 12px 16px;
     background: var(--tp-green);
-    color: var(--tp-text-main);
+    color: var(--tp-light);
     text-decoration: none;
     border-radius: 12px;
     font-size: 14px;

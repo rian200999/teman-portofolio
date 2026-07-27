@@ -91,7 +91,7 @@ function renderTestimoni() {
                 <p class="ts-quote">"${item.testimoni}"</p>
                 
                 <a href="${item.link}" target="_blank" class="ts-btn-visit">
-                    Lihat Web CV-nya <i class='bx bx-right-arrow-alt'></i>
+                    Lihat Web Portofolio <i class='bx bx-right-arrow-alt'></i>
                 </a>
             </div>
         `;
