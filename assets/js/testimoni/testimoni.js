@@ -25,6 +25,7 @@ const dataTestimoni = [
         posisi: "Account Executive & KOL Specialist",
         paket: "Custom",
         gambar: "https://temanportofolio.com/assets/img/testimonials/darin.jpeg",
+        link: "https://darin.temanportofolio.com",
         testimoni: "Sebagai AE, bawa data portofolio yang proper itu wajib banget buat pitching. Teman Portofolio berhasil nyulap ribuan baris data Excel campaign-ku jadi satu website interaktif yang elegan. Klien dan HRD langsung impress!"
     }
     // {
