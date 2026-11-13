@@ -20,14 +20,13 @@ const dataTestimoni = [
         link: "https://rianhidayat.temanportofolio.com",
         testimoni: "Semenjak pakai Teman Portofolio, lamaranku yang tadinya sering di-ghosting sekarang mulai dapet panggilan HRD. Tampilan dataku jadi super rapi!"
     },
-    // {
-    //     nama: "Nabila Putri",
-    //     posisi: "Digital Marketer",
-    //     paket: "Custom",
-    //     gambar: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=800&q=80",
-    //     link: "#",
-    //     testimoni: `"Gila sih ini! Aku request paket custom buat nampilin hasil campaign Ads aku, hasilnya elegan banget. Nggak usah pusing mikirin coding sama sekali."`
-    // },
+    {
+        nama: "Darin Nur Azizah",
+        posisi: "Account Executive & KOL Specialist",
+        paket: "Custom",
+        gambar: "https://temanportofolio.com/assets/img/testimonials/darin.jpeg",
+        testimoni: "Sebagai AE, bawa data portofolio yang proper itu wajib banget buat pitching. Teman Portofolio berhasil nyulap ribuan baris data Excel campaign-ku jadi satu website interaktif yang elegan. Klien dan HRD langsung impress!"
+    }
     // {
     //     nama: "Reza Pahlevi",
     //     posisi: "UI/UX Designer",
